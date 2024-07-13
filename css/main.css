@@ -1,0 +1,19 @@
+html {
+    box-sizing: border-box;
+    font-size: 17px; /* Cambia el tamaño de fuente a 16px directamente */
+    height: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    height: 100vh;
+    font-size: 1rem; /* Usa 1rem para mantener el tamaño de fuente en 16px */
+    font-family: 'Roboto', sans-serif;
+    transition: .3s ease all;
+}
+
