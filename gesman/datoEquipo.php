@@ -4,16 +4,18 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="css/main.css">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/main.css">
+
     <title>Sistema GPEM S.A.C</title>
     <style>
       ::placeholder{
@@ -51,27 +53,34 @@
                 <label for="nombreEquipoId" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="nombreEquipoId">
             </div>
-            <div class="col-md-4 col-lg-4">
-                <label for="modeloId" class="form-label">Modelo</label>
-                <select id="modeloId" class="form-select">
-                    <option selected>Seleccionar modelo</option>
-                    <option>Modelo1</option>
-                    <option>Modelo2</option>
-                    <option>Modelo3</option>
-                </select>
+            <div class="custom-select-container col-md-6 col-lg-4">
+              <label for="modeloId" class="form-label">Modelo</label>
+              <div class="custom-select-wrapper">
+                  <input type="text" id="modeloInput" class="custom-select-input" placeholder="Seleccionar Modelo" />
+                  <span class="custom-select-arrow"><i class="bi bi-chevron-down"></i></span>
+                  <div id="modeloList" class="custom-select-list">
+                  <div class="custom-select-item" data-value="modelo1">Modelo1</div>
+                  <div class="custom-select-item" data-value="modelo2">Modelo2</div>
+                  <div class="custom-select-item" data-value="modelo3">Modelo3</div>
+                  </div>
+              </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <label for="serieEquipoId" class="form-label">Serie</label>
                 <input type="text" class="form-control" id="serieEquipoId">
             </div>
-            <div class="col-md-4 col-lg-4">
-                <label for="marcaEquipoId" class="form-label">Marca</label>
-                <select id="modeloId" class="form-select">
-                    <option selected>Seleccionar marca</option>
-                    <option>Marca1</option>
-                    <option>Marca2</option>
-                    <option>Marca3</option>
-                </select>
+
+            <div class="custom-select-container col-md-6 col-lg-4">
+              <label for="marcaId" class="form-label">Marca</label>
+              <div class="custom-select-wrapper">
+                  <input type="text" id="marcaInput" class="custom-select-input" placeholder="Seleccionar Marca" />
+                  <span class="custom-select-arrow"><i class="bi bi-chevron-down"></i></span>
+                  <div id="marcaList" class="custom-select-list">
+                  <div class="custom-select-item" data-value="supervisor1">Marca1</div>
+                  <div class="custom-select-item" data-value="colaborador1">Marca2</div>
+                  <div class="custom-select-item" data-value="tecnico1">Marca3</div>
+                  </div>
+              </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <label for="kmEquipoId" class="form-label">Kilometraje</label>
@@ -82,16 +91,20 @@
                 <input type="text" class="form-control" id="horaMotorId">
             </div>
 
-            <div class="col-md-2 col-lg-12">
+            <div class="col-md-12 col-lg-12">
                 <label for="desEquipoId" class="form-label">Descripción</label>
                 <textarea name="desEquipo" class="form-control" id="desEquipoId" placeholder="Puede ingresar adicionalmente la fecha de fabricación, número interno, número de padron,tipo de combustible y otros que considere necesario."></textarea>
             </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Guardar</button>
+            <div class="col-sm-3">
+              <a href="/sigein/gesman/datoGeneral.php" class="btn btn-primary form-control"><i class="bi bi-arrow-left-square"></i> Atrás</a>
+            </div>
+            <div class="col-sm-3">
+              <a href="/sigein/gesman/resumen.php" class="btn btn-primary form-control">Siguiente <i class="bi bi-arrow-right-square"></i></a>
             </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="../js/datoEquipo.js"></script>
   </body>
 </html>

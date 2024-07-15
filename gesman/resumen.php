@@ -9,11 +9,14 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/main.css">
     <title>Sistema GPEM S.A.C</title>
     <style>
       ::placeholder{
@@ -46,32 +49,35 @@
 
         <!--RESUMEN-->
         <div class="row g-3">
-            <div class="col-md-2">
+            <div class="col-md-12">
                 <label for="antecedentesId" class="form-label">Antecedentes</label>
                 <textarea name="antecedentes" class="form-control" id="antecedentesId"></textarea>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <label for="actividadId" class="form-label">Actividad</label>
                 <input type="text" class="form-control" id="actividadId">
             </div>
-            <div class="col-md-2">
+            <div class="col-md-12 col-lg-6 col-xl-4">
                 <label for="analisisId" class="form-label">Análisis | Diagnóstico</label>
                 <textarea name="analisis" class="form-control" id="analisisId"></textarea>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-12 col-lg-6 col-xl-4">
                 <label for="conclusionesId" class="form-label">Conclusiones</label>
                 <textarea name="conlcusiones" class="form-control" id="conclusionesId"></textarea>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-12 col-xl-4">
                 <label for="recomendacionesId" class="form-label">Recomendaciones</label>
                 <textarea name="recomendaciones" class="form-control" id="recomendacionesId"></textarea>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-12">
                 <label for="estadoId" class="form-label">Estado</label>
                 <input type="text" class="form-control" id="estadoId" disabled>
             </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Guardar</button>
+            <div class="col-sm-3">
+              <a href="/sigein/gesman/datoEquipo.php" class="btn btn-primary form-control"><i class="bi bi-arrow-left-square"></i> Atrás</a>
+            </div>
+            <div class="col-sm-3">
+              <a href="/sigein/gesman/actividad.php" class="btn btn-primary form-control">Siguiente <i class="bi bi-arrow-right-square"></i></a>
             </div>
         </div>
     </div>

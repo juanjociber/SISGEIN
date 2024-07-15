@@ -5,22 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <link rel="stylesheet" href="css/main.css">
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/main.css">
     <title>Sistema GPEM S.A.C</title>
-    <style>
-      ::placeholder{
-        color: #cecccc !important;
-        font-weight: 200;
-      }
-    </style>
   </head>
   <body>
 
@@ -49,45 +44,49 @@
 
       <!--DATOS GENERALES-->
       <div class="row g-3">
-        <div class="col-12">
+        <div class="col-12 col-md-4 col-lg-4">
           <label for="nroInforme" class="form-label">Nro. Informe</label>
-          <input type="text" class="form-control" id="nroInforme" disabled>
+          <input type="text" class="form-control" id="nroInforme" value="INFORME GP-INF-1" disabled>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4 col-lg-4">
           <label for="fechaInforme" class="form-label">Fecha</label>
           <input type="date" class="form-control" id="fechaInforme">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4 col-lg-4">
           <label for="nroOrdenTrabajo" class="form-label">Orden de trabajo</label>
           <input type="text" class="form-control" id="nroOrdenTrabajo" disabled>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-4">
           <label for="nombreCliente" class="form-label">Cliente</label>
           <input type="text" class="form-control" id="nombreCliente" disabled>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-4">
           <label for="contacto" class="form-label">Contacto</label>
           <input type="text" class="form-control" id="contacto">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-4">
           <label for="ubicacion" class="form-label">Lugar</label>
           <input type="text" class="form-control" id="ubicacion">
-        </div>
-        <div class="col-md-4">
+        </div>      
+        <div class="custom-select-container col-md-6 col-lg-12">
           <label for="supervisorId" class="form-label">Supervisor</label>
-          <select id="supervisorId" class="form-select">
-              <option selected>Seleccionar supervisor</option>
-              <option>Supervisor1</option>
-              <option>Supervisor2</option>
-              <option>Supervisor3</option>
-          </select>
+          <div class="custom-select-wrapper">
+            <input type="text" id="supervisorInput" class="custom-select-input" placeholder="Seleccionar supervisor" />
+            <span class="custom-select-arrow"><i class="bi bi-chevron-down"></i></span>
+            <div id="supervisorList" class="custom-select-list">
+              <div class="custom-select-item" data-value="supervisor1">Supervisor1</div>
+              <div class="custom-select-item" data-value="colaborador1">Colaborador1</div>
+              <div class="custom-select-item" data-value="tecnico1">Tecnico1</div>
+            </div>
+          </div>
         </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">Guardar</button>
+        <div class="col-sm-3">
+          <a href="/sigein/gesman/datoEquipo.php" class="btn btn-primary form-control">Siguiente <i class="bi bi-arrow-right-square"></i></a>
         </div>
       </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="../js/datoGeneral.js"></script>
   </body>
 </html>
