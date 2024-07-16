@@ -33,3 +33,16 @@ document.addEventListener('DOMContentLoaded', function() {
         selectList.style.display = 'block';
     });
 });
+
+
+const fechaInforme = document.querySelector('#fechaInforme').value;
+
+const date = new Date();
+const dia = date.getDay();
+const mes = date.getMonth();
+const anio = date.getFullYear();
+
+const fecha = `${dia} /${mes} / ${anio}`
+
+
+console.log(fechaInforme);

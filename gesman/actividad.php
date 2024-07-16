@@ -22,7 +22,73 @@
       ::placeholder{
         color: #cecccc !important;
         font-weight: 200;
+        text-transform: uppercase;
       }
+      /*ESTILOS CARGA DE IMAGEN*/
+      .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .file-input-wrapper input[type="file"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .custom-file-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5em 1em;
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .custom-file-button i {
+            margin-right: 0.5em;
+        }
+
+        .preview {
+            width: 300px;
+            height: auto;
+            border: 2px solid #000;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            display: none;
+            margin-top: 1em;
+        }
+        .ocultarDiv{
+          display: none
+        }
+        .accordion-body--mod{
+          padding-right: 0 !important;
+        }
+        .accordion-button::after{
+          width: 0;
+        }
+        .accordion-button--mod{
+          padding: 0.5rem;
+          position: relative;
+        }
+        .accordion-botones{
+          position:absolute;
+          top:0;
+          right: 0;
+        }
+        .accordion-botones i{
+          font-size:20px;
+          margin-right: 1rem;
+        }
 
     </style>
   </head>
@@ -60,17 +126,129 @@
         <div class="col-12 fw-bold d-flex justify-content-between">
           <p class="m-0 p-0 text-center text-secondary text-uppercase">Listado de actividades</p>
         </div>
-        <ul class="list-group">
-          <li class="list-group-item d-flex justify-content-between">
-            <div class="fw-bold">Actividad01 <small class="text-secondary">01/01/2024</small></div><span class="badge bg-primary">Proceso</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between">
-            <div class="fw-bold">Actividad02 <small class="text-secondary">01/02/2024</small></div><span class="badge bg-success">Terminado</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between">
-            <div class="fw-bold">Actividad03 <small class="text-secondary">01/03/2024</small></div><span class="badge bg-secondary">Anulado</span>
-          </li>
-        </ul>
+
+         <!-- INICIO ACCORDION   -->
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          <!-- ITEM 1  -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+              <!-- START BUTTON COLLAPSED -->
+              <div class="accordion-button accordion-button--mod collapsed" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                <div class="accordion-botones">
+                  <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#actividadModal" data-bs-whatever="@mdo"></i>
+                  <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#actividadModal" data-bs-whatever="@mdo"></i>
+                  <i class="bi bi-paperclip"></i>
+                  <i class="bi bi-trash3"></i>
+                </div>
+                <div class="accordion-actividad">
+                  Actividad1 Actividad1 Actividad1 Actividad1 Actividad1 Actividad1 Actividad1
+                </div>
+              </div><!-- FIN BUTTON COLLAPSED -->
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+              <!-- START BODY -->
+              <div class="accordion-body accordion-body--mod">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <!-- START BUTTON COLLAPSED -->
+                    <div class="accordion-button accordion-button--mod collapsed" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                      <div class="accordion-botones">
+                        <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#actividadModal" data-bs-whatever="@mdo"></i>
+                        <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#actividadModal" data-bs-whatever="@mdo"></i>
+                        <i class="bi bi-paperclip"></i>
+                        <i class="bi bi-trash3"></i>
+                      </div>
+                      <div class="accordion-actividad">
+                        Subactividad1<small class="text-secondary" style="font-size:12px">05/07/2024</small>
+                      </div>
+                    </div><!-- FIN BUTTON COLLAPSED -->
+                  </h2>
+                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
+                    <div class="accordion-body accordion-body--mod">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                          <!-- START BUTTON COLLAPSED -->
+                          <div class="accordion-button accordion-button--mod collapsed" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                            <div class="accordion-botones">
+                              <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#actividadModal" data-bs-whatever="@mdo"></i>
+                              <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#actividadModal" data-bs-whatever="@mdo"></i>
+                              <i class="bi bi-paperclip"></i>
+                              <i class="bi bi-trash3"></i>
+                            </div>
+                            <div class="accordion-actividad">
+                              Subactividad1<small class="text-secondary" style="font-size:12px">15/07/2024</small>
+                            </div>
+                          </div><!-- FIN BUTTON COLLAPSED -->
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- FINAL BODY -->
+            </div>
+          </div>
+
+          <!-- ITEM 2 -->
+          <div class="accordion-item mt-2">
+            <h2 class="accordion-header" id="panelsStayOpen-headingDos">
+              <!-- START BUTTON COLLAPSED -->
+              <div class="accordion-button accordion-button--mod collapsed" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                <div class="accordion-botones">
+                  <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#actividadModal" data-bs-whatever="@mdo"></i>
+                  <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#actividadModal" data-bs-whatever="@mdo"></i>
+                  <i class="bi bi-paperclip"></i>
+                  <i class="bi bi-trash3"></i>
+                </div>
+                <div class="accordion-actividad">
+                  Actividad2<small class="text-secondary" style="font-size:12px">04/05/2024</small>
+                </div>
+              </div><!-- FIN BUTTON COLLAPSED -->
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingDos">
+              <!-- START BODY -->
+              <div class="accordion-body accordion-body--mod">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <!-- START BUTTON COLLAPSED -->
+                    <div class="accordion-button accordion-button--mod collapsed" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                      <div class="accordion-botones">
+                        <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#actividadModal" data-bs-whatever="@mdo"></i>
+                        <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#actividadModal" data-bs-whatever="@mdo"></i>
+                        <i class="bi bi-paperclip"></i>
+                        <i class="bi bi-trash3"></i>
+                      </div>
+                      <div class="accordion-actividad">
+                        Subactividad2<small class="text-secondary" style="font-size:12px">05/07/2024</small>
+                      </div>
+                    </div><!-- FIN BUTTON COLLAPSED -->
+                  </h2>
+                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
+                    <div class="accordion-body accordion-body--mod">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                          <!-- START BUTTON COLLAPSED -->
+                          <div class="accordion-button accordion-button--mod collapsed" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                            <div class="accordion-botones">
+                              <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#actividadModal" data-bs-whatever="@mdo"></i>
+                              <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#actividadModal" data-bs-whatever="@mdo"></i>
+                              <i class="bi bi-paperclip"></i>
+                              <i class="bi bi-trash3"></i>
+                            </div>
+                            <div class="accordion-actividad">
+                              Subactividad2<small class="text-secondary" style="font-size:12px">15/07/2024</small>
+                            </div>
+                          </div><!-- FIN BUTTON COLLAPSED -->
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- FINAL BODY -->
+            </div>
+          </div>
+          
+        </div> <!-- FIN ACCORDION -->
+          
         <div class="col-sm-3">
           <a href="/sigein/gesman/resumen.php" class="btn btn-primary form-control"><i class="bi bi-arrow-left-square"></i> Atrás</a>
         </div>
@@ -84,14 +262,14 @@
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="modal-header bg-primary text-white">
-              <h1 class="modal-title fs-5 text-uppercase" id="actividadModalLabel">Actividad nueva</h1>
+              <h1 class="modal-title fs-5 text-uppercase" id="actividadModalLabel">Actividad</h1>
               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
           <div class="modal-body">
             <!--ACTIVIDAD-->
             <div class="row g-3">
               <div class="col-12">
-                <label for="actividadesId" class="form-label">Actividad</label>
+                <label for="actividadesId" class="form-label">Nombre de actividad</label>
                 <input type="text" class="form-control" id="actividadesId">
               </div>
               <div class="col-md-12">
@@ -102,7 +280,7 @@
                 <label for="trabajosId" class="form-label">Trabajos</label>
                 <textarea name="trabajos" class="form-control" id="trabajosId"></textarea>
               </div>
-              <div class="col-md-12 col-lg-6">
+              <!-- <div class="col-md-12 col-lg-6">
                 <label for="tituloUnoId" class="form-label">Título [1]</label>
                 <input type="text" class="form-control" id="tituloUnoId">
               </div>
@@ -130,7 +308,7 @@
               <div class="col-md-12col-lg-4">
                 <label for="stateId" class="form-label">Estado</label>
                 <input type="text" class="form-control" id="stateId" disabled>
-              </div>
+              </div> -->
               <div class="col-md-12">
                 <label for="observacionesId" class="form-label">Observación</label>
                 <textarea name="observaciones" class="form-control" id="observacionesId"></textarea>
@@ -146,5 +324,7 @@
     </div><!--FIN CONTAINER-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="../js/actividad.js"></script>
+  
   </body>
 </html>

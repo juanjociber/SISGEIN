@@ -21,9 +21,6 @@ body {
 /*SELECT*/
 .custom-select-container {
     position: relative;
-    /* width: 100%;
-    max-width: 400px;
-    margin: 0 auto; */
 }
 .custom-select-wrapper {
     position: relative;

@@ -21,6 +21,7 @@
       ::placeholder{
         color: #cecccc !important;
         font-weight: 200;
+        text-transform: uppercase;
       }
     </style>
   </head>

@@ -17,6 +17,23 @@
     <link rel="stylesheet" href="../css/main.css">
     <title>Sistema GPEM S.A.C</title>
   </head>
+  <style>
+    ::placeholder{
+      color: #cecccc !important;
+      font-weight: 200;
+      text-transform: uppercase;
+    }
+    .form-label{
+      color:#212529;
+      font-weight:300; 
+    }
+    .form-control{
+      border-radius:.25rem;
+    }
+    .btn-control{
+      padding:.375rem .75rem;
+    }
+    </style>
   <body>
 
     <div class="container">
@@ -25,7 +42,7 @@
         <div class="col-12 fw-bold d-flex justify-content-between">
             <p class="m-0 p-0">CLIENTE</p>
             <input type="text" class="d-none" id="txtIdOt" value="" readonly/>
-            <p class="m-0 p-0 text-center text-secondary">INFORME GP-INF-1</p>
+            <p class="m-0 p-0 text-center text-secondary">GP-INF-1</p>
         </div>
       </div>
       <!-- ENLACES -->
@@ -33,7 +50,7 @@
         <div class="col-12">
             <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">                        
-                    <li class="breadcrumb-item active fw-bold" aria-current="page">DATOS GENERALES</li>
+                    <li class="breadcrumb-item active fw-bold" aria-current="page">INFORME</li>
                     <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/datoEquipo.php" class="text-decoration-none">EQUIPO</a></li>
                     <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/resumen.php" class="text-decoration-none">RESUMEN</a></li>
                     <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/actividad.php" class="text-decoration-none">ACTIVIDADES</a></li>
@@ -44,23 +61,23 @@
 
       <!--DATOS GENERALES-->
       <div class="row g-3">
-        <div class="col-12 col-md-4 col-lg-4">
+        <div class="col-6 col-md-4 col-lg-4">
           <label for="nroInforme" class="form-label">Nro. Informe</label>
           <input type="text" class="form-control" id="nroInforme" value="INFORME GP-INF-1" disabled>
         </div>
-        <div class="col-md-4 col-lg-4">
+        <div class="col-6 col-md-4 col-lg-4">
           <label for="fechaInforme" class="form-label">Fecha</label>
           <input type="date" class="form-control" id="fechaInforme">
         </div>
-        <div class="col-md-4 col-lg-4">
+        <div class="col-6 col-md-4 col-lg-4">
           <label for="nroOrdenTrabajo" class="form-label">Orden de trabajo</label>
           <input type="text" class="form-control" id="nroOrdenTrabajo" disabled>
         </div>
-        <div class="col-md-6 col-lg-4">
+        <div class="col-6 col-md-6 col-lg-4">
           <label for="nombreCliente" class="form-label">Cliente</label>
           <input type="text" class="form-control" id="nombreCliente" disabled>
         </div>
-        <div class="col-md-6 col-lg-4">
+        <div class=" col-md-6 col-lg-4">
           <label for="contacto" class="form-label">Contacto</label>
           <input type="text" class="form-control" id="contacto">
         </div>
@@ -80,7 +97,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-6 btn-control">
           <a href="/sigein/gesman/datoEquipo.php" class="btn btn-primary form-control">Siguiente <i class="bi bi-arrow-right-square"></i></a>
         </div>
       </div>
