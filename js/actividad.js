@@ -1,16 +1,14 @@
-const lista = document.querySelectorAll('.list-group-item');
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('icono-cargar')) {
+        console.log('SI');
+        // Mostrar el contenedor de carga de archivos
+        const fileUploadContainer = document.querySelector('#cargar-archivo');
+        //fileUploadContainer.style.display = 'block';
 
-lista.forEach((item, i) =>{
-    console.log(item,i)
-});
-
-
-document.addEventListener('click',(event)=>{
-        console.log(event.target);
-        if(event.target.matches('.list-group-item') || event.target.matches('.list-group-item--nombre')
-            || event.target.matches('.list-group-item--fecha')){
-            // document.querySelector('#actividadId1').classList.toggle('ocultarDiv');
-            document.querySelector('#actividadId1').classList.remove('ocultarDiv');
-        }
-        
+        // Alternativamente, puedes activar el input de archivo directamente
+        const fileInput = document.querySelector('#file-input');
+        fileInput.click();
+    } else {
+        console.log('NO');
+    }
 });

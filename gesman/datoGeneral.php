@@ -68,7 +68,7 @@
                     <li class="breadcrumb-item active fw-bold" aria-current="page">INFORME</li>
                     <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/datoEquipo.php" class="text-decoration-none">EQUIPO</a></li>
                     <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/resumen.php" class="text-decoration-none">RESUMEN</a></li>
-                    <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/actividad.php" class="text-decoration-none">ACTIVIDADES</a></li>
+                    <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/actividad.php" class="text-decoration-none">ACTIVIDAD</a></li>
                 </ol>
             </nav>
         </div>
@@ -92,6 +92,7 @@
           <label for="nombreCliente" class="form-label mb-0">Cliente</label>
           <input type="text" class="form-control" id="nombreCliente" disabled>
         </div>
+        
         <div class="custom-select-container col-md-6 col-lg-6 mt-2">
           <label for="contactoId" class="form-label mb-0">Contacto</label>
           <div class="custom-select-wrapper">
@@ -104,10 +105,12 @@
             </div>
           </div>
         </div>
+        
         <div class="col-md-6 col-lg-6 mt-2">
           <label for="ubicacion" class="form-label mb-0">Lugar</label>
           <input type="text" class="form-control" id="ubicacion">
         </div>      
+        
         <div class="custom-select-container col-md-6 col-lg-6 mt-2">
           <label for="supervisorId" class="form-label mb-0">Supervisor</label>
           <div class="custom-select-wrapper">
@@ -120,6 +123,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-6 btn-control mt-2">
           <button type="button" class="btn btn-primary text-uppercase fw-200">Guardar <i class="bi bi-floppy"></i></button>
         </div>

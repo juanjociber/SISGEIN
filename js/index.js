@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // INICIALIZANDO EL SELECT PERSONALIZADO
-    const initCustomSelect =(inputId, listId) => {
+    // Función para inicializar el select personalizado
+    function initCustomSelect(inputId, listId) {
         const selectInput = document.getElementById(inputId);
         const selectList = document.getElementById(listId);
         const selectItems = selectList.getElementsByClassName('custom-select-item');
@@ -51,19 +51,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     // Inicializar el selector personalizado
-    initCustomSelect('contactoInput', 'contactoList');
-    initCustomSelect('supervisorInput', 'supervisorList');
-
-    // SETEANDO CON FECHA ACTUAL
-    const setFecha = () =>{
-        const today = new Date();
-        const year = today.getFullYear();
-        const month = String(today.getMonth() + 1).padStart(2, '0');const day = String(today.getDate()).padStart(2, '0');
-
-        const formattedDate = `${year}-${month}-${day}`;
-        document.getElementById('fechaInforme').value = formattedDate;
-    }
-    setFecha();
-    
+    initCustomSelect('equipoInput', 'equipoList');
 });
-
