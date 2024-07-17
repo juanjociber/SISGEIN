@@ -88,52 +88,88 @@
 
         <div class="row p-1 mb-2">
           <div class="col-6 col-sm-4 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 12px;">Nro. Informe</p> 
+            <p class="m-0 p-0">001</p>
+          </div>
+          <div class="col-6 col-sm-4 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 12px;">Nombre Informe</p> 
+            <p class="m-0 p-0">GP-INF-1</p>
+          </div>
+          <div class="col-6 col-sm-4 mb-1">
             <p class="m-0 text-secondary" style="font-size: 12px;">Fecha</p> 
-            <p class="m-0 p-0">2024-07-17</p>
+            <p class="m-0 p-0">17/07/2024</p>
           </div>
           <div class="col-6 col-sm-4 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Activo</p> 
-            <p class="m-0 p-0">22FLOTA</p>
+            <p class="m-0 text-secondary" style="font-size: 12px;">OT N°</p> 
+            <p class="m-0 p-0">0101</p>
           </div>
           <div class="col-6 col-sm-4 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Km/Hr</p> 
-            <p class="m-0 p-0">0</p>
-          </div>
-          <div class="col-6 col-sm-4 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Tipo</p> 
-            <p class="m-0 p-0">PREVENTIVA</p>
-          </div>
-          <div class="col-6 col-sm-4 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Sistema:</p> 
-            <p class="m-0 p-0">6-NEUMATICO</p>
-          </div>
-          <div class="col-6 col-sm-4 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Orígen:</p> 
-            <p class="m-0 p-0">MP-MANTTO PREVENTIVO</p>
-          </div>
-          <div class="col-6 col-sm-4 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Supervisor</p> 
+            <p class="m-0 text-secondary" style="font-size: 12px;">Nombre de cliente:</p> 
             <p class="m-0 p-0">UNKNOWN</p>
           </div>
           <div class="col-6 col-sm-4 mb-1">
             <p class="m-0 text-secondary" style="font-size: 12px;">Contacto</p> 
             <p class="m-0 p-0">UNKNOWN</p>
           </div>
+          <div class="col-12 col-sm-12 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 12px;">Lugar</p> 
+            <p class="m-0 p-0">UNKNOWN</p>
+          </div>
+          <div class="col-6 col-sm-12 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 12px;">Supervisor</p> 
+            <p class="m-0 p-0">UNKNOWN</p>
+          </div>
           <div class="col-6 col-sm-4 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Estado</p>
-            <span class='badge bg-primary'>Proceso</span>              
+            <p class="m-0 text-secondary" style="font-size: 12px;">Nombre Equipo</p>
+            <p class="m-0 p-0">UNKNOWN</p>              
+          </div>
+          <div class="col-6 col-sm-4 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 12px;">Modelo Equipo</p> 
+            <p class="m-0 p-0">UNKNOWN</p>
+          </div>
+          <div class="col-6 col-sm-4 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 12px;">Serie Equipo</p> 
+            <p class="m-0 p-0">UNKNOWN</p>
+          </div>
+          <div class="col-6 col-sm-4 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 12px;">Marca Equipo</p> 
+            <p class="m-0 p-0">UNKNOWN</p>
+          </div>
+          <div class="col-6 col-sm-4 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 12px;">Kilometraje</p> 
+            <p class="m-0 p-0">UNKNOWN</p>
+          </div>
+          <div class="col-6 col-sm-4 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 12px;">Horas Motor</p> 
+            <p class="m-0 p-0">UNKNOWN</p>
+          </div>
+          <div class="col-12 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 12px;">Descripción</p> 
+            <p class="m-0 p-0">UNKNOWN</p>
+          </div>
+          <div class="col-12 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 12px;">Antecedentes</p> 
+            <p class="m-0 p-0">UNKNOWN</p>
           </div>
           <div class="col-12 mb-1">
             <p class="m-0 text-secondary" style="font-size: 12px;">Actividad</p> 
-            <p class="m-0 p-0">DRENADO DE SISTEMA NEUMATICO ALIMENTADOR - L,X,V</p>
+            <p class="m-0 p-0">UNKNOWN</p>
           </div>
           <div class="col-12 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Descripción:</p> 
-            <p class="m-0 p-0"></p>
+            <p class="m-0 text-secondary" style="font-size: 12px;">Análisis</p> 
+            <p class="m-0 p-0">UNKNOWN</p>
           </div>
           <div class="col-12 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Observaciones</p> 
-            <p class="m-0 p-0"></p>
+            <p class="m-0 text-secondary" style="font-size: 12px;">Conclusiones</p> 
+            <p class="m-0 p-0">UNKNOWN</p>
+          </div>
+          <div class="col-12 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 12px;">Recomendaciones</p> 
+            <p class="m-0 p-0">UNKNOWN</p>
+          </div>
+          <div class="col-12 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 12px;">Estado</p> 
+            <p class="m-0 p-0">UNKNOWN</p>
           </div>            
         </div>
 
