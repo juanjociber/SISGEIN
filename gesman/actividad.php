@@ -89,6 +89,50 @@
           font-size:20px;
           margin-right: 1rem;
         }
+        .form-label{
+          color:#212529;
+          font-weight:300; 
+        }
+        @media(max-width:767px){
+          .form-label{
+            font-size: 13px;
+          }
+          .listadoAcvidades{
+            font-size: 13px;
+          }
+          .accordion-actividad{
+           font-size: 13px;
+          }
+        }
+        @media(min-width:768px){
+          .mt--mod{
+            margin-top: 17px !important;
+          }
+        }
+        @media(min-width:92px){
+          .form-label{
+            font-size: 15px;
+          }
+          .listadoAcvidades{
+            font-size: 15px;
+          }
+          .accordion-actividad{
+            font-size: 15px;
+          }
+        }
+        .form-control{
+          border-radius:.25rem;
+        }
+        .btn-control{
+          padding:.375rem .75rem;
+        }
+        .fixed-size-textarea {
+          resize: none; /* Evita que el textarea se pueda redimensionar */
+        }
+        .accordion-actividad{
+          color: #212529;
+          font-weight: 300;
+        }
 
     </style>
   </head>
@@ -98,7 +142,7 @@
           <div class="col-12 fw-bold d-flex justify-content-between">
             <p class="m-0 p-0">CLIENTE</p>
               <input type="text" class="d-none" id="txtIdOt" value="" readonly/>
-            <p class="m-0 p-0 text-center text-secondary">INFORME GP-INF-1</p>
+            <p class="m-0 p-0 text-center text-secondary">GP-INF-1</p>
           </div>
       </div>
 
@@ -106,7 +150,7 @@
           <div class="col-12">
               <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                   <ol class="breadcrumb">
-                      <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/datoGeneral.php" class="text-decoration-none">DATOS GENERALES</a></li>
+                      <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/datoGeneral.php" class="text-decoration-none">INFORME</a></li>
                       <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/datoEquipo.php" class="text-decoration-none">EQUIPO</a></li>
                       <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/resumen.php" class="text-decoration-none">RESUMEN</a></li>
                       <li class="breadcrumb-item active fw-bold" aria-current="page">ACTIVIDADES</li>
@@ -124,7 +168,7 @@
       <!--LISTA DE ACTIVIDADES-->
       <div class="row g-3">
         <div class="col-12 fw-bold d-flex justify-content-between">
-          <p class="m-0 p-0 text-center text-secondary text-uppercase">Listado de actividades</p>
+          <p class="m-0 p-0 text-center text-secondary text-uppercase listadoActividades">Listado de actividades</p>
         </div>
 
          <!-- INICIO ACCORDION   -->
@@ -159,7 +203,7 @@
                         <i class="bi bi-trash3"></i>
                       </div>
                       <div class="accordion-actividad">
-                        Subactividad1<small class="text-secondary" style="font-size:12px">05/07/2024</small>
+                        Subactividad1
                       </div>
                     </div><!-- FIN BUTTON COLLAPSED -->
                   </h2>
@@ -176,7 +220,7 @@
                               <i class="bi bi-trash3"></i>
                             </div>
                             <div class="accordion-actividad">
-                              Subactividad1<small class="text-secondary" style="font-size:12px">15/07/2024</small>
+                              Subactividad1
                             </div>
                           </div><!-- FIN BUTTON COLLAPSED -->
                         </h2>
@@ -200,7 +244,7 @@
                   <i class="bi bi-trash3"></i>
                 </div>
                 <div class="accordion-actividad">
-                  Actividad2<small class="text-secondary" style="font-size:12px">04/05/2024</small>
+                  Actividad2
                 </div>
               </div><!-- FIN BUTTON COLLAPSED -->
             </h2>
@@ -218,7 +262,7 @@
                         <i class="bi bi-trash3"></i>
                       </div>
                       <div class="accordion-actividad">
-                        Subactividad2<small class="text-secondary" style="font-size:12px">05/07/2024</small>
+                        Subactividad2
                       </div>
                     </div><!-- FIN BUTTON COLLAPSED -->
                   </h2>
@@ -235,7 +279,7 @@
                               <i class="bi bi-trash3"></i>
                             </div>
                             <div class="accordion-actividad">
-                              Subactividad2<small class="text-secondary" style="font-size:12px">15/07/2024</small>
+                              Subactividad2
                             </div>
                           </div><!-- FIN BUTTON COLLAPSED -->
                         </h2>
@@ -250,10 +294,7 @@
         </div> <!-- FIN ACCORDION -->
           
         <div class="col-sm-3">
-          <a href="/sigein/gesman/resumen.php" class="btn btn-primary form-control"><i class="bi bi-arrow-left-square"></i> Atrás</a>
-        </div>
-        <div class="col-sm-3">
-          <button class="btn btn-success"><i class="bi bi-floppy"></i> Guardar</button>
+          <button class="btn btn-primary text-uppercase fw-200">Guardar <i class="bi bi-floppy"></i></button>
         </div>
       </div>
 
@@ -268,50 +309,21 @@
           <div class="modal-body">
             <!--ACTIVIDAD-->
             <div class="row g-3">
-              <div class="col-12">
-                <label for="actividadesId" class="form-label">Nombre de actividad</label>
+              <div class="col-12 mt-2">
+                <label for="actividadesId" class="form-label mb-0">Nombre de actividad</label>
                 <input type="text" class="form-control" id="actividadesId">
               </div>
-              <div class="col-md-12">
-                <label for="diagnosticoId" class="form-label">Diagnóstico</label>
-                <textarea name="diagnosticos" class="form-control" id="diagnosticoId"></textarea>
+              <div class="col-md-12 mt-2">
+                <label for="diagnosticoId" class="form-label mb-0">Diagnóstico</label>
+                <textarea name="diagnosticos" class="form-control fixed-size-textarea" row="4" id="diagnosticoId"></textarea>
               </div>
-              <div class="col-md-12">
-                <label for="trabajosId" class="form-label">Trabajos</label>
-                <textarea name="trabajos" class="form-control" id="trabajosId"></textarea>
+              <div class="col-md-12 mt-2">
+                <label for="trabajosId" class="form-label mb-0">Trabajos</label>
+                <textarea name="trabajos" class="form-control fixed-size-textarea" row="4" id="trabajosId"></textarea>
               </div>
-              <!-- <div class="col-md-12 col-lg-6">
-                <label for="tituloUnoId" class="form-label">Título [1]</label>
-                <input type="text" class="form-control" id="tituloUnoId">
-              </div>
-              <div class="col-md-12 col-lg-6">
-                <label class="form-label" for="inputGroupFile02">Cargar[1]</label>
-                <input type="file" class="form-control" id="inputGroupFile02" multiple>
-              </div>
-              <div class="col-md-12 col-lg-12">
-                <label for="descripcionUnoId" class="form-label">Descripción [1]</label>
-                <textarea name="descripcionUno" class="form-control" id="descripcionUnoId"></textarea>
-              </div>
-              <div class="col-md-12 col-lg-6">
-                <label for="tituloDosId" class="form-label">Título [2]</label>
-                <input type="text" class="form-control" id="tituloDosId">
-              </div>
-              <div class="col-md-12 col-lg-6">
-                <label class="form-label" for="inputGroupFile02">Cargar[2]</label>
-                <input type="file" class="form-control" id="inputGroupFile02" multiple>
-              </div>
-              <div class="col-md-12 col-lg-12">
-                <label for="descripcionDosId" class="form-label">Descripción [2]</label>
-                <textarea name="descripcionDos" class="form-control" id="descripcionDosId"></textarea>
-              </div>
-
-              <div class="col-md-12col-lg-4">
-                <label for="stateId" class="form-label">Estado</label>
-                <input type="text" class="form-control" id="stateId" disabled>
-              </div> -->
-              <div class="col-md-12">
-                <label for="observacionesId" class="form-label">Observación</label>
-                <textarea name="observaciones" class="form-control" id="observacionesId"></textarea>
+              <div class="col-md-12 mt-2">
+                <label for="observacionesId" class="form-label mb-0">Observación</label>
+                <textarea name="observaciones" class="form-control fixed-size-textarea" row="4" id="observacionesId"></textarea>
               </div>
             </div>
             <div class="modal-footer">

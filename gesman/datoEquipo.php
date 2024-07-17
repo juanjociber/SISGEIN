@@ -23,6 +23,34 @@
         font-weight: 200;
         text-transform: uppercase;
       }
+      .form-label{
+        color:#212529;
+        font-weight:300; 
+      }
+      @media(max-width:767px){
+        .form-label{
+          font-size: 13px;
+        }
+      }
+      @media(min-width:768px){
+        .mt--mod{
+          margin-top: 17px !important;
+        }
+      }
+      @media(min-width:92px){
+        .form-label{
+          font-size: 15px;
+        }
+      }
+      .form-control{
+        border-radius:.25rem;
+      }
+      .btn-control{
+        padding:.375rem .75rem;
+      }
+      .fixed-size-textarea {
+        resize: none; /* Evita que el textarea se pueda redimensionar */
+      }
     </style>
   </head>
   <body>
@@ -31,7 +59,7 @@
             <div class="col-12 fw-bold d-flex justify-content-between">
                 <p class="m-0 p-0">CLIENTE</p>
                 <input type="text" class="d-none" id="txtIdOt" value="" readonly/>
-                <p class="m-0 p-0 text-center text-secondary">INFORME GP-INF-1</p>
+                <p class="m-0 p-0 text-center text-secondary">GP-INF-1</p>
             </div>
         </div>
         
@@ -39,7 +67,7 @@
             <div class="col-12">
                 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                     <ol class="breadcrumb">                        
-                    <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/datoGeneral.php" class="text-decoration-none">DATOS GENERALES</a></li>
+                    <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/datoGeneral.php" class="text-decoration-none">INFORME</a></li>
                         <li class="breadcrumb-item active fw-bold" aria-current="page">EQUIPO</li>
                         <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/resumen.php" class="text-decoration-none">RESUMEN</a></li>
                         <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/actividad.php" class="text-decoration-none">ACTIVIDADES</a></li>
@@ -50,12 +78,12 @@
 
         <!--DATOS EQUIPOS-->
         <div class="row g-3">
-            <div class="col-md-6 col-lg-4">
-                <label for="nombreEquipoId" class="form-label">Nombre</label>
+            <div class="col-6 col-lg-4 mt-2">
+                <label for="nombreEquipoId" class="form-label mb-0">Nombre</label>
                 <input type="text" class="form-control" id="nombreEquipoId">
             </div>
-            <div class="custom-select-container col-md-6 col-lg-4">
-              <label for="modeloId" class="form-label">Modelo</label>
+            <div class="custom-select-container col-6 col-lg-4 mt-2">
+              <label for="modeloId" class="form-label mb-0">Modelo</label>
               <div class="custom-select-wrapper">
                   <input type="text" id="modeloInput" class="custom-select-input" placeholder="Seleccionar Modelo" />
                   <span class="custom-select-arrow"><i class="bi bi-chevron-down"></i></span>
@@ -66,13 +94,13 @@
                   </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <label for="serieEquipoId" class="form-label">Serie</label>
+            <div class="col-6 col-lg-4 mt-2">
+                <label for="serieEquipoId" class="form-label mb-0">Serie</label>
                 <input type="text" class="form-control" id="serieEquipoId">
             </div>
 
-            <div class="custom-select-container col-md-6 col-lg-4">
-              <label for="marcaId" class="form-label">Marca</label>
+            <div class="custom-select-container col-6 col-lg-4 mt-2">
+              <label for="marcaId" class="form-label mb-0">Marca</label>
               <div class="custom-select-wrapper">
                   <input type="text" id="marcaInput" class="custom-select-input" placeholder="Seleccionar Marca" />
                   <span class="custom-select-arrow"><i class="bi bi-chevron-down"></i></span>
@@ -83,24 +111,21 @@
                   </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <label for="kmEquipoId" class="form-label">Kilometraje</label>
+            <div class="col-6 col-lg-4 mt-2">
+                <label for="kmEquipoId" class="form-label mb-0">Kilometraje</label>
                 <input type="text" class="form-control" id="kmEquipoId">
             </div>
-            <div class="col-md-6 col-lg-4">
-                <label for="horaMotorId" class="form-label">Horas de motor</label>
+            <div class="col-6 col-lg-4 mt-2">
+                <label for="horaMotorId" class="form-label mb-0">Horas de motor</label>
                 <input type="text" class="form-control" id="horaMotorId">
             </div>
 
-            <div class="col-md-12 col-lg-12">
-                <label for="desEquipoId" class="form-label">Descripción</label>
-                <textarea name="desEquipo" class="form-control" id="desEquipoId" placeholder="Puede ingresar adicionalmente la fecha de fabricación, número interno, número de padron,tipo de combustible y otros que considere necesario."></textarea>
+            <div class="col-md-12 col-lg-12 mt-2">
+                <label for="desEquipoId" class="form-label mb-0">Descripción</label>
+                <textarea name="desEquipo" class="form-control fixed-size-textarea" rows="4" id="desEquipoId" placeholder="Puede ingresar adicionalmente la fecha de fabricación, número interno, número de padron,tipo de combustible y otros que considere necesario."></textarea>
             </div>
-            <div class="col-sm-3">
-              <a href="/sigein/gesman/datoGeneral.php" class="btn btn-primary form-control"><i class="bi bi-arrow-left-square"></i> Atrás</a>
-            </div>
-            <div class="col-sm-3">
-              <a href="/sigein/gesman/resumen.php" class="btn btn-primary form-control">Siguiente <i class="bi bi-arrow-right-square"></i></a>
+            <div class="col-6 btn-control mt-2">
+              <button type="button" class="btn btn-primary text-uppercase fw-200">Guardar <i class="bi bi-floppy"></i></button>
             </div>
         </div>
     </div>

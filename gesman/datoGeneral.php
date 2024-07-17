@@ -27,6 +27,21 @@
       color:#212529;
       font-weight:300; 
     }
+    @media(max-width:767px){
+      .form-label{
+        font-size: 13px;
+      }
+    }
+    @media(min-width:768px){
+      .mt--mod{
+        margin-top: 17px !important;
+      }
+    }
+    @media(min-width:92px){
+      .form-label{
+        font-size: 15px;
+      }
+    }
     .form-control{
       border-radius:.25rem;
     }
@@ -62,31 +77,39 @@
       <!--DATOS GENERALES-->
       <div class="row g-3">
         <div class="col-6 col-md-4 col-lg-4">
-          <label for="nroInforme" class="form-label">Nro. Informe</label>
+          <label for="nroInforme" class="form-label mb-0">Nro. Informe</label>
           <input type="text" class="form-control" id="nroInforme" value="INFORME GP-INF-1" disabled>
         </div>
         <div class="col-6 col-md-4 col-lg-4">
-          <label for="fechaInforme" class="form-label">Fecha</label>
+          <label for="fechaInforme" class="form-label mb-0">Fecha</label>
           <input type="date" class="form-control" id="fechaInforme">
         </div>
-        <div class="col-6 col-md-4 col-lg-4">
-          <label for="nroOrdenTrabajo" class="form-label">Orden de trabajo</label>
+        <div class="col-6 col-md-4 col-lg-4 mt-2 mt--mod">
+          <label for="nroOrdenTrabajo" class="form-label mb-0">Orden de trabajo</label>
           <input type="text" class="form-control" id="nroOrdenTrabajo" disabled>
         </div>
-        <div class="col-6 col-md-6 col-lg-4">
-          <label for="nombreCliente" class="form-label">Cliente</label>
+        <div class="col-6 col-md-6 col-lg-6 mt-2">
+          <label for="nombreCliente" class="form-label mb-0">Cliente</label>
           <input type="text" class="form-control" id="nombreCliente" disabled>
         </div>
-        <div class=" col-md-6 col-lg-4">
-          <label for="contacto" class="form-label">Contacto</label>
-          <input type="text" class="form-control" id="contacto">
+        <div class="custom-select-container col-md-6 col-lg-6 mt-2">
+          <label for="contactoId" class="form-label mb-0">Contacto</label>
+          <div class="custom-select-wrapper">
+            <input type="text" id="contactoInput" class="custom-select-input" placeholder="Seleccionar contacto" />
+            <span class="custom-select-arrow"><i class="bi bi-chevron-down"></i></span>
+            <div id="contactoList" class="custom-select-list">
+              <div class="custom-select-item" data-value="contacto1">Contacto1</div>
+              <div class="custom-select-item" data-value="contacto2">Contacto2</div>
+              <div class="custom-select-item" data-value="contacto3">Contacto3</div>
+            </div>
+          </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <label for="ubicacion" class="form-label">Lugar</label>
+        <div class="col-md-6 col-lg-6 mt-2">
+          <label for="ubicacion" class="form-label mb-0">Lugar</label>
           <input type="text" class="form-control" id="ubicacion">
         </div>      
-        <div class="custom-select-container col-md-6 col-lg-12">
-          <label for="supervisorId" class="form-label">Supervisor</label>
+        <div class="custom-select-container col-md-6 col-lg-6 mt-2">
+          <label for="supervisorId" class="form-label mb-0">Supervisor</label>
           <div class="custom-select-wrapper">
             <input type="text" id="supervisorInput" class="custom-select-input" placeholder="Seleccionar supervisor" />
             <span class="custom-select-arrow"><i class="bi bi-chevron-down"></i></span>
@@ -97,8 +120,8 @@
             </div>
           </div>
         </div>
-        <div class="col-6 btn-control">
-          <a href="/sigein/gesman/datoEquipo.php" class="btn btn-primary form-control">Siguiente <i class="bi bi-arrow-right-square"></i></a>
+        <div class="col-6 btn-control mt-2">
+          <button type="button" class="btn btn-primary text-uppercase fw-200">Guardar <i class="bi bi-floppy"></i></button>
         </div>
       </div>
     </div>

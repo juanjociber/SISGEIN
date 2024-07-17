@@ -28,15 +28,30 @@ document.addEventListener('DOMContentLoaded', function() {
         // Filtrar elementos de la lista al escribir en el input
         selectInput.addEventListener('input', function() {
             const filter = selectInput.value.toLowerCase();
+            let textoEncontrado = false;
             Array.from(selectItems).forEach(item => {
                 const text = item.textContent.toLowerCase();
-                item.style.display = text.includes(filter) ? '' : 'none';
+                if (text.includes(filter)) {
+                    item.style.display = '';
+                    textoEncontrado = true;
+                } else {
+                    item.style.display = 'none';
+                }
             });
             selectList.style.display = 'block';
+
+            // Limpiar el input si no hay coincidencias
+            if (!textoEncontrado) {
+                selectInput.value = '';
+                 // Mostrar todas las opciones de la lista
+                 Array.from(selectItems).forEach(item => {
+                    item.style.display = '';
+                });
+            }
         });
     }
 
-    // Inicializar ambos selectores personalizados
+    // Inicializar el selector personalizado
     initCustomSelect('modeloInput', 'modeloList');
     initCustomSelect('marcaInput', 'marcaList');
 });

@@ -24,6 +24,34 @@
         font-weight: 200;
         text-transform: uppercase;
       }
+      .form-label{
+        color:#212529;
+        font-weight:300; 
+      }
+      @media(max-width:767px){
+        .form-label{
+          font-size: 13px;
+        }
+      }
+      @media(min-width:768px){
+        .mt--mod{
+          margin-top: 17px !important;
+        }
+      }
+      @media(min-width:92px){
+        .form-label{
+          font-size: 15px;
+        }
+      }
+      .form-control{
+        border-radius:.25rem;
+      }
+      .btn-control{
+        padding:.375rem .75rem;
+      }
+      .fixed-size-textarea {
+        resize: none; /* Evita que el textarea se pueda redimensionar */
+      }
     </style>
   </head>
   <body>
@@ -32,14 +60,14 @@
             <div class="col-12 fw-bold d-flex justify-content-between">
                 <p class="m-0 p-0">CLIENTE</p>
                 <input type="text" class="d-none" id="txtIdOt" value="" readonly/>
-                <p class="m-0 p-0 text-center text-secondary">INFORME GP-INF-1</p>
+                <p class="m-0 p-0 text-center text-secondary">GP-INF-1</p>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
                 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                     <ol class="breadcrumb"> 
-                        <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/datoGeneral.php" class="text-decoration-none">DATOS GENERALES</a></li>
+                        <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/datoGeneral.php" class="text-decoration-none">INFORME</a></li>
                         <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/datoEquipo.php" class="text-decoration-none">EQUIPO</a></li>
                         <li class="breadcrumb-item active fw-bold" aria-current="page">RESUMEN</li>
                         <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/actividad.php" class="text-decoration-none">ACTIVIDADES</a></li>
@@ -50,35 +78,32 @@
 
         <!--RESUMEN-->
         <div class="row g-3">
-            <div class="col-md-12">
-                <label for="antecedentesId" class="form-label">Antecedentes</label>
-                <textarea name="antecedentes" class="form-control" id="antecedentesId"></textarea>
+            <div class="col-md-12 mt-2">
+                <label for="antecedentesId" class="form-label mb-0">Antecedentes</label>
+                <textarea name="antecedentes" class="form-control fixed-size-textarea" rows="4" id="antecedentesId"></textarea>
             </div>
-            <div class="col-md-12">
-                <label for="actividadId" class="form-label">Actividad</label>
+            <div class="col-md-12 mt-2">
+                <label for="actividadId" class="form-label mb-0">Actividad</label>
                 <input type="text" class="form-control" id="actividadId">
             </div>
-            <div class="col-md-12 col-lg-6 col-xl-4">
-                <label for="analisisId" class="form-label">Análisis | Diagnóstico</label>
-                <textarea name="analisis" class="form-control" id="analisisId"></textarea>
+            <div class="col-md-12 col-lg-6 col-xl-4 mt-2">
+                <label for="analisisId" class="form-label mb-0">Análisis | Diagnóstico</label>
+                <textarea name="analisis" class="form-control fixed-size-textarea" rows="4" id="analisisId"></textarea>
             </div>
-            <div class="col-md-12 col-lg-6 col-xl-4">
-                <label for="conclusionesId" class="form-label">Conclusiones</label>
-                <textarea name="conlcusiones" class="form-control" id="conclusionesId"></textarea>
+            <div class="col-md-12 col-lg-6 col-xl-4 mt-2">
+                <label for="conclusionesId" class="form-label mb-0">Conclusiones</label>
+                <textarea name="conlcusiones" class="form-control fixed-size-textarea" rows="4" id="conclusionesId"></textarea>
             </div>
-            <div class="col-md-12 col-xl-4">
-                <label for="recomendacionesId" class="form-label">Recomendaciones</label>
-                <textarea name="recomendaciones" class="form-control" id="recomendacionesId"></textarea>
+            <div class="col-md-12 col-xl-4 mt-2">
+                <label for="recomendacionesId" class="form-label mb-0">Recomendaciones</label>
+                <textarea name="recomendaciones" class="form-control fixed-size-textarea" rows="4" id="recomendacionesId"></textarea>
             </div>
-            <div class="col-md-12">
-                <label for="estadoId" class="form-label">Estado</label>
+            <div class="col-md-12 mt-2">
+                <label for="estadoId" class="form-label mb-0">Estado</label>
                 <input type="text" class="form-control" id="estadoId" disabled>
             </div>
-            <div class="col-sm-3">
-              <a href="/sigein/gesman/datoEquipo.php" class="btn btn-primary form-control"><i class="bi bi-arrow-left-square"></i> Atrás</a>
-            </div>
-            <div class="col-sm-3">
-              <a href="/sigein/gesman/actividad.php" class="btn btn-primary form-control">Siguiente <i class="bi bi-arrow-right-square"></i></a>
+            <div class="col-6 btn-control mt-2">
+              <button type="button" class="btn btn-primary text-uppercase fw-200">Guardar <i class="bi bi-floppy"></i></button>
             </div>
         </div>
     </div>
