@@ -60,7 +60,7 @@
 
       <div class="row mb-1 border-bottom">
         <div class="col-6 col-lg-6 col-xl-3">
-          <label for="txtOrden" class="form-label mb-0">Órden</label>
+          <label for="txtOrden" class="form-label mb-0">Informe</label>
           <input type="text" class="form-control" id="txtOrden">
         </div>
         <div class="col-6 custom-select-container col-lg-6 col-xl-3">
@@ -91,7 +91,7 @@
 
       <a class="link-colecciones" href="/sigein/gesman/vistaPreliminar.php" style="text-decoration:none;color: #212529;font-weight: 300;">
         <div class="row">
-          <div class="col-8"><span class="fw-bold">00001</span> <span style="font-size: 12px; font-style: italic;">2024-07-17</span></div>
+          <div class="col-8"><span class="fw-bold">00003</span> <span style="font-size: 12px; font-style: italic;">2024-07-17</span></div>
           <div class="col-4 text-end"><span class="badge bg-primary">Proceso</span></div>
           <div class="col-12">21FLOTA PREVENTIVA DRENADO DE SISTEMA NEUMATICO ARTICULADO - L,M,V</div>
         </div>
@@ -99,10 +99,18 @@
       <hr>
       <a class="link-colecciones" href="/sigein/gesman/vistaPreliminar.php" style="text-decoration:none;color: #212529;font-weight: 300;">
           <div class="row">
-              <div class="col-8"><span class="fw-bold">00002</span> <span style="font-size: 12px; font-style: italic;">2024-07-17</span></div>
+              <div class="col-8"><span class="fw-bold">00002</span> <span style="font-size: 12px; font-style: italic;">2024-04-17</span></div>
               <div class="col-4 text-end"><span class="badge bg-secondary">Abierto</span></div>
               <div class="col-12">21FLOTA PREVENTIVA DRENADO DE SISTEMA NEUMATICO ARTICULADO - L,M,V</div>
           </div>
+      </a>
+      <hr>
+      <a class="link-colecciones" href="/sigein/gesman/vistaPreliminar.php" style="text-decoration:none;color: #212529;font-weight: 300;">
+        <div class="row">
+          <div class="col-8"><span class="fw-bold">00001</span> <span style="font-size: 12px; font-style: italic;">2024-01-02</span></div>
+          <div class="col-4 text-end"><span class="badge bg-success">Cerrado</span></div>
+          <div class="col-12">21064 CORRECTIVA REVISAR PALANCA DE LUCES</div>
+        </div>
       </a>
     </div>
 

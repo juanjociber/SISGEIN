@@ -151,6 +151,13 @@
       .item-actividad{
         position:relative;
       }
+      .imagenes-actividad{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap:5px;
+        margin-right: 1rem;
+        margin-left: 1rem;
+      }
 
     </style>
   </head>
@@ -190,144 +197,8 @@
         </div>
 
          <!-- INICIO ACCORDION   -->
-        <div class="accordion" id="accordionPanelsStayOpenExample">
-          
-          <!-- ITEM 1  -->
-          <div class="accordion-item">
-            <h2 class="accordion-header accordion-header--mod" id="panelsStayOpen-headingOne">
-              <!-- START LISTA -->
-              <div class="item-actividad">
-                <!-- START BUTTON COLLAPSED -->
-                <div class="accordion-button accordion-button--mod collapsed" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
-                  <div class="accordion-actividad col-8 text-uppercase">
-                  Mantenimiento preventivo, cambio de aceite lubricante de transmision.
-                  </div>
-                </div><!-- FIN BUTTON COLLAPSED -->
-                <div class="accordion-botones">
-                  <i class="bi bi-plus-lg icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                  <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                  <div id="cargar-archivo" style="display: none;">
-                      <input type="file" id="file-input" accept="image/*" />
-                  </div>
-                  <i class="bi bi-paperclip icono icono-cargar" data-toggle="tooltip" data-placement="top" title="Cargar imagen"></i>
-                  <i class="bi bi-trash3 icono"></i>
-                </div>
-              </div><!-- END LISTA -->
-            </h2>
-            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-              <!-- START BODY -->
-              <div class="accordion-body accordion-body--mod">
-                <div class="accordion-item">
-                  <h2 class="accordion-header accordion-header--mod" id="panelsStayOpen-headingTwo">
-                    <!-- START LISTA -->
-                    <div class="item-actividad">
-                      <!-- START BUTTON COLLAPSED -->
-                      <div class="accordion-button accordion-button--mod collapsed" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                        <div class="accordion-actividad col-8 text-uppercase">
-                          Subactividad1.1.
-                        </div>
-                      </div><!-- FIN BUTTON COLLAPSED -->
-                      <div class="accordion-botones">
-                        <i class="bi bi-plus-lg icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                        <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                        <i class="bi bi-paperclip icono icono-cargar"></i>
-                        <i class="bi bi-trash3 icono"></i>
-                      </div>
-                    </div><!-- END LISTA -->                    
-                  </h2>
-                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
-                    <div class="accordion-body accordion-body--mod">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                          <!-- START LISTA -->
-                          <div class="item-actividad">
-                            <!-- START BUTTON COLLAPSED -->
-                            <div class="accordion-button accordion-button--mod collapsed" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                              <div class="accordion-actividad col-8 text-uppercase">
-                                Subactividad1.2
-                              </div>
-                            </div><!-- FIN BUTTON COLLAPSED -->
-                            <div class="accordion-botones">
-                              <i class="bi bi-plus-lg icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                              <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                              <i class="bi bi-paperclip icono icono-cargar"></i>
-                              <i class="bi bi-trash3 icono"></i>
-                            </div>
-                          </div><!-- END LISTA -->
-                        </h2>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div><!-- FINAL BODY -->
-            </div>
-          </div>
-
-          <!-- ITEM 2 -->
-          <div class="accordion-item mt-2">
-            <h2 class="accordion-header accordion-header--mod" id="lista2">
-              <div class="item-actividad">
-                <!-- START BUTTON COLLAPSED -->
-                <div class="accordion-button accordion-button--mod collapsed" data-bs-toggle="collapse" data-bs-target="#item2-collapse" aria-expanded="false" aria-controls="item2-collapse">
-                  <div class="accordion-actividad col-8 text-uppercase collapsed" data-bs-toggle="collapse" data-bs-target="#item2-collapse" aria-expanded="false" aria-controls="item2-collapse">
-                    Mantenimiento preventivo, cambio de aceite lubricante de transmision.
-                  </div>
-                </div><!-- FIN BUTTON COLLAPSED -->  
-                <div class="accordion-botones">
-                  <i class="bi bi-plus-lg icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                  <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                  <i class="bi bi-paperclip icono icono-cargar"></i>
-                  <i class="bi bi-trash3 icono"></i>
-                </div>
-              </div>
-            </h2>
-            <div id="item2-collapse" class="accordion-collapse collapse show" aria-labelledby="lista2">
-              <!-- START BODY -->
-              <div class="accordion-body accordion-body--mod">
-                <div class="accordion-item mt-2">
-                  <h2 class="accordion-header accordion-header--mod" id="lista3">
-                    <div class="item-actividad">
-                      <!-- START BUTTON COLLAPSED -->
-                      <div class="accordion-button accordion-button--mod collapsed" data-bs-toggle="collapse" data-bs-target="#item3-collapse" aria-expanded="false" aria-controls="#item3-collapse">
-                        <div class="accordion-actividad col-8 text-uppercase collapsed" data-bs-toggle="collapse" data-bs-target="#item3-collapse" aria-expanded="false" aria-controls="#item3-collapse">
-                        Subactividad2.1
-                        </div>
-                      </div><!-- FIN BUTTON COLLAPSED -->
-                        <div class="accordion-botones">
-                          <i class="bi bi-plus-lg icono" data-bs-toggle="modal" data-bs-target="#actividadModal" ></i>
-                          <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                          <i class="bi bi-paperclip icono icono-cargar"></i>
-                          <i class="bi bi-trash3 icono"></i>
-                        </div>
-                      </div>
-                  </h2>
-                  <div id="item3-collapse" class="accordion-collapse collapse show" aria-labelledby="lista3">
-                    <div class="accordion-body accordion-body--mod">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="lista3">
-                          <div class="item-actividad">
-                            <!-- START BUTTON COLLAPSED -->
-                            <div class="accordion-button accordion-button--mod collapsed" data-bs-toggle="collapse" data-bs-target="#item3-collapse" aria-expanded="false" aria-controls="item3-collapse">
-                              <div class="accordion-actividad collapsed" data-bs-toggle="collapse" data-bs-target="#item3-collapse" aria-expanded="false" aria-controls="item3-collapse">
-                                Subactividad2.2
-                              </div>
-                            </div><!-- FIN BUTTON COLLAPSED -->
-                            <div class="accordion-botones">
-                              <i class="bi bi-plus-lg icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                              <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                              <i class="bi bi-paperclip icono icono-cargar"></i>
-                              <i class="bi bi-trash3 icono"></i>
-                            </div>
-                          </div>
-                        </h2>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div><!-- FINAL BODY -->
-            </div>
-          </div>
-          
+        <div class="accordion" id="contenedor-accordion">
+        
         </div> <!-- FIN ACCORDION -->
           
         <div class="col-sm-3">
@@ -347,8 +218,8 @@
             <!--ACTIVIDAD-->
             <div class="row g-3">
               <div class="col-12 mt-2">
-                <label for="actividadesId" class="form-label mb-0">Nombre de actividad</label>
-                <input type="text" class="form-control" id="actividadesId">
+                <label for="nombreActId" class="form-label mb-0">Nombre de actividad</label>
+                <input type="text" name="actividad" class="form-control" id="nombreActId">
               </div>
               <div class="col-md-12 mt-2">
                 <label for="diagnosticoId" class="form-label mb-0">Diagnóstico</label>
@@ -365,7 +236,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-success">Guardar</button>
+              <button type="button" class="btn btn-success" id="guardarActividad">Guardar</button>
             </div>
           </div>
         </div>
@@ -373,7 +244,120 @@
     </div><!--FIN CONTAINER-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="../js/actividad.js"></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const rootAccordion = document.getElementById('contenedor-accordion');
+        const levels = 8; // Define cuántos niveles de subactividades deseas
+        crearAccordion(rootAccordion, 'Mantenimiento preventivo, cambio de aceite lubricante de transmision.', levels, 1);
+
+        document.getElementById('guardarActividad').addEventListener('click', function() {
+          const nombreActividad = document.querySelector('#nombreActId').value;
+          console.log('Nuevo nombre: ', nombreActividad );
+          crearAccordion(rootAccordion, `${nombreActividad}`, levels, 1);
+          document.querySelector('#nombreActId').value = '';
+          const modal = bootstrap.Modal.getInstance(document.getElementById('actividadModal'));
+          modal.hide();
+          
+        });
+      });
+      /*cuando le doy click al boton guardar los campos de modal se deben limpiar y cerrar el modal, te paso todo mi codigo y estoy trabajando con bootstrap*/ 
+
+      const crearAccordion = (parentElement, actividad, levels, level) =>{
+        const idUnico = Math.random().toString(36).substring(2, 7); // ID único para evitar colisiones
+
+        const accordionItem = document.createElement('div');
+        accordionItem.className = 'accordion-item';
+
+        const header = document.createElement('h2');
+        header.className = 'accordion-header accordion-header--mod';
+        header.id = `heading-${idUnico}`;
+
+        const button = document.createElement('div');
+        button.className = 'accordion-button accordion-button--mod collapsed';
+        button.setAttribute('data-bs-toggle', 'collapse');
+        button.setAttribute('data-bs-target', `#collapse-${idUnico}`);
+        button.setAttribute('aria-expanded', 'false');
+        button.setAttribute('aria-controls', `collapse-${idUnico}`);
+        
+        const actividadDiv = document.createElement('div');
+        actividadDiv.className = 'accordion-actividad col-8 text-uppercase';
+        actividadDiv.textContent = actividad;
+
+        button.appendChild(actividadDiv);
+
+        const botonesDiv = document.createElement('div');
+        botonesDiv.className = 'accordion-botones';
+        botonesDiv.innerHTML = `
+          <i class="bi bi-plus-lg icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
+          <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
+          <div id="cargar-archivo${idUnico}" style="display: none;">
+            <input type="file" id="file-input${idUnico}" accept="image/*" />
+          </div>
+          <i class="bi bi-paperclip icono icono-cargar" data-id="file-input${idUnico}"></i>
+          <i class="bi bi-trash3 icono"></i>
+        `;
+
+        const itemActividad = document.createElement('div');
+        itemActividad.className = 'item-actividad';
+        itemActividad.appendChild(button);
+        itemActividad.appendChild(botonesDiv);
+
+        header.appendChild(itemActividad);
+        accordionItem.appendChild(header);
+
+        const collapseDiv = document.createElement('div');
+        collapseDiv.id = `collapse-${idUnico}`;
+        collapseDiv.className = 'accordion-collapse collapse';
+        collapseDiv.setAttribute('aria-labelledby', `heading-${idUnico}`);
+
+        const bodyDiv = document.createElement('div');
+        bodyDiv.className = 'accordion-body accordion-body--mod';
+
+        bodyDiv.innerHTML = '<div class="imagenes-actividad"></div></div>'; // Contenedor para las imágenes
+
+
+        if (level < levels) {
+            crearAccordion(bodyDiv, `Subactividad ${level + 1}`, levels, level + 1);
+        }
+        collapseDiv.appendChild(bodyDiv);
+        accordionItem.appendChild(collapseDiv);
+        parentElement.appendChild(accordionItem);
+
+        // Verificar si el input existe antes de agregar el event listener
+          const fileInput = document.getElementById(`file-input${idUnico}`);
+          if (fileInput) {
+              fileInput.addEventListener('change', function(e) {
+                  const fileList = e.target.files;
+                  console.log(fileList)
+                  const imageContainer = bodyDiv.querySelector('.imagenes-actividad');
+                  for (let i = 0; i < fileList.length; i++) {
+                    const file = fileList[i];
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                      const img = document.createElement('img');
+                      img.src = event.target.result;
+                      img.className = 'img-thumbnail';
+                      img.style.margin = '10px';
+                      imageContainer.appendChild(img);
+                    };
+                    reader.readAsDataURL(file);
+                  }
+              });
+          }
+      }
+  
+      document.addEventListener('click', (e) => {
+      if(e.target.classList.contains('icono-cargar')) {
+        const id = e.target.getAttribute('data-id');
+        const fileInput = document.getElementById(id);
+        if(fileInput){
+          fileInput.click();
+          console.log(fileInput);
+        }
+      } 
+      });
+    </script>
   
   </body>
 </html>

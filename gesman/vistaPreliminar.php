@@ -53,6 +53,22 @@
         display:none;
       }
     }
+    .color-contenido{
+      color: #212529;
+    }
+    .color-titulo{
+      color: #747272;
+    }
+    .textura-contenido{
+      font-weight:300;
+      font-size: 16px;
+    }
+    .vineta::before {
+      content: '\2713'; /* Unicode para el check mark */
+      font-size: 13px;
+      color: green; /* Cambia el color según prefieras */
+      margin-right: 8px;
+    }
     </style>
   <body>
 
@@ -61,7 +77,7 @@
         <div class="row mb-3 mt-3">
           <div class="col-12 btn-group" role="group" aria-label="Basic example">
             <a href="/sigein/gesman/index.php" class="col-4">
-              <button type="button" class="btn btn-outline-primary col-12 fw-bold d-flex flex-column align-items-center" style="border-radius:0"><i class="bi bi-list-task"></i><span class="text-button"> Ordenes</span></button>
+              <button type="button" class="btn btn-outline-primary col-12 fw-bold d-flex flex-column align-items-center" style="border-radius:0"><i class="bi bi-list-task"></i><span class="text-button"> Informes</span></button>
             </a>
             <a href="/sigein/gesman/datoGeneral.php" class="col-4">
               <button type="button" class="btn btn-outline-primary col-12 fw-bold d-flex flex-column align-items-center" style="border-radius:0; border-left:0"><i class="bi bi-pencil-square"></i><span class="text-button"> Editar</span></button>
@@ -74,7 +90,7 @@
 
         <div class="row border-bottom mb-2 fs-5">
           <div class="col-12 fw-bold d-flex justify-content-between">
-            <p class="m-0 p-0">CLIENTE</p>
+            <p class="m-0 p-0 text-secondary">CLIENTE</p>
             <input type="text" class="d-none" id="txtId" value="">
             <p class="m-0 p-0 text-center text-secondary">GP-INF-1</p>
           </div>
@@ -82,94 +98,130 @@
 
         <div class="row p-1 mb-0">
           <div class="col-12 mb-0 border-bottom bg-light">
-            <p class="m-0 fw-bold">INFORME</p>
+            <p class="mt-2 mb-2 fw-bold color-titulo">INFORMACIÓN GENERAL</p>
           </div>
         </div>
 
         <div class="row p-1 mb-2">
-          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+          <div class="col-6 col-sm-4 col-lg-4 mb-1">
             <p class="m-0 text-secondary" style="font-size: 13px;">Nro. Informe</p> 
-            <p class="m-0 p-0">001</p>
+            <p class="m-0 p-0 textura-contenido">001</p>
           </div>
-          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+          <div class="col-6 col-sm-4 col-lg-4 mb-1">
             <p class="m-0 text-secondary" style="font-size: 13px;">Nombre Informe</p> 
-            <p class="m-0 p-0">GP-INF-1</p>
+            <p class="m-0 p-0 textura-contenido">GP-INF-1</p>
           </div>
-          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+          <div class="col-6 col-sm-4 col-lg-4 mb-1">
             <p class="m-0 text-secondary" style="font-size: 13px;">Fecha</p> 
-            <p class="m-0 p-0">17/07/2024</p>
+            <p class="m-0 p-0 textura-contenido">17/07/2024</p>
           </div>
-          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+          <div class="col-6 col-sm-4 col-lg-4 mb-1">
             <p class="m-0 text-secondary" style="font-size: 13px;">OT N°</p> 
-            <p class="m-0 p-0">0101</p>
+            <p class="m-0 p-0 textura-contenido">0101</p>
           </div>
-          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+          <div class="col-6 col-sm-4 col-lg-4 mb-1">
             <p class="m-0 text-secondary" style="font-size: 13px;">Nombre de cliente:</p> 
-            <p class="m-0 p-0">PLANETA DIGITAL</p>
+            <p class="m-0 p-0 textura-contenido">PLANETA DIGITAL</p>
           </div>
-          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+          <div class="col-6 col-sm-4 col-lg-4 mb-1">
             <p class="m-0 text-secondary" style="font-size: 13px;">Contacto</p> 
-            <p class="m-0 p-0">TECH GENIUS STORE</p>
+            <p class="m-0 p-0 textura-contenido">TECH GENIUS STORE</p>
           </div>
-          <div class="col-12 col-sm-12 col-lg-6 mb-1">
+          <div class="col-6 col-sm-4 col-lg-4 mb-1">
             <p class="m-0 text-secondary" style="font-size: 13px;">Lugar</p> 
-            <p class="m-0 p-0">AV. UNIVERSITARIA 5050</p>
+            <p class="m-0 p-0 textura-contenido">AV. UNIVERSITARIA 5050</p>
           </div>
-          <div class="col-6 col-sm-12 col-lg-6 mb-1">
+          <div class="col-6 col-sm-8 col-lg-4 mb-1">
             <p class="m-0 text-secondary" style="font-size: 13px;">Supervisor</p> 
-            <p class="m-0 p-0">INOCENTE TRANQUILO, BUENANCIO</p>
+            <p class="m-0 p-0 textura-contenido">INOCENTE TRANQUILO, BUENANCIO</p>
           </div>
-          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+
+          <div class="col-12 mb-0 border-bottom bg-light">
+            <p class="mt-2 mb-2 fw-bold color-titulo">INFORMACIÓN DEL EQUIPO</p>
+          </div>
+
+          <div class="col-6 col-sm-4 col-lg-4 mb-1">
             <p class="m-0 text-secondary" style="font-size: 13px;">Nombre Equipo</p>
-            <p class="m-0 p-0">WORKBOT</p>              
+            <p class="m-0 p-0 textura-contenido">WORKBOT</p>              
           </div>
-          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+          <div class="col-6 col-sm-4 col-lg-4 mb-1">
             <p class="m-0 text-secondary" style="font-size: 13px;">Modelo Equipo</p> 
-            <p class="m-0 p-0">MODELO CYBER</p>
+            <p class="m-0 p-0 textura-contenido">MODELO CYBER</p>
           </div>
-          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+          <div class="col-6 col-sm-4 col-lg-4 mb-1">
             <p class="m-0 text-secondary" style="font-size: 13px;">Serie Equipo</p> 
-            <p class="m-0 p-0">S-50505050</p>
+            <p class="m-0 p-0 textura-contenido">S-50505050</p>
           </div>
-          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+          <div class="col-6 col-sm-4 col-lg-4 mb-1">
             <p class="m-0 text-secondary" style="font-size: 13px;">Marca Equipo</p> 
-            <p class="m-0 p-0">NIPONES</p>
+            <p class="m-0 p-0 textura-contenido">NIPONES</p>
           </div>
-          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+          <div class="col-6 col-sm-4 col-lg-4 mb-1">
             <p class="m-0 text-secondary" style="font-size: 13px;">Kilometraje</p> 
-            <p class="m-0 p-0">1234.00</p>
+            <p class="m-0 p-0 textura-contenido">1234.00</p>
           </div>
-          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+          <div class="col-6 col-sm-4 col-lg-4 mb-1">
             <p class="m-0 text-secondary" style="font-size: 13px;">Horas Motor</p> 
-            <p class="m-0 p-0">23:45:00</p>
+            <p class="m-0 p-0 textura-contenido">23:45:00</p>
           </div>
           <div class="col-12 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 13px;">Descripción</p> 
-            <p class="m-0 p-0" style="text-align: justify;">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO. PRAESENT AT DUI SODALES, SAGITTIS MASSA VEL, ACCUMSAN DUI. CRAS UT EST PORTA, DIGNISSIM NUNC NEC, COMMODO MI. DONEC CONGUE JUSTO SED MAGNA IMPERDIET, PLACERAT PORTTITOR ARCU PLACERAT. VIVAMUS SIT AMET LOREM UT EROS TEMPOR CONSECTETUR. CURABITUR PRETIUM CONSECTETUR SAPIEN EGET TINCIDUNT. NULLAM A VOLUTPAT RISUS. IN UT AUGUE HENDRERIT AUGUE CONGUE EFFICITUR. CRAS COMMODO DAPIBUS ALIQUAM.</p>
+            <p class="m-0 text-secondary" style="font-size: 13px;">Descripción</p>
+            <div class="d-flex">
+              <span class="vineta"></span>
+              <p class="m-0 p-0 textura-contenido" id="description" style="text-align: justify;"> LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO.</p>
+            </div>
+            <div class="d-flex">
+              <span class="vineta"></span>
+              <p class="m-0 p-0 textura-contenido" id="description" style="text-align: justify;"> LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO.</p>
+            </div> 
+          </div>
+
+          <div class="col-12 mb-0 border-bottom bg-light">
+            <p class="mt-2 mb-2 fw-bold color-titulo">ACTIVIDADES REALIZADAS</p>
+          </div>
+
+          <div class="col-12 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 13px;">Antecedentes</p>
+            <div class="d-flex">
+              <span class="vineta"></span> 
+              <p class="m-0 p-0 textura-contenido" style="text-align: justify;">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO.</p>
+            </div>
           </div>
           <div class="col-12 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 13px;">Antecedentes</p> 
-            <p class="m-0 p-0 style="text-align: justify;">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO. PRAESENT AT DUI SODALES, SAGITTIS MASSA VEL, ACCUMSAN DUI. CRAS UT EST PORTA, DIGNISSIM NUNC NEC, COMMODO MI. DONEC CONGUE JUSTO SED MAGNA IMPERDIET, PLACERAT PORTTITOR ARCU PLACERAT. VIVAMUS SIT AMET LOREM UT EROS TEMPOR CONSECTETUR. CURABITUR PRETIUM CONSECTETUR SAPIEN EGET TINCIDUNT. NULLAM A VOLUTPAT RISUS. IN UT AUGUE HENDRERIT AUGUE CONGUE EFFICITUR. CRAS COMMODO DAPIBUS ALIQUAM.</p>
+            <p class="m-0 text-secondary" style="font-size: 13px;">Actividad</p>
+            <div class="d-flex">
+              <span class="vineta"></span> 
+              <p class="m-0 p-0 textura-contenido" style="text-align: justify;">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO.</p>
+            </div>
           </div>
           <div class="col-12 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 13px;">Actividad</p> 
-            <p class="m-0 p-0 style="text-align: justify;">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO. PRAESENT AT DUI SODALES, SAGITTIS MASSA VEL, ACCUMSAN DUI. CRAS UT EST PORTA, DIGNISSIM NUNC NEC, COMMODO MI. DONEC CONGUE JUSTO SED MAGNA IMPERDIET, PLACERAT PORTTITOR ARCU PLACERAT. VIVAMUS SIT AMET LOREM UT EROS TEMPOR CONSECTETUR. CURABITUR PRETIUM CONSECTETUR SAPIEN EGET TINCIDUNT. NULLAM A VOLUTPAT RISUS. IN UT AUGUE HENDRERIT AUGUE CONGUE EFFICITUR. CRAS COMMODO DAPIBUS ALIQUAM.</p>
+            <p class="m-0 text-secondary" style="font-size: 13px;">Análisis</p>
+            <div class="d-flex">
+              <span class="vineta"></span> 
+              <p class="m-0 p-0 textura-contenido" style="text-align: justify;">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO.</p>
+            </div>
+            <div class="d-flex">
+              <span class="vineta"></span> 
+              <p class="m-0 p-0 textura-contenido" style="text-align: justify;">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO.</p>
+            </div>
           </div>
           <div class="col-12 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 13px;">Análisis</p> 
-            <p class="m-0 p-0 style="text-align: justify;">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO. PRAESENT AT DUI SODALES, SAGITTIS MASSA VEL, ACCUMSAN DUI. CRAS UT EST PORTA, DIGNISSIM NUNC NEC, COMMODO MI. DONEC CONGUE JUSTO SED MAGNA IMPERDIET, PLACERAT PORTTITOR ARCU PLACERAT. VIVAMUS SIT AMET LOREM UT EROS TEMPOR CONSECTETUR. CURABITUR PRETIUM CONSECTETUR SAPIEN EGET TINCIDUNT. NULLAM A VOLUTPAT RISUS. IN UT AUGUE HENDRERIT AUGUE CONGUE EFFICITUR. CRAS COMMODO DAPIBUS ALIQUAM.</p>
+            <p class="m-0 text-secondary" style="font-size: 13px;">Conclusiones</p>
+            <div class="d-flex">
+              <span class="vineta"></span> 
+              <p class="m-0 p-0 textura-contenido" style="text-align: justify;">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO.</p>
+            </div>
           </div>
           <div class="col-12 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 13px;">Conclusiones</p> 
-            <p class="m-0 p-0 style="text-align: justify;">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO. PRAESENT AT DUI SODALES, SAGITTIS MASSA VEL, ACCUMSAN DUI. CRAS UT EST PORTA, DIGNISSIM NUNC NEC, COMMODO MI. DONEC CONGUE JUSTO SED MAGNA IMPERDIET, PLACERAT PORTTITOR ARCU PLACERAT. VIVAMUS SIT AMET LOREM UT EROS TEMPOR CONSECTETUR. CURABITUR PRETIUM CONSECTETUR SAPIEN EGET TINCIDUNT. NULLAM A VOLUTPAT RISUS. IN UT AUGUE HENDRERIT AUGUE CONGUE EFFICITUR. CRAS COMMODO DAPIBUS ALIQUAM.</p>
-          </div>
-          <div class="col-12 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 13px;">Recomendaciones</p> 
-            <p class="m-0 p-0 style="text-align: justify;">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO. PRAESENT AT DUI SODALES, SAGITTIS MASSA VEL, ACCUMSAN DUI. CRAS UT EST PORTA, DIGNISSIM NUNC NEC, COMMODO MI. DONEC CONGUE JUSTO SED MAGNA IMPERDIET, PLACERAT PORTTITOR ARCU PLACERAT. VIVAMUS SIT AMET LOREM UT EROS TEMPOR CONSECTETUR. CURABITUR PRETIUM CONSECTETUR SAPIEN EGET TINCIDUNT. NULLAM A VOLUTPAT RISUS. IN UT AUGUE HENDRERIT AUGUE CONGUE EFFICITUR. CRAS COMMODO DAPIBUS ALIQUAM.</p>
+            <p class="m-0 text-secondary" style="font-size: 13px;">Recomendaciones</p>
+            <div class="d-flex">
+              <span class="vineta"></span> 
+              <p class="m-0 p-0 textura-contenido" style="text-align: justify;">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO.</p>
+            </div>
           </div>
           <div class="col-12 col-lg-6 mb-1">
             <p class="m-0 text-secondary" style="font-size: 13px;">Estado</p> 
-            <p class="m-0 p-0">UNKNOWN</p>
+            <p class="m-0 p-0 textura-contenido">UNKNOWN</p>
           </div>            
         </div>
 
@@ -189,6 +241,32 @@
       </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="../js/vistaPreliminar.js"></script>
+    <!-- <script src="../js/vistaPreliminar.js"></script> -->
+     <script>
+      
+      // iniciando
+      // document.getElementById('description').value = '\u2022 ';
+
+      document.getElementById('description').value = '+';
+      
+      document.getElementById('description').addEventListener('input', function(event) {
+        console.log(event)
+          let textarea = event.target;
+          let value = textarea.value;
+          let lastChar = value.slice(-1);
+
+          if (lastChar === '.') {
+              // Salto de linea al detectar .
+              let lines = value.split('\n');
+              // Obteniendo la ultima liea
+              lines[lines.length - 1] = '\u2022 ' + lines[lines.length - 1];
+              // Une la nueva liena
+              textarea.value = lines.join('\n');
+              // agrega una nueva linea 
+              textarea.value += '\n\u2022 ';
+          }
+      });
+
+     </script>
   </body>
 </html>

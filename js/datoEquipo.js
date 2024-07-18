@@ -55,3 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initCustomSelect('modeloInput', 'modeloList');
     initCustomSelect('marcaInput', 'marcaList');
 });
+
+
+
