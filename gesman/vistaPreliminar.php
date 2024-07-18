@@ -82,118 +82,99 @@
 
         <div class="row p-1 mb-0">
           <div class="col-12 mb-0 border-bottom bg-light">
-            <p class="m-0 fw-bold">Órden</p>
+            <p class="m-0 fw-bold">INFORME</p>
           </div>
         </div>
 
         <div class="row p-1 mb-2">
-          <div class="col-6 col-sm-4 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Nro. Informe</p> 
+          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 13px;">Nro. Informe</p> 
             <p class="m-0 p-0">001</p>
           </div>
-          <div class="col-6 col-sm-4 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Nombre Informe</p> 
+          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 13px;">Nombre Informe</p> 
             <p class="m-0 p-0">GP-INF-1</p>
           </div>
-          <div class="col-6 col-sm-4 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Fecha</p> 
+          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 13px;">Fecha</p> 
             <p class="m-0 p-0">17/07/2024</p>
           </div>
-          <div class="col-6 col-sm-4 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">OT N°</p> 
+          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 13px;">OT N°</p> 
             <p class="m-0 p-0">0101</p>
           </div>
-          <div class="col-6 col-sm-4 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Nombre de cliente:</p> 
-            <p class="m-0 p-0">UNKNOWN</p>
+          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 13px;">Nombre de cliente:</p> 
+            <p class="m-0 p-0">PLANETA DIGITAL</p>
           </div>
-          <div class="col-6 col-sm-4 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Contacto</p> 
-            <p class="m-0 p-0">UNKNOWN</p>
+          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 13px;">Contacto</p> 
+            <p class="m-0 p-0">TECH GENIUS STORE</p>
           </div>
-          <div class="col-12 col-sm-12 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Lugar</p> 
-            <p class="m-0 p-0">UNKNOWN</p>
+          <div class="col-12 col-sm-12 col-lg-6 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 13px;">Lugar</p> 
+            <p class="m-0 p-0">AV. UNIVERSITARIA 5050</p>
           </div>
-          <div class="col-6 col-sm-12 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Supervisor</p> 
-            <p class="m-0 p-0">UNKNOWN</p>
+          <div class="col-6 col-sm-12 col-lg-6 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 13px;">Supervisor</p> 
+            <p class="m-0 p-0">INOCENTE TRANQUILO, BUENANCIO</p>
           </div>
-          <div class="col-6 col-sm-4 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Nombre Equipo</p>
-            <p class="m-0 p-0">UNKNOWN</p>              
+          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 13px;">Nombre Equipo</p>
+            <p class="m-0 p-0">WORKBOT</p>              
           </div>
-          <div class="col-6 col-sm-4 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Modelo Equipo</p> 
-            <p class="m-0 p-0">UNKNOWN</p>
+          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 13px;">Modelo Equipo</p> 
+            <p class="m-0 p-0">MODELO CYBER</p>
           </div>
-          <div class="col-6 col-sm-4 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Serie Equipo</p> 
-            <p class="m-0 p-0">UNKNOWN</p>
+          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 13px;">Serie Equipo</p> 
+            <p class="m-0 p-0">S-50505050</p>
           </div>
-          <div class="col-6 col-sm-4 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Marca Equipo</p> 
-            <p class="m-0 p-0">UNKNOWN</p>
+          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 13px;">Marca Equipo</p> 
+            <p class="m-0 p-0">NIPONES</p>
           </div>
-          <div class="col-6 col-sm-4 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Kilometraje</p> 
-            <p class="m-0 p-0">UNKNOWN</p>
+          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 13px;">Kilometraje</p> 
+            <p class="m-0 p-0">1234.00</p>
           </div>
-          <div class="col-6 col-sm-4 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Horas Motor</p> 
-            <p class="m-0 p-0">UNKNOWN</p>
-          </div>
-          <div class="col-12 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Descripción</p> 
-            <p class="m-0 p-0">UNKNOWN</p>
+          <div class="col-6 col-sm-4 col-lg-3 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 13px;">Horas Motor</p> 
+            <p class="m-0 p-0">23:45:00</p>
           </div>
           <div class="col-12 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Antecedentes</p> 
-            <p class="m-0 p-0">UNKNOWN</p>
+            <p class="m-0 text-secondary" style="font-size: 13px;">Descripción</p> 
+            <p class="m-0 p-0" style="text-align: justify;">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO. PRAESENT AT DUI SODALES, SAGITTIS MASSA VEL, ACCUMSAN DUI. CRAS UT EST PORTA, DIGNISSIM NUNC NEC, COMMODO MI. DONEC CONGUE JUSTO SED MAGNA IMPERDIET, PLACERAT PORTTITOR ARCU PLACERAT. VIVAMUS SIT AMET LOREM UT EROS TEMPOR CONSECTETUR. CURABITUR PRETIUM CONSECTETUR SAPIEN EGET TINCIDUNT. NULLAM A VOLUTPAT RISUS. IN UT AUGUE HENDRERIT AUGUE CONGUE EFFICITUR. CRAS COMMODO DAPIBUS ALIQUAM.</p>
           </div>
           <div class="col-12 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Actividad</p> 
-            <p class="m-0 p-0">UNKNOWN</p>
+            <p class="m-0 text-secondary" style="font-size: 13px;">Antecedentes</p> 
+            <p class="m-0 p-0 style="text-align: justify;">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO. PRAESENT AT DUI SODALES, SAGITTIS MASSA VEL, ACCUMSAN DUI. CRAS UT EST PORTA, DIGNISSIM NUNC NEC, COMMODO MI. DONEC CONGUE JUSTO SED MAGNA IMPERDIET, PLACERAT PORTTITOR ARCU PLACERAT. VIVAMUS SIT AMET LOREM UT EROS TEMPOR CONSECTETUR. CURABITUR PRETIUM CONSECTETUR SAPIEN EGET TINCIDUNT. NULLAM A VOLUTPAT RISUS. IN UT AUGUE HENDRERIT AUGUE CONGUE EFFICITUR. CRAS COMMODO DAPIBUS ALIQUAM.</p>
           </div>
           <div class="col-12 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Análisis</p> 
-            <p class="m-0 p-0">UNKNOWN</p>
+            <p class="m-0 text-secondary" style="font-size: 13px;">Actividad</p> 
+            <p class="m-0 p-0 style="text-align: justify;">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO. PRAESENT AT DUI SODALES, SAGITTIS MASSA VEL, ACCUMSAN DUI. CRAS UT EST PORTA, DIGNISSIM NUNC NEC, COMMODO MI. DONEC CONGUE JUSTO SED MAGNA IMPERDIET, PLACERAT PORTTITOR ARCU PLACERAT. VIVAMUS SIT AMET LOREM UT EROS TEMPOR CONSECTETUR. CURABITUR PRETIUM CONSECTETUR SAPIEN EGET TINCIDUNT. NULLAM A VOLUTPAT RISUS. IN UT AUGUE HENDRERIT AUGUE CONGUE EFFICITUR. CRAS COMMODO DAPIBUS ALIQUAM.</p>
           </div>
           <div class="col-12 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Conclusiones</p> 
-            <p class="m-0 p-0">UNKNOWN</p>
+            <p class="m-0 text-secondary" style="font-size: 13px;">Análisis</p> 
+            <p class="m-0 p-0 style="text-align: justify;">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO. PRAESENT AT DUI SODALES, SAGITTIS MASSA VEL, ACCUMSAN DUI. CRAS UT EST PORTA, DIGNISSIM NUNC NEC, COMMODO MI. DONEC CONGUE JUSTO SED MAGNA IMPERDIET, PLACERAT PORTTITOR ARCU PLACERAT. VIVAMUS SIT AMET LOREM UT EROS TEMPOR CONSECTETUR. CURABITUR PRETIUM CONSECTETUR SAPIEN EGET TINCIDUNT. NULLAM A VOLUTPAT RISUS. IN UT AUGUE HENDRERIT AUGUE CONGUE EFFICITUR. CRAS COMMODO DAPIBUS ALIQUAM.</p>
           </div>
           <div class="col-12 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Recomendaciones</p> 
-            <p class="m-0 p-0">UNKNOWN</p>
+            <p class="m-0 text-secondary" style="font-size: 13px;">Conclusiones</p> 
+            <p class="m-0 p-0 style="text-align: justify;">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO. PRAESENT AT DUI SODALES, SAGITTIS MASSA VEL, ACCUMSAN DUI. CRAS UT EST PORTA, DIGNISSIM NUNC NEC, COMMODO MI. DONEC CONGUE JUSTO SED MAGNA IMPERDIET, PLACERAT PORTTITOR ARCU PLACERAT. VIVAMUS SIT AMET LOREM UT EROS TEMPOR CONSECTETUR. CURABITUR PRETIUM CONSECTETUR SAPIEN EGET TINCIDUNT. NULLAM A VOLUTPAT RISUS. IN UT AUGUE HENDRERIT AUGUE CONGUE EFFICITUR. CRAS COMMODO DAPIBUS ALIQUAM.</p>
           </div>
           <div class="col-12 mb-1">
-            <p class="m-0 text-secondary" style="font-size: 12px;">Estado</p> 
+            <p class="m-0 text-secondary" style="font-size: 13px;">Recomendaciones</p> 
+            <p class="m-0 p-0 style="text-align: justify;">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. CRAS EU VELIT AT URNA TEMPUS MOLESTIE ET VEL MASSA. MAECENAS VITAE ERAT RHONCUS, SODALES PURUS SED, IACULIS JUSTO. PRAESENT AT DUI SODALES, SAGITTIS MASSA VEL, ACCUMSAN DUI. CRAS UT EST PORTA, DIGNISSIM NUNC NEC, COMMODO MI. DONEC CONGUE JUSTO SED MAGNA IMPERDIET, PLACERAT PORTTITOR ARCU PLACERAT. VIVAMUS SIT AMET LOREM UT EROS TEMPOR CONSECTETUR. CURABITUR PRETIUM CONSECTETUR SAPIEN EGET TINCIDUNT. NULLAM A VOLUTPAT RISUS. IN UT AUGUE HENDRERIT AUGUE CONGUE EFFICITUR. CRAS COMMODO DAPIBUS ALIQUAM.</p>
+          </div>
+          <div class="col-12 col-lg-6 mb-1">
+            <p class="m-0 text-secondary" style="font-size: 13px;">Estado</p> 
             <p class="m-0 p-0">UNKNOWN</p>
           </div>            
         </div>
 
-        <div class="row p-1 mb-0">
-          <div class="col-12 mb-0 border-bottom bg-light">
-              <p class="m-0 fw-bold">Tareos</p>
-          </div>
-        </div>
-        
-        <div class="row mb-2 p-1">  
-          <div class="col-12 mb-1 pb-1 border-bottom">
-            <div class="row">
-              <div class="col-12 d-flex justify-content-between">
-                <p class="m-0 p-0">INOCENTE CONFIADO, BUENANCIO</p>
-                <p class="m-0 p-0 fw-bold">0 Min</p>
-              </div>
-              <div class="col-12 d-flex justify-content-between">
-                <p class="m-0 p-0">2024-07-17 15:30:48</p>
-                <p class="m-0 p-0"></p>                                    
-              </div>
-            </div>
-          </div>        
-        </div>
-
+        <div class="col-12 mb-0 border-bottom bg-light"></div>
+       
         <div class="row p-1 mb-0">
           <div class="col-12 mb-0 border-bottom bg-light">
             <p class="m-0 fw-bold">Imágenes</p>
@@ -208,6 +189,6 @@
       </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="../js/datoGeneral.js"></script>
+    <script src="../js/vistaPreliminar.js"></script>
   </body>
 </html>
