@@ -49,7 +49,7 @@ const crearAccordion = (parentElement, actividad, levels, level) => {
       <i class="bi bi-plus-lg icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
       <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
       <div id="cargar-archivo${idUnico}" style="display: none;">
-        <input type="file" id="file-input${idUnico}" accept="image/*" />
+        <input type="file" id="file-input${idUnico}" accept="image/*" multiple />
       </div>
       <i class="bi bi-paperclip icono icono-cargar" data-id="file-input${idUnico}"></i>
       <i class="bi bi-trash3 icono"></i>
@@ -90,11 +90,30 @@ const crearAccordion = (parentElement, actividad, levels, level) => {
                 const file = fileList[i];
                 const reader = new FileReader();
                 reader.onload = function(event) {
+                    const imgDiv = document.createElement('div');
+                    imgDiv.className = 'image-wrapper';
+                    imgDiv.style.position = 'relative';
+                    imgDiv.style.display = 'inline-block';
+                    imgDiv.style.margin = '10px';
+
                     const img = document.createElement('img');
                     img.src = event.target.result;
                     img.className = 'img-thumbnail';
-                    img.style.margin = '10px';
-                    imageContainer.appendChild(img);
+                    
+                    const removeIcon = document.createElement('i');
+                    removeIcon.className = 'bi bi-x-circle-fill remove-icon';
+                    removeIcon.style.position = 'absolute';
+                    removeIcon.style.top = '5px';
+                    removeIcon.style.right = '5px';
+                    removeIcon.style.cursor = 'pointer';
+                    
+                    removeIcon.addEventListener('click', function() {
+                        imgDiv.remove();
+                    });
+
+                    imgDiv.appendChild(img);
+                    imgDiv.appendChild(removeIcon);
+                    imageContainer.appendChild(imgDiv);
                 };
                 reader.readAsDataURL(file);
             }

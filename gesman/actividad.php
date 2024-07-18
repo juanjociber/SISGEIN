@@ -335,14 +335,33 @@
                     const file = fileList[i];
                     const reader = new FileReader();
                     reader.onload = function(event) {
-                      const img = document.createElement('img');
-                      img.src = event.target.result;
-                      img.className = 'img-thumbnail';
-                      img.style.margin = '10px';
-                      imageContainer.appendChild(img);
+                        const imgDiv = document.createElement('div');
+                        imgDiv.className = 'image-wrapper';
+                        imgDiv.style.position = 'relative';
+                        imgDiv.style.display = 'inline-block';
+                        imgDiv.style.margin = '10px';
+
+                        const img = document.createElement('img');
+                        img.src = event.target.result;
+                        img.className = 'img-thumbnail';
+                        
+                        const removeIcon = document.createElement('i');
+                        removeIcon.className = 'bi bi-x-circle-fill remove-icon';
+                        removeIcon.style.position = 'absolute';
+                        removeIcon.style.top = '5px';
+                        removeIcon.style.right = '5px';
+                        removeIcon.style.cursor = 'pointer';
+                        
+                        removeIcon.addEventListener('click', function() {
+                            imgDiv.remove();
+                        });
+
+                        imgDiv.appendChild(img);
+                        imgDiv.appendChild(removeIcon);
+                        imageContainer.appendChild(imgDiv);
                     };
                     reader.readAsDataURL(file);
-                  }
+                }
               });
           }
       }
