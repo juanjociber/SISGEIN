@@ -206,225 +206,223 @@
         </div>
       </div>
 
-      <!--MODAL-->
-      <!-- <div class="modal fade" id="actividadModal" tabindex="-1" aria-labelledby="actividadModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
+      <!-- MODAL PARA AGREGAR ACTIVIDADES Y SUBACTIVIDADES -->
+      <div class="modal fade" id="actividadModal" tabindex="-1" aria-labelledby="actividadModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header bg-primary text-white">
-              <h1 class="modal-title fs-5 text-uppercase" id="actividadModalLabel">Actividad</h1>
+              <h5 class="modal-title fs-5 text-uppercase" id="actividadModalLabel">Actividad</h5>
               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-          <div class="modal-body">
+            <!-- START MODAL-BODY -->
+            <div class="modal-body">
+              
+              <div class="row">
+                <div class="campoactividad">
+                  <label for="nombreActId" class="form-label mb-0">Nombre de la Actividad</label>
+                  <input type="text" class="form-control" id="nombreActId" placeholder="Ingrese el nombre de la actividad.">
+                </div>
 
-          <div class="row g-3">
-              <div class="col-12 mt-2">
-                <label for="nombreActId" class="form-label mb-0">Nombre de actividad</label>
-                <input type="text" name="actividad" class="form-control" id="nombreActId">
+                <div id="camposubactividad" class="mt-3" style="display: none;">
+                  <label for="nombreSubActId" class="form-label">Nombre de la Subactividad</label>
+                  <input type="text" class="form-control" id="nombreSubActId" placeholder="Ingrese el nombre de la subactividad.">
+                </div>
+
+                <div id="campoDiagnostico" class="col-md-12 mt-2">
+                  <label for="diagnosticoId" class="form-label mb-0">Diagnóstico</label>
+                  <textarea name="diagnosticos" class="form-control fixed-size-textarea" row="4" id="diagnosticoId" placeholder="Ingrese el diagnositico."></textarea>
+                </div>
+
+                <div id="campoTrabajo" class="col-md-12 mt-2">
+                  <label for="trabajosId" class="form-label mb-0">Trabajos</label>
+                  <textarea name="trabajos" class="form-control fixed-size-textarea" row="4" id="trabajosId" placeholder="Ingrese los trabajos realizados."></textarea>
+                </div>
+
+                <div id="campoObservacion" class ="col-md-12 mt-2">
+                  <label for="observacionesId" class="form-label mb-0">Observación</label>
+                  <textarea name="observaciones" class="form-control fixed-size-textarea" row="4" id="observacionesId" placeholder="Ingrese las observaciones encontradas."></textarea>
+                </div>
+
+                <div id="contenedorGuardarActividad" class="col-6 mt-4">
+                  <button id="guardarActividad" class="btn btn-primary text-uppercase pt-2 pb-2 col-12" style="font-weight:200;">Guardar Act <i class="bi bi-floppy"></i></button>
+                </div>
+
+                <div id="contenedorGuardarSusbactividad" class="col-6 mt-4">
+                  <button id="guardarSubactividad" class="btn btn-secondary text-uppercase pt-2 pb-2 col-12" style="font-weight:200;">Guardar SubAc <i class="bi bi-floppy"></i></button>
+                </div>
               </div>
-              <div class="col-md-12 mt-2">
-                <label for="diagnosticoId" class="form-label mb-0">Diagnóstico</label>
-                <textarea name="diagnosticos" class="form-control fixed-size-textarea" row="4" id="diagnosticoId"></textarea>
-              </div>
-              <div class="col-md-12 mt-2">
-                <label for="trabajosId" class="form-label mb-0">Trabajos</label>
-                <textarea name="trabajos" class="form-control fixed-size-textarea" row="4" id="trabajosId"></textarea>
-              </div>
-              <div class="col-md-12 mt-2">
-                <label for="observacionesId" class="form-label mb-0">Observación</label>
-                <textarea name="observaciones" class="form-control fixed-size-textarea" row="4" id="observacionesId"></textarea>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-success" id="guardarActividad">Guardar</button>
-            </div>
+
+            </div><!-- END MODAL-BODY -->
           </div>
         </div>
-      </div> -->
-
-
-      <!-- Modal para agregar actividades y subactividades -->
-<div class="modal fade" id="actividadModal" tabindex="-1" aria-labelledby="actividadModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="actividadModalLabel">Agregar Actividad</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <div class="mb-3">
-          <label for="nombreActId" class="form-label">Nombre de la Actividad</label>
-          <input type="text" class="form-control" id="nombreActId" placeholder="Ingrese el nombre de la actividad">
-        </div>
-        <button id="guardarActividad" class="btn btn-primary">Guardar Actividad</button>
-        <div id="subactividadFields" class="mt-3" style="display: none;">
-          <label for="nombreSubActId" class="form-label">Nombre de la Subactividad</label>
-          <input type="text" class="form-control" id="nombreSubActId" placeholder="Ingrese el nombre de la subactividad">
-          <button id="guardarSubactividad" class="btn btn-secondary mt-2">Guardar Subactividad</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
 
     </div><!--FIN CONTAINER-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     
     <script>
+
+      let nombreActividad = null;
+
       document.addEventListener('DOMContentLoaded', () => {
-    const rootAccordion = document.getElementById('contenedor-accordion');
+        const rootAccordion = document.getElementById('contenedor-accordion');
 
-    // Manejar el guardado de la actividad
-    document.getElementById('guardarActividad').addEventListener('click', function() {
-        const nombreActividad = document.querySelector('#nombreActId').value;
-        if (nombreActividad.trim() === '') return; // No hacer nada si el campo está vacío
+        //ALGORIRMO PARA AGREGAR NUEVA ACTIVIDAD
+        document.querySelector('#agregarActividad').addEventListener('click',() =>{
+          document.querySelector('#contenedorGuardarSusbactividad').style.display='none';
+        });
 
-        // AGREGANDO NUEVA ACTIVIDAD
-        crearAccordion(rootAccordion, `${nombreActividad}`, 1);
+        // ALGORITMO PARA GUARDAR ACTIVIDAD
+        document.getElementById('guardarActividad').addEventListener('click', function() {
+          nombreActividad = document.querySelector('#nombreActId').value;
+          if (nombreActividad.trim() === '') return; // No hacer nada si el campo está vacío
 
-        document.querySelector('#nombreActId').value = '';
-        const modal = bootstrap.Modal.getInstance(document.getElementById('actividadModal'));
-        modal.hide();
-    });
+          // AGREGANDO NUEVA ACTIVIDAD
+          crearAccordion(rootAccordion, `${nombreActividad}`, 1);
 
-    // Manejar el guardado de la subactividad
-    document.getElementById('guardarSubactividad').addEventListener('click', function() {
-        const nombreSubactividad = document.querySelector('#nombreSubActId').value;
-        if (nombreSubactividad.trim() === '') return; // No hacer nada si el campo está vacío
+          document.querySelector('#nombreActId').value = '';
+          const modal = bootstrap.Modal.getInstance(document.getElementById('actividadModal'));
+          modal.hide();
+        });
 
-        const currentActivityId = document.querySelector('#actividadModal').getAttribute('data-current-activity-id');
-        const activityElement = document.querySelector(`#collapse-${currentActivityId} .accordion-body`);
+        // ALGORITMO PARA GUARDAR SUBACTIVIDAD
+        document.getElementById('guardarSubactividad').addEventListener('click', function() {
+          const nombreSubactividad = document.querySelector('#nombreSubActId').value;
+          if (nombreSubactividad.trim() === '') return; // No hacer nada si el campo está vacío
 
-        // AGREGAR SUBACTIVIDAD
-        crearAccordion(activityElement, `${nombreSubactividad}`, 1);
+          const currentActivityId = document.querySelector('#actividadModal').getAttribute('data-current-activity-id');
+          const activityElement = document.querySelector(`#collapse-${currentActivityId} .accordion-body`);
 
-        document.querySelector('#nombreSubActId').value = '';
-        document.querySelector('#subactividadFields').style.display = 'none';
-        const modal = bootstrap.Modal.getInstance(document.getElementById('actividadModal'));
-        modal.hide();
-    });
-});
+          // AGREGAR SUBACTIVIDAD
+          crearAccordion(activityElement, `${nombreSubactividad}`, 1);
+          document.querySelector('#nombreSubActId').value = '';
+          document.querySelector('#camposubactividad').style.display = 'none';
+          const modal = bootstrap.Modal.getInstance(document.getElementById('actividadModal'));
+          modal.hide();
+        });
+      });
 
-const crearAccordion = (parentElement, actividad, level) => {
-    const idUnico = Math.random().toString(36).substring(2, 7); // ID único para evitar colisiones
+      const crearAccordion = (parentElement, actividad, level) => {
+        const idUnico = Math.random().toString(36).substring(2, 7); // ID único para evitar colisiones
 
-    const accordionItem = document.createElement('div');
-    accordionItem.className = 'accordion-item';
+        const accordionItem = document.createElement('div');
+        accordionItem.className = 'accordion-item';
+        accordionItem.setAttribute('id',`accordion-item-${idUnico}`);
 
-    const header = document.createElement('h2');
-    header.className = 'accordion-header accordion-header--mod';
-    header.id = `heading-${idUnico}`;
+        const header = document.createElement('h2');
+        header.className = 'accordion-header accordion-header--mod';
+        header.id = `heading-${idUnico}`;
 
-    const button = document.createElement('div');
-    button.className = 'accordion-button accordion-button--mod collapsed';
-    button.setAttribute('data-bs-toggle', 'collapse');
-    button.setAttribute('data-bs-target', `#collapse-${idUnico}`);
-    button.setAttribute('aria-expanded', 'false');
-    button.setAttribute('aria-controls', `collapse-${idUnico}`);
+        const button = document.createElement('div');
+        button.className = 'accordion-button accordion-button--mod collapsed';
+        button.setAttribute('data-bs-toggle', 'collapse');
+        button.setAttribute('data-bs-target', `#collapse-${idUnico}`);
+        button.setAttribute('aria-expanded', 'false');
+        button.setAttribute('aria-controls', `collapse-${idUnico}`);
+        button.setAttribute('id',`${idUnico}` );
 
-    const actividadDiv = document.createElement('div');
-    actividadDiv.className = 'accordion-actividad col-8 text-uppercase';
-    actividadDiv.textContent = actividad;
+        const actividadDiv = document.createElement('div');
+        actividadDiv.className = 'accordion-actividad col-8 text-uppercase';
+        actividadDiv.textContent = actividad;
 
-    button.appendChild(actividadDiv);
+        button.appendChild(actividadDiv);
 
-    const botonesDiv = document.createElement('div');
-    botonesDiv.className = 'accordion-botones';
-    botonesDiv.innerHTML = `
-      <i class="bi bi-plus-lg icono icono-agregar" data-id="${idUnico}" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-      <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-      <div id="cargar-archivo${idUnico}" style="display: none;">
-        <input type="file" id="file-input${idUnico}" accept="image/*" />
-      </div>
-      <i class="bi bi-paperclip icono icono-cargar" data-id="file-input${idUnico}"></i>
-      <i class="bi bi-trash3 icono"></i>
-    `;
+        const botonesDiv = document.createElement('div');
+        botonesDiv.className = 'accordion-botones';
+        botonesDiv.innerHTML = `
+          <i class="bi bi-plus-lg icono icono-agregar" data-id="${idUnico}" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
+          <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
+          <div id="cargar-archivo${idUnico}" style="display: none;">
+            <input type="file" id="file-input${idUnico}" accept="image/*" />
+          </div>
+          <i class="bi bi-paperclip icono icono-cargar" data-id="file-input${idUnico}"></i>
+          <i class="bi bi-trash3 icono"></i>
+        `;
+        const itemActividad = document.createElement('div');
+        itemActividad.className = 'item-actividad';
+        itemActividad.appendChild(button);
+        itemActividad.appendChild(botonesDiv);
 
-    const itemActividad = document.createElement('div');
-    itemActividad.className = 'item-actividad';
-    itemActividad.appendChild(button);
-    itemActividad.appendChild(botonesDiv);
+        header.appendChild(itemActividad);
+        accordionItem.appendChild(header);
 
-    header.appendChild(itemActividad);
-    accordionItem.appendChild(header);
+        const collapseDiv = document.createElement('div');
+        collapseDiv.id = `collapse-${idUnico}`;
+        collapseDiv.className = 'accordion-collapse collapse';
+        collapseDiv.setAttribute('aria-labelledby', `heading-${idUnico}`);
 
-    const collapseDiv = document.createElement('div');
-    collapseDiv.id = `collapse-${idUnico}`;
-    collapseDiv.className = 'accordion-collapse collapse';
-    collapseDiv.setAttribute('aria-labelledby', `heading-${idUnico}`);
+        const bodyDiv = document.createElement('div');
+        bodyDiv.className = 'accordion-body accordion-body--mod';
 
-    const bodyDiv = document.createElement('div');
-    bodyDiv.className = 'accordion-body accordion-body--mod';
+        bodyDiv.innerHTML = '<div class="imagenes-actividad"></div>'; // Contenedor para las imágenes
 
-    bodyDiv.innerHTML = '<div class="imagenes-actividad"></div>'; // Contenedor para las imágenes
+        collapseDiv.appendChild(bodyDiv);
+        accordionItem.appendChild(collapseDiv);
+        parentElement.appendChild(accordionItem);
 
-    collapseDiv.appendChild(bodyDiv);
-    accordionItem.appendChild(collapseDiv);
-    parentElement.appendChild(accordionItem);
+        // EVENTO PARA AGREGAR SUBACTIVIDAD
+        const addSubActivityIcon = botonesDiv.querySelector('.icono-agregar');
+        addSubActivityIcon.addEventListener('click', function() {
+            // MOSTRAR CAMPO PARA INGRESAR SUBACTIVIDAD EN EL MODAL
+            document.querySelector('#camposubactividad').style.display = 'block';
+            // OCULTAR CAMPO ACTIVIDAD
+            document.querySelector('#nombreActId').value = nombreActividad;
+            document.querySelector('#nombreActId').setAttribute('disabled','disabled');
+            // ESTABLECER EL ID DE LA ACTIVIDAD ACTUAL EN EL MODAL
+            document.querySelector('#actividadModal').setAttribute('data-current-activity-id', idUnico);
+        });
 
-    // Agregar evento para agregar subactividades
-    const addSubActivityIcon = botonesDiv.querySelector('.icono-agregar');
-    addSubActivityIcon.addEventListener('click', function() {
-        // Mostrar el campo para ingresar subactividad en el modal
-        document.querySelector('#subactividadFields').style.display = 'block';
-        // Establecer el ID de la actividad actual en el modal
-        document.querySelector('#actividadModal').setAttribute('data-current-activity-id', idUnico);
-    });
-
-    // Verificar si el input existe antes de agregar el event listener
-    const fileInput = document.getElementById(`file-input${idUnico}`);
-    if (fileInput) {
-        fileInput.addEventListener('change', function(e) {
+        // VERIFICANDO SI EL INPUT EXISTE ANTES DE AGREGAR EL 'eventListener'
+        const fileInput = document.getElementById(`file-input${idUnico}`);
+        if (fileInput) {
+          fileInput.addEventListener('change', function(e) {
             const fileList = e.target.files;
             const imageContainer = bodyDiv.querySelector('.imagenes-actividad');
             for (let i = 0; i < fileList.length; i++) {
-                const file = fileList[i];
-                const reader = new FileReader();
-                reader.onload = function(event) {
-                    const imgDiv = document.createElement('div');
-                    imgDiv.className = 'image-wrapper';
-                    imgDiv.style.position = 'relative';
-                    imgDiv.style.display = 'inline-block';
-                    imgDiv.style.margin = '10px';
+              const file = fileList[i];
+              const reader = new FileReader();
+              reader.onload = function(event) {
+                const imgDiv = document.createElement('div');
+                imgDiv.className = 'image-wrapper';
+                imgDiv.style.position = 'relative';
+                imgDiv.style.display = 'inline-block';
+                imgDiv.style.margin = '10px';
 
-                    const img = document.createElement('img');
-                    img.src = event.target.result;
-                    img.className = 'img-thumbnail';
+                const img = document.createElement('img');
+                img.src = event.target.result;
+                img.className = 'img-thumbnail';
 
-                    const removeIcon = document.createElement('i');
-                    removeIcon.className = 'bi bi-x-circle-fill remove-icon';
-                    removeIcon.style.position = 'absolute';
-                    removeIcon.style.top = '5px';
-                    removeIcon.style.right = '5px';
-                    removeIcon.style.cursor = 'pointer';
+                const removeIcon = document.createElement('i');
+                removeIcon.className = 'bi bi-x-circle-fill remove-icon';
+                removeIcon.style.position = 'absolute';
+                removeIcon.style.top = '5px';
+                removeIcon.style.right = '5px';
+                removeIcon.style.cursor = 'pointer';
 
-                    removeIcon.addEventListener('click', function() {
-                        imgDiv.remove();
-                    });
+                removeIcon.addEventListener('click', function() {
+                    imgDiv.remove();
+                });
 
-                    imgDiv.appendChild(img);
-                    imgDiv.appendChild(removeIcon);
-                    imageContainer.appendChild(imgDiv);
-                };
-                reader.readAsDataURL(file);
+                imgDiv.appendChild(img);
+                imgDiv.appendChild(removeIcon);
+                imageContainer.appendChild(imgDiv);
+              };
+              reader.readAsDataURL(file);
             }
-        });
-    }
-};
-
-document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('icono-cargar')) {
-        const id = e.target.getAttribute('data-id');
-        const fileInput = document.getElementById(id);
-        if (fileInput) {
-            fileInput.click();
+          });
         }
-    }
-});
-
+      };
+      // ALGORITMO PARA CARGAR IMAGEN 
+      document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('icono-cargar')) {
+          const id = e.target.getAttribute('data-id');
+          const fileInput = document.getElementById(id);
+          if (fileInput) {
+            fileInput.click();
+          }
+        }
+      });
 
     </script>
   
