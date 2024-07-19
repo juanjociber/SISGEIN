@@ -186,7 +186,7 @@
 
       <div class="row mb-1 border-bottom">
           <div class="col-6 mb-2">
-              <button type="button" class="btn btn-outline-primary form-control text-uppercase" data-bs-toggle="modal" data-bs-target="#actividadModal" data-bs-whatever="@mdo"><i class="bi bi-plus-lg"></i> Agregar</button>
+              <button type="button" class="btn btn-outline-primary form-control text-uppercase" data-bs-toggle="modal" data-bs-target="#actividadModal" data-bs-whatever="@mdo" id="agregarActividad"><i class="bi bi-plus-lg"></i> Agregar</button>
           </div>
       </div>
 
@@ -207,7 +207,7 @@
       </div>
 
       <!--MODAL-->
-      <div class="modal fade" id="actividadModal" tabindex="-1" aria-labelledby="actividadModalLabel" aria-hidden="true">
+      <!-- <div class="modal fade" id="actividadModal" tabindex="-1" aria-labelledby="actividadModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="modal-header bg-primary text-white">
@@ -215,8 +215,8 @@
               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
           <div class="modal-body">
-            <!--ACTIVIDAD-->
-            <div class="row g-3">
+
+          <div class="row g-3">
               <div class="col-12 mt-2">
                 <label for="nombreActId" class="form-label mb-0">Nombre de actividad</label>
                 <input type="text" name="actividad" class="form-control" id="nombreActId">
@@ -240,142 +240,192 @@
             </div>
           </div>
         </div>
+      </div> -->
+
+
+      <!-- Modal para agregar actividades y subactividades -->
+<div class="modal fade" id="actividadModal" tabindex="-1" aria-labelledby="actividadModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="actividadModalLabel">Agregar Actividad</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="nombreActId" class="form-label">Nombre de la Actividad</label>
+          <input type="text" class="form-control" id="nombreActId" placeholder="Ingrese el nombre de la actividad">
+        </div>
+        <button id="guardarActividad" class="btn btn-primary">Guardar Actividad</button>
+        <div id="subactividadFields" class="mt-3" style="display: none;">
+          <label for="nombreSubActId" class="form-label">Nombre de la Subactividad</label>
+          <input type="text" class="form-control" id="nombreSubActId" placeholder="Ingrese el nombre de la subactividad">
+          <button id="guardarSubactividad" class="btn btn-secondary mt-2">Guardar Subactividad</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
     </div><!--FIN CONTAINER-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const rootAccordion = document.getElementById('contenedor-accordion');
-        const levels = 8; // Define cuántos niveles de subactividades deseas
-        crearAccordion(rootAccordion, 'Mantenimiento preventivo, cambio de aceite lubricante de transmision.', levels, 1);
+      document.addEventListener('DOMContentLoaded', () => {
+    const rootAccordion = document.getElementById('contenedor-accordion');
 
-        document.getElementById('guardarActividad').addEventListener('click', function() {
-          const nombreActividad = document.querySelector('#nombreActId').value;
-          console.log('Nuevo nombre: ', nombreActividad );
-          crearAccordion(rootAccordion, `${nombreActividad}`, levels, 1);
-          document.querySelector('#nombreActId').value = '';
-          const modal = bootstrap.Modal.getInstance(document.getElementById('actividadModal'));
-          modal.hide();
-          
+    // Manejar el guardado de la actividad
+    document.getElementById('guardarActividad').addEventListener('click', function() {
+        const nombreActividad = document.querySelector('#nombreActId').value;
+        if (nombreActividad.trim() === '') return; // No hacer nada si el campo está vacío
+
+        // AGREGANDO NUEVA ACTIVIDAD
+        crearAccordion(rootAccordion, `${nombreActividad}`, 1);
+
+        document.querySelector('#nombreActId').value = '';
+        const modal = bootstrap.Modal.getInstance(document.getElementById('actividadModal'));
+        modal.hide();
+    });
+
+    // Manejar el guardado de la subactividad
+    document.getElementById('guardarSubactividad').addEventListener('click', function() {
+        const nombreSubactividad = document.querySelector('#nombreSubActId').value;
+        if (nombreSubactividad.trim() === '') return; // No hacer nada si el campo está vacío
+
+        const currentActivityId = document.querySelector('#actividadModal').getAttribute('data-current-activity-id');
+        const activityElement = document.querySelector(`#collapse-${currentActivityId} .accordion-body`);
+
+        // AGREGAR SUBACTIVIDAD
+        crearAccordion(activityElement, `${nombreSubactividad}`, 1);
+
+        document.querySelector('#nombreSubActId').value = '';
+        document.querySelector('#subactividadFields').style.display = 'none';
+        const modal = bootstrap.Modal.getInstance(document.getElementById('actividadModal'));
+        modal.hide();
+    });
+});
+
+const crearAccordion = (parentElement, actividad, level) => {
+    const idUnico = Math.random().toString(36).substring(2, 7); // ID único para evitar colisiones
+
+    const accordionItem = document.createElement('div');
+    accordionItem.className = 'accordion-item';
+
+    const header = document.createElement('h2');
+    header.className = 'accordion-header accordion-header--mod';
+    header.id = `heading-${idUnico}`;
+
+    const button = document.createElement('div');
+    button.className = 'accordion-button accordion-button--mod collapsed';
+    button.setAttribute('data-bs-toggle', 'collapse');
+    button.setAttribute('data-bs-target', `#collapse-${idUnico}`);
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-controls', `collapse-${idUnico}`);
+
+    const actividadDiv = document.createElement('div');
+    actividadDiv.className = 'accordion-actividad col-8 text-uppercase';
+    actividadDiv.textContent = actividad;
+
+    button.appendChild(actividadDiv);
+
+    const botonesDiv = document.createElement('div');
+    botonesDiv.className = 'accordion-botones';
+    botonesDiv.innerHTML = `
+      <i class="bi bi-plus-lg icono icono-agregar" data-id="${idUnico}" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
+      <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
+      <div id="cargar-archivo${idUnico}" style="display: none;">
+        <input type="file" id="file-input${idUnico}" accept="image/*" />
+      </div>
+      <i class="bi bi-paperclip icono icono-cargar" data-id="file-input${idUnico}"></i>
+      <i class="bi bi-trash3 icono"></i>
+    `;
+
+    const itemActividad = document.createElement('div');
+    itemActividad.className = 'item-actividad';
+    itemActividad.appendChild(button);
+    itemActividad.appendChild(botonesDiv);
+
+    header.appendChild(itemActividad);
+    accordionItem.appendChild(header);
+
+    const collapseDiv = document.createElement('div');
+    collapseDiv.id = `collapse-${idUnico}`;
+    collapseDiv.className = 'accordion-collapse collapse';
+    collapseDiv.setAttribute('aria-labelledby', `heading-${idUnico}`);
+
+    const bodyDiv = document.createElement('div');
+    bodyDiv.className = 'accordion-body accordion-body--mod';
+
+    bodyDiv.innerHTML = '<div class="imagenes-actividad"></div>'; // Contenedor para las imágenes
+
+    collapseDiv.appendChild(bodyDiv);
+    accordionItem.appendChild(collapseDiv);
+    parentElement.appendChild(accordionItem);
+
+    // Agregar evento para agregar subactividades
+    const addSubActivityIcon = botonesDiv.querySelector('.icono-agregar');
+    addSubActivityIcon.addEventListener('click', function() {
+        // Mostrar el campo para ingresar subactividad en el modal
+        document.querySelector('#subactividadFields').style.display = 'block';
+        // Establecer el ID de la actividad actual en el modal
+        document.querySelector('#actividadModal').setAttribute('data-current-activity-id', idUnico);
+    });
+
+    // Verificar si el input existe antes de agregar el event listener
+    const fileInput = document.getElementById(`file-input${idUnico}`);
+    if (fileInput) {
+        fileInput.addEventListener('change', function(e) {
+            const fileList = e.target.files;
+            const imageContainer = bodyDiv.querySelector('.imagenes-actividad');
+            for (let i = 0; i < fileList.length; i++) {
+                const file = fileList[i];
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const imgDiv = document.createElement('div');
+                    imgDiv.className = 'image-wrapper';
+                    imgDiv.style.position = 'relative';
+                    imgDiv.style.display = 'inline-block';
+                    imgDiv.style.margin = '10px';
+
+                    const img = document.createElement('img');
+                    img.src = event.target.result;
+                    img.className = 'img-thumbnail';
+
+                    const removeIcon = document.createElement('i');
+                    removeIcon.className = 'bi bi-x-circle-fill remove-icon';
+                    removeIcon.style.position = 'absolute';
+                    removeIcon.style.top = '5px';
+                    removeIcon.style.right = '5px';
+                    removeIcon.style.cursor = 'pointer';
+
+                    removeIcon.addEventListener('click', function() {
+                        imgDiv.remove();
+                    });
+
+                    imgDiv.appendChild(img);
+                    imgDiv.appendChild(removeIcon);
+                    imageContainer.appendChild(imgDiv);
+                };
+                reader.readAsDataURL(file);
+            }
         });
-      });
-      /*cuando le doy click al boton guardar los campos de modal se deben limpiar y cerrar el modal, te paso todo mi codigo y estoy trabajando con bootstrap*/ 
+    }
+};
 
-      const crearAccordion = (parentElement, actividad, levels, level) =>{
-        const idUnico = Math.random().toString(36).substring(2, 7); // ID único para evitar colisiones
-
-        const accordionItem = document.createElement('div');
-        accordionItem.className = 'accordion-item';
-
-        const header = document.createElement('h2');
-        header.className = 'accordion-header accordion-header--mod';
-        header.id = `heading-${idUnico}`;
-
-        const button = document.createElement('div');
-        button.className = 'accordion-button accordion-button--mod collapsed';
-        button.setAttribute('data-bs-toggle', 'collapse');
-        button.setAttribute('data-bs-target', `#collapse-${idUnico}`);
-        button.setAttribute('aria-expanded', 'false');
-        button.setAttribute('aria-controls', `collapse-${idUnico}`);
-        
-        const actividadDiv = document.createElement('div');
-        actividadDiv.className = 'accordion-actividad col-8 text-uppercase';
-        actividadDiv.textContent = actividad;
-
-        button.appendChild(actividadDiv);
-
-        const botonesDiv = document.createElement('div');
-        botonesDiv.className = 'accordion-botones';
-        botonesDiv.innerHTML = `
-          <i class="bi bi-plus-lg icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-          <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-          <div id="cargar-archivo${idUnico}" style="display: none;">
-            <input type="file" id="file-input${idUnico}" accept="image/*" />
-          </div>
-          <i class="bi bi-paperclip icono icono-cargar" data-id="file-input${idUnico}"></i>
-          <i class="bi bi-trash3 icono"></i>
-        `;
-
-        const itemActividad = document.createElement('div');
-        itemActividad.className = 'item-actividad';
-        itemActividad.appendChild(button);
-        itemActividad.appendChild(botonesDiv);
-
-        header.appendChild(itemActividad);
-        accordionItem.appendChild(header);
-
-        const collapseDiv = document.createElement('div');
-        collapseDiv.id = `collapse-${idUnico}`;
-        collapseDiv.className = 'accordion-collapse collapse';
-        collapseDiv.setAttribute('aria-labelledby', `heading-${idUnico}`);
-
-        const bodyDiv = document.createElement('div');
-        bodyDiv.className = 'accordion-body accordion-body--mod';
-
-        bodyDiv.innerHTML = '<div class="imagenes-actividad"></div></div>'; // Contenedor para las imágenes
-
-
-        if (level < levels) {
-            crearAccordion(bodyDiv, `Subactividad ${level + 1}`, levels, level + 1);
-        }
-        collapseDiv.appendChild(bodyDiv);
-        accordionItem.appendChild(collapseDiv);
-        parentElement.appendChild(accordionItem);
-
-        // Verificar si el input existe antes de agregar el event listener
-          const fileInput = document.getElementById(`file-input${idUnico}`);
-          if (fileInput) {
-              fileInput.addEventListener('change', function(e) {
-                  const fileList = e.target.files;
-                  console.log(fileList)
-                  const imageContainer = bodyDiv.querySelector('.imagenes-actividad');
-                  for (let i = 0; i < fileList.length; i++) {
-                    const file = fileList[i];
-                    const reader = new FileReader();
-                    reader.onload = function(event) {
-                        const imgDiv = document.createElement('div');
-                        imgDiv.className = 'image-wrapper';
-                        imgDiv.style.position = 'relative';
-                        imgDiv.style.display = 'inline-block';
-                        imgDiv.style.margin = '10px';
-
-                        const img = document.createElement('img');
-                        img.src = event.target.result;
-                        img.className = 'img-thumbnail';
-                        
-                        const removeIcon = document.createElement('i');
-                        removeIcon.className = 'bi bi-x-circle-fill remove-icon';
-                        removeIcon.style.position = 'absolute';
-                        removeIcon.style.top = '5px';
-                        removeIcon.style.right = '5px';
-                        removeIcon.style.cursor = 'pointer';
-                        
-                        removeIcon.addEventListener('click', function() {
-                            imgDiv.remove();
-                        });
-
-                        imgDiv.appendChild(img);
-                        imgDiv.appendChild(removeIcon);
-                        imageContainer.appendChild(imgDiv);
-                    };
-                    reader.readAsDataURL(file);
-                }
-              });
-          }
-      }
-  
-      document.addEventListener('click', (e) => {
-      if(e.target.classList.contains('icono-cargar')) {
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('icono-cargar')) {
         const id = e.target.getAttribute('data-id');
         const fileInput = document.getElementById(id);
-        if(fileInput){
-          fileInput.click();
-          console.log(fileInput);
+        if (fileInput) {
+            fileInput.click();
         }
-      } 
-      });
+    }
+});
+
+
     </script>
   
   </body>
