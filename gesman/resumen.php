@@ -79,23 +79,23 @@
         <!--RESUMEN-->
         <div class="row g-3">
             <div class="col-md-12 mt-2">
-              <label for="actividadId" class="form-label mb-0">Actividad</label>
+              <label for="actividadId" class="form-label mb-0">Actividad <i class="bi bi-plus-lg icono icono-agregar"></i></label>
               <input type="text" class="form-control" id="actividadId">
             </div>
             <div class="col-md-12 mt-2">
-              <label for="antecedenteId" class="form-label mb-0">Antecedente</label>
+              <label for="antecedenteId" class="form-label mb-0">Antecedente <i class="bi bi-plus-lg icono icono-agregar"></i></label>
               <input type="text" class="form-control" id="AntencedenteId">
             </div>
             <div class="col-md-12 col-lg-6 col-xl-4 mt-2">
-              <label for="diagnosticoId" class="form-label mb-0">Diagnóstico</label>
+              <label for="diagnosticoId" class="form-label mb-0">Diagnóstico <i class="bi bi-plus-lg icono icono-agregar"></i></label>
               <input type="text" class="form-control" id="diagnosticoId">
             </div>
             <div class="col-md-12 col-lg-6 col-xl-4 mt-2">
-              <label for="conclusionId" class="form-label mb-0">Conclusión</label>
+              <label for="conclusionId" class="form-label mb-0">Conclusión <i class="bi bi-plus-lg icono icono-agregar"></i></label>
               <input type="text" class="form-control" id="conclusionId">
             </div>
             <div class="col-md-12 col-xl-4 mt-2">
-              <label for="recomendacionId" class="form-label mb-0">Recomendación</label>
+              <label for="recomendacionId" class="form-label mb-0">Recomendación <i class="bi bi-plus-lg icono icono-agregar"></i></label>
               <input type="text" class="form-control" id="recomendacionId">
             </div>
             <div class="col-6 btn-control mt-2">
