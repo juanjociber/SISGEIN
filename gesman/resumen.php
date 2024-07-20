@@ -79,28 +79,24 @@
         <!--RESUMEN-->
         <div class="row g-3">
             <div class="col-md-12 mt-2">
-                <label for="antecedentesId" class="form-label mb-0">Antecedentes</label>
-                <textarea name="antecedentes" class="form-control fixed-size-textarea" rows="4" id="antecedentesId"></textarea>
+              <label for="actividadId" class="form-label mb-0">Actividad</label>
+              <input type="text" class="form-control" id="actividadId">
             </div>
             <div class="col-md-12 mt-2">
-                <label for="actividadId" class="form-label mb-0">Actividad</label>
-                <input type="text" class="form-control" id="actividadId">
+              <label for="antecedenteId" class="form-label mb-0">Antecedente</label>
+              <input type="text" class="form-control" id="AntencedenteId">
             </div>
             <div class="col-md-12 col-lg-6 col-xl-4 mt-2">
-                <label for="analisisId" class="form-label mb-0">Análisis | Diagnóstico</label>
-                <textarea name="analisis" class="form-control fixed-size-textarea" rows="4" id="analisisId"></textarea>
+              <label for="diagnosticoId" class="form-label mb-0">Diagnóstico</label>
+              <input type="text" class="form-control" id="diagnosticoId">
             </div>
             <div class="col-md-12 col-lg-6 col-xl-4 mt-2">
-                <label for="conclusionesId" class="form-label mb-0">Conclusiones</label>
-                <textarea name="conlcusiones" class="form-control fixed-size-textarea" rows="4" id="conclusionesId"></textarea>
+              <label for="conclusionId" class="form-label mb-0">Conclusión</label>
+              <input type="text" class="form-control" id="conclusionId">
             </div>
             <div class="col-md-12 col-xl-4 mt-2">
-                <label for="recomendacionesId" class="form-label mb-0">Recomendaciones</label>
-                <textarea name="recomendaciones" class="form-control fixed-size-textarea" rows="4" id="recomendacionesId"></textarea>
-            </div>
-            <div class="col-md-12 mt-2">
-                <label for="estadoId" class="form-label mb-0">Estado</label>
-                <input type="text" class="form-control" id="estadoId" disabled>
+              <label for="recomendacionId" class="form-label mb-0">Recomendación</label>
+              <input type="text" class="form-control" id="recomendacionId">
             </div>
             <div class="col-6 btn-control mt-2">
               <button type="button" class="btn btn-primary text-uppercase fw-200">Guardar <i class="bi bi-floppy"></i></button>

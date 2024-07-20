@@ -162,9 +162,7 @@
     </style>
   </head>
   <body>
-    <!-- START CONTAINER -->
     <div class="container">
-      <!-- START CABECERA -->
       <div class="row border-bottom mb-3 fs-5">
           <div class="col-12 fw-bold d-flex justify-content-between">
             <p class="m-0 p-0">CLIENTE</p>
@@ -172,9 +170,7 @@
             <p class="m-0 p-0 text-center text-secondary">GP-INF-1</p>
           </div>
       </div>
-      <!-- END CABECERA -->
 
-      <!-- START ENLACES -->
       <div class="row">
           <div class="col-12">
               <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
@@ -187,7 +183,6 @@
               </nav>
           </div>
       </div>
-      <!-- END ENLACES -->
 
       <div class="row mb-1 border-bottom">
           <div class="col-6 mb-2">
@@ -195,164 +190,23 @@
           </div>
       </div>
 
-      <!-- START LISTA DE ACTIVIDADES-->
+      <!--LISTA DE ACTIVIDADES-->
       <div class="row g-3">
         <div class="col-12 fw-bold d-flex justify-content-between">
           <p class="m-0 p-0 text-center text-secondary text-uppercase listadoActividades">Listado de actividades</p>
         </div>
 
-        <!-- START ACCORDION   -->
+         <!-- INICIO ACCORDION   -->
         <div class="accordion" id="contenedor-accordion">
-          
-          <!-- CONTENEDOR DE CADA ITEM-ACCORDION -->
-          <div class="accordion-item" id="accordionId">
-            <h2 class="accordion-header accordion-header--mod" id="accordionHeaderId1">
-              <div class="item-actividad">
-                <div class="accordion-button accordion-button--mod collapsed" data-bs-toggle="collapse"
-                  data-bs-target="#collapseAcordion" aria-expanded="false" aria-controls="collapseAcordion" id="13">
-                  <div class="accordion-actividad col-8 text-uppercase">ACTIVIDAD 1</div>
-                </div>
-                <div class="accordion-botones">
-                  <i class="bi bi-plus-lg icono icono-agregar" data-id="13" data-bs-toggle="modal"
-                    data-bs-target="#actividadModal"></i>
-                  <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                  <div id="cargar-archivo-13" style="display: none;">
-                    <input type="file" id="file-input-13" accept="image/*">
-                  </div>
-                  <i class="bi bi-paperclip icono icono-cargar" data-id="file-input-13"></i>
-                  <i class="bi bi-trash3 icono"></i>
-                </div>
-              </div>
-            </h2>
-            <div id="collapseAcordion" class="accordion-collapse collapse" aria-labelledby="accordionHeaderId1" style="">
-                <div class="accordion-body accordion-body--mod">
-                  <div class="imagenes-actividad">
-                    <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
-                      <img src="" class="img-thumbnail">
-                      <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
-                    </div>
-                    </div>
-                    <div class="accordion-item" id="accordion-item-ur6f3">
-                        <h2 class="accordion-header accordion-header--mod" id="accordionHeaderId2">
-                            <div class="item-actividad">
-                                <div class="accordion-button accordion-button--mod" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse-ur6f3" aria-expanded="true" aria-controls="collapse-ur6f3"
-                                    id="ur6f3">
-                                    <div class="accordion-actividad col-8 text-uppercase">SUBACTIVIDAD 1.1</div>
-                                </div>
-                                <div class="accordion-botones">
-                                    <i class="bi bi-plus-lg icono icono-agregar" data-id="ur6f3" data-bs-toggle="modal"
-                                        data-bs-target="#actividadModal"></i>
-                                    <i class="bi bi-pencil-square icono" data-bs-toggle="modal"
-                                        data-bs-target="#actividadModal"></i>
-                                    <div id="cargar-archivour6f3" style="display: none;">
-                                        <input type="file" id="file-inputur6f3" accept="image/*">
-                                    </div>
-                                    <i class="bi bi-paperclip icono icono-cargar" data-id="file-inputur6f3"></i>
-                                    <i class="bi bi-trash3 icono"></i>
-                                </div>
-                            </div>
-                        </h2>
-                        <div id="collapse-ur6f3" class="accordion-collapse collapse show" aria-labelledby="accordionHeaderId2"
-                            style="">
-                            <div class="accordion-body accordion-body--mod">
-                                <div class="imagenes-actividad">
-                                    <div class="image-wrapper"
-                                        style="position: relative; display: inline-block; margin: 10px;"><img src=""
-                                            class="img-thumbnail"><i class="bi bi-x-circle-fill remove-icon"
-                                            style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i></div>
-                                </div>
-                                <div class="accordion-item" id="accordion-item-10uzu">
-                                    <h2 class="accordion-header accordion-header--mod" id="heading-10uzu">
-                                        <div class="item-actividad">
-                                            <div class="accordion-button accordion-button--mod" data-bs-toggle="collapse"
-                                                data-bs-target="#collapse-10uzu" aria-expanded="true"
-                                                aria-controls="collapse-10uzu" id="10uzu">
-                                                <div class="accordion-actividad col-8 text-uppercase">SUBACTIVIDAD 1.1.1
-                                                </div>
-                                            </div>
-                                            <div class="accordion-botones">
-                                                <i class="bi bi-plus-lg icono icono-agregar" data-id="10uzu"
-                                                    data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                                                <i class="bi bi-pencil-square icono" data-bs-toggle="modal"
-                                                    data-bs-target="#actividadModal"></i>
-                                                <div id="cargar-archivo10uzu" style="display: none;">
-                                                    <input type="file" id="file-input10uzu" accept="image/*">
-                                                </div>
-                                                <i class="bi bi-paperclip icono icono-cargar" data-id="file-input10uzu"></i>
-                                                <i class="bi bi-trash3 icono"></i>
-                                            </div>
-                                        </div>
-                                    </h2>
-                                    <div id="collapse-10uzu" class="accordion-collapse collapse show"
-                                        aria-labelledby="heading-10uzu" style="">
-                                        <div class="accordion-body accordion-body--mod">
-                                            <div class="imagenes-actividad">
-                                                <div class="image-wrapper"
-                                                    style="position: relative; display: inline-block; margin: 10px;"><img
-                                                        src="" class="img-thumbnail"><i
-                                                        class="bi bi-x-circle-fill remove-icon"
-                                                        style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item" id="accordion-item-idc5s">
-                                                <h2 class="accordion-header accordion-header--mod" id="heading-idc5s">
-                                                    <div class="item-actividad">
-                                                        <div class="accordion-button accordion-button--mod collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#collapse-idc5s"
-                                                            aria-expanded="false" aria-controls="collapse-idc5s" id="idc5s">
-                                                            <div class="accordion-actividad col-8 text-uppercase">
-                                                                SUBACTIVIDAD 1.1.1.1</div>
-                                                        </div>
-                                                        <div class="accordion-botones">
-                                                            <i class="bi bi-plus-lg icono icono-agregar" data-id="idc5s"
-                                                                data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                                                            <i class="bi bi-pencil-square icono" data-bs-toggle="modal"
-                                                                data-bs-target="#actividadModal"></i>
-                                                            <div id="cargar-archivoidc5s" style="display: none;">
-                                                                <input type="file" id="file-inputidc5s" accept="image/*">
-                                                            </div>
-                                                            <i class="bi bi-paperclip icono icono-cargar"
-                                                                data-id="file-inputidc5s"></i>
-                                                            <i class="bi bi-trash3 icono"></i>
-                                                        </div>
-                                                    </div>
-                                                </h2>
-                                                <div id="collapse-idc5s" class="accordion-collapse collapse"
-                                                    aria-labelledby="heading-idc5s">
-                                                    <div class="accordion-body accordion-body--mod">
-                                                        <div class="imagenes-actividad">
-                                                            <div class="image-wrapper"
-                                                                style="position: relative; display: inline-block; margin: 10px;">
-                                                                <img src="" class="img-thumbnail"><i
-                                                                    class="bi bi-x-circle-fill remove-icon"
-                                                                    style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>
-          <!-- CONTENEDOR DE CADA ITEM-ACCORDION -->
         
-        </div>
-        <!-- FIN ACCORDION -->
+        </div> <!-- FIN ACCORDION -->
           
         <div class="col-sm-3">
           <button class="btn btn-primary text-uppercase fw-200">Guardar <i class="bi bi-floppy"></i></button>
         </div>
       </div>
-      <!-- END LISTA DE ACTIVIDADES-->
 
-      <!-- START MODAL PARA AGREGAR ACTIVIDADES Y SUBACTIVIDADES -->
+      <!-- MODAL PARA AGREGAR ACTIVIDADES Y SUBACTIVIDADES -->
       <div class="modal fade" id="actividadModal" tabindex="-1" aria-labelledby="actividadModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -362,6 +216,7 @@
             </div>
             <!-- START MODAL-BODY -->
             <div class="modal-body">
+              
               <div class="row">
                 <div id="campoactividad">
                   <label for="nombreActId" class="form-label mb-0">Nombre de la Actividad</label>
@@ -397,18 +252,16 @@
                 </div>
               </div>
 
-            </div>
-            <!-- END MODAL-BODY -->
+            </div><!-- END MODAL-BODY -->
           </div>
         </div>
       </div>
-      <!-- END MODAL -->
 
     </div><!--FIN CONTAINER-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     
-    <!-- <script>
+    <script>
 
       let nombreActividad = null;
 
@@ -581,7 +434,7 @@
         }
       });
 
-    </script> -->
+    </script>
   
   </body>
 </html>
