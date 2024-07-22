@@ -1,10 +1,38 @@
+<?php
+// Variables para almacenar los valores
+$actividades = [];
+$antecedentes = [];
+$diagnosticos = [];
+$conclusiones = [];
+$recomendaciones = [];
+
+// Verifica si se ha enviado un formulario
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['actividad'])) {
+        $actividad = $_POST['actividad'];
+    }
+    if (isset($_POST['antecedente'])) {
+        $antecedente = $_POST['antecedente'];
+    }
+    if (isset($_POST['diagnostico'])) {
+        $diagnostico = $_POST['diagnostico'];
+    }
+    if (isset($_POST['conclusion'])) {
+        $conclusion = $_POST['conclusion'];
+    }
+    if (isset($_POST['recomendacion'])) {
+        $recomendacion = $_POST['recomendacion'];
+    }
+}
+?>
+
 <!doctype html>
 <html lang="es">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <link rel="stylesheet" href="css/main.css">
 
     <!-- Bootstrap CSS -->
@@ -15,39 +43,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="../css/main.css">
     <title>Sistema GPEM S.A.C</title>
     <style>
-      ::placeholder{
+      ::placeholder {
         color: #cecccc !important;
         font-weight: 200;
         text-transform: uppercase;
       }
-      .form-label{
-        color:#212529;
-        font-weight:300; 
+      .form-label {
+        color: #212529;
+        font-weight: 300;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 0.5rem;
+        margin-bottom: 0;
       }
-      @media(max-width:767px){
-        .form-label{
+      .form-label i {
+        font-size: 18px;
+        cursor: pointer;
+      }
+      @media(max-width:767px) {
+        .form-label {
           font-size: 13px;
         }
       }
-      @media(min-width:768px){
-        .mt--mod{
+      @media(min-width:768px) {
+        .mt--mod {
           margin-top: 17px !important;
         }
       }
-      @media(min-width:92px){
-        .form-label{
+      @media(min-width:92px) {
+        .form-label {
           font-size: 15px;
         }
       }
-      .form-control{
-        border-radius:.25rem;
+      .form-control {
+        border-radius: .25rem;
       }
-      .btn-control{
-        padding:.375rem .75rem;
+      .btn-control {
+        padding: .375rem .75rem;
       }
       .fixed-size-textarea {
         resize: none; /* Evita que el textarea se pueda redimensionar */
@@ -66,7 +102,7 @@
         <div class="row">
             <div class="col-12">
                 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-                    <ol class="breadcrumb"> 
+                    <ol class="breadcrumb">
                         <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/datoGeneral.php" class="text-decoration-none">INFORME</a></li>
                         <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/datoEquipo.php" class="text-decoration-none">EQUIPO</a></li>
                         <li class="breadcrumb-item active fw-bold" aria-current="page">RESUMEN</li>
@@ -77,34 +113,153 @@
         </div>
 
         <!--RESUMEN-->
-        <div class="row g-3">
-            <div class="col-md-12 mt-2">
-              <label for="actividadId" class="form-label mb-0">Actividad <i class="bi bi-plus-lg icono icono-agregar"></i></label>
-              <input type="text" class="form-control" id="actividadId">
+        <div class="row">
+            <div class="col-12 mt-2">
+              <label for="actividadId" class="form-label">Actividad <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalActividad"></i></label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="actividadId" name="actividad" value="<?php echo isset($actividad) ? $actividad : ''; ?>">
+                <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
+                <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+              </div>
             </div>
-            <div class="col-md-12 mt-2">
-              <label for="antecedenteId" class="form-label mb-0">Antecedente <i class="bi bi-plus-lg icono icono-agregar"></i></label>
-              <input type="text" class="form-control" id="AntencedenteId">
+            <div class="col-12 mt-2">
+              <label for="antecedenteId" class="form-label">Antecedente <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalAntecedente"></i></label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="antecedenteId" name="antecedente" value="<?php echo isset($antecedente) ? $antecedente : ''; ?>">
+                <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
+                <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+              </div>
             </div>
-            <div class="col-md-12 col-lg-6 col-xl-4 mt-2">
-              <label for="diagnosticoId" class="form-label mb-0">Diagnóstico <i class="bi bi-plus-lg icono icono-agregar"></i></label>
-              <input type="text" class="form-control" id="diagnosticoId">
+            <div class="col-12 mt-2">
+              <label for="diagnosticoId" class="form-label">Diagnóstico <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalDiagnostico"></i></label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="diagnosticoId" name="diagnostico" value="<?php echo isset($diagnostico) ? $diagnostico : ''; ?>">
+                <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
+                <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+              </div>
             </div>
-            <div class="col-md-12 col-lg-6 col-xl-4 mt-2">
-              <label for="conclusionId" class="form-label mb-0">Conclusión <i class="bi bi-plus-lg icono icono-agregar"></i></label>
-              <input type="text" class="form-control" id="conclusionId">
+            <div class="col-12 mt-2">
+              <label for="conclusionId" class="form-label">Conclusión <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalConclusion"></i></label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="conclusionId" name="conclusion" value="<?php echo isset($conclusion) ? $conclusion : ''; ?>">
+                <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
+                <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+              </div>
             </div>
-            <div class="col-md-12 col-xl-4 mt-2">
-              <label for="recomendacionId" class="form-label mb-0">Recomendación <i class="bi bi-plus-lg icono icono-agregar"></i></label>
-              <input type="text" class="form-control" id="recomendacionId">
+            <div class="col-12 mt-2">
+              <label for="recomendacionId" class="form-label">Recomendación <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalRecomendacion"></i></label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="recomendacionId" name="recomendacion" value="<?php echo isset($recomendacion) ? $recomendacion : ''; ?>">
+                <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
+                <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+              </div>
             </div>
             <div class="col-6 btn-control mt-2">
-              <button type="button" class="btn btn-primary text-uppercase fw-200">Guardar <i class="bi bi-floppy"></i></button>
+              <button type="button" class="btn btn-primary text-uppercase fw-light" onclick="sendResumen()">Guardar <i class="bi bi-floppy"></i></button>
             </div>
+            <!-- <div class="col-6 btn-control mt-2">
+              <button type="button" class="btn btn-danger text-uppercase fw-light">Cancelar</button>
+            </div> -->
         </div>
     </div>
 
+    <!-- Modals -->
+    <div class="modal fade" id="modalActividad" tabindex="-1" aria-labelledby="modalActividadLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title text-uppercase" id="modalActividadLabel">Agregar Actividad</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form method="post">
+              <input type="text" class="form-control" id="modalActividadInput" name="actividad">
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary text-uppercase fw-light">Guardar <i class="bi bi-floppy"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="modal fade" id="modalAntecedente" tabindex="-1" aria-labelledby="modalAntecedenteLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title text-uppercase" id="modalAntecedenteLabel">Agregar Antecedente</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form method="post">
+              <input type="text" class="form-control" id="modalAntecedenteInput" name="antecedente">
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary text-uppercase fw-light">Guardar <i class="bi bi-floppy"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalDiagnostico" tabindex="-1" aria-labelledby="modalDiagnosticoLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title text-uppercase" id="modalDiagnosticoLabel">Agregar Diagnóstico</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form method="post">
+              <input type="text" class="form-control" id="modalDiagnosticoInput" name="diagnostico">
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary text-uppercase fw-light">Guardar <i class="bi bi-floppy"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalConclusion" tabindex="-1" aria-labelledby="modalConclusionLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title text-uppercase" id="modalConclusionLabel">Agregar Conclusión</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form method="post">
+              <input type="text" class="form-control" id="modalConclusionInput" name="conclusion">
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary text-uppercase fw-light">Guardar <i class="bi bi-floppy"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalRecomendacion" tabindex="-1" aria-labelledby="modalRecomendacionLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title text-uppercase" id="modalRecomendacionLabel">Agregar Recomendación</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form method="post">
+              <input type="text" class="form-control" id="modalRecomendacionInput" name="recomendacion">
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary text-uppercase fw-light">Guardar <i class="bi bi-floppy"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/resumen.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
 </html>
