@@ -84,15 +84,7 @@
             </div>
             <div class="custom-select-container col-6 col-lg-4 mt-2">
               <label for="modeloId" class="form-label mb-0">Modelo</label>
-              <div class="custom-select-wrapper">
-                  <input type="text" id="modeloInput" class="custom-select-input" placeholder="Seleccionar Modelo" />
-                  <span class="custom-select-arrow"><i class="bi bi-chevron-down"></i></span>
-                  <div id="modeloList" class="custom-select-list">
-                  <div class="custom-select-item" data-value="modelo1">Modelo1</div>
-                  <div class="custom-select-item" data-value="modelo2">Modelo2</div>
-                  <div class="custom-select-item" data-value="modelo3">Modelo3</div>
-                  </div>
-              </div>
+              <input type="text" class="form-control" id="modeloId">
             </div>
             <div class="col-6 col-lg-4 mt-2">
                 <label for="serieEquipoId" class="form-label mb-0">Serie</label>
@@ -101,15 +93,7 @@
 
             <div class="custom-select-container col-6 col-lg-4 mt-2">
               <label for="marcaId" class="form-label mb-0">Marca</label>
-              <div class="custom-select-wrapper">
-                  <input type="text" id="marcaInput" class="custom-select-input" placeholder="Seleccionar Marca" />
-                  <span class="custom-select-arrow"><i class="bi bi-chevron-down"></i></span>
-                  <div id="marcaList" class="custom-select-list">
-                  <div class="custom-select-item" data-value="supervisor1">Marca1</div>
-                  <div class="custom-select-item" data-value="colaborador1">Marca2</div>
-                  <div class="custom-select-item" data-value="tecnico1">Marca3</div>
-                  </div>
-              </div>
+              <input type="text" class="form-control" id="marcaId">
             </div>
             <div class="col-6 col-lg-4 mt-2">
                 <label for="kmEquipoId" class="form-label mb-0">Kilometraje</label>
@@ -121,16 +105,16 @@
             </div>
 
             <div class="col-md-12 col-lg-12 mt-2">
-                <label for="desEquipoId" class="form-label mb-0">Descripción</label>
-                <textarea name="desEquipo" class="form-control fixed-size-textarea" rows="4" id="desEquipoId" placeholder="Puede ingresar adicionalmente la fecha de fabricación, número interno, número de padron,tipo de combustible y otros que considere necesario."></textarea>
+                <label for="descipcionEquipoId" class="form-label mb-0">Descripción</label>
+                <textarea name="desEquipo" class="form-control fixed-size-textarea" rows="4" id="descripcionEquipoId" placeholder="Puede ingresar adicionalmente la fecha de fabricación, número interno, número de padron,tipo de combustible y otros que considere necesario."></textarea>
             </div>
             <div class="col-6 btn-control mt-2">
-              <button type="button" class="btn btn-primary text-uppercase fw-200">Guardar <i class="bi bi-floppy"></i></button>
+              <button type="button" class="btn btn-primary text-uppercase fw-light" onclick="sendEquipo()">Guardar <i class="bi bi-floppy"></i></button>
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="../js/datoEquipo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -67,9 +67,7 @@ const cargaFechaActual = () =>{
 
 // const cargaDatosGenerales = async () =>{
 
-  const btnGuardar = document.querySelector('#guardarDatosGenerales');
-
-  btnGuardar.addEventListener('click',()=>{
+  const sendDatosGenerales = async () => {
     const formData = new FormData();
     const fecha = document.querySelector('#fechaInforme').value;
     const contacto = document.querySelector('#contactoInput').value;
@@ -83,8 +81,6 @@ const cargaFechaActual = () =>{
   
     console.log('Datos a enviar: ', { fecha, contacto, lugar, supervisor });
     console.log(formData);
-  });
-
 
 
   // const response = await fetch('http://192.168.40.70/marcador/controller/RegistrarMarcacion.php', {
@@ -100,7 +96,7 @@ const cargaFechaActual = () =>{
   //   throw new Error(datos.msg);
   // }
   // console.warn('Respuesta del servidor registro marcacion : ', datos);
-// }
+}
 
 
 

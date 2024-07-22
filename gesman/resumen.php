@@ -54,11 +54,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       }
       .form-label {
         color: #212529;
-        font-weight: 300;
-        display: flex;
-        justify-content: space-between;
+        font-weight: 700;
         padding-right: 0.5rem;
         margin-bottom: 0;
+        text-transform: uppercase;
       }
       .form-label i {
         font-size: 18px;
@@ -81,12 +80,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       }
       .form-control {
         border-radius: .25rem;
+        font-weight:300;
       }
       .btn-control {
         padding: .375rem .75rem;
       }
       .fixed-size-textarea {
         resize: none; /* Evita que el textarea se pueda redimensionar */
+      }
+      .input-group-text{
+        background-color: transparent;
+        border: none;
+      }
+      .input-group{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        align-items: center;
+      }
+      .input-group p{
+        font-weight: 300;
+      }
+      .input-grop-icons{
+        display: flex;
+        justify-content: flex-end;
+      }
+      .vineta::before {
+        content: '\2713'; /* Unicode para el check mark */
+        font-size: 13px;
+        color: green; /* Cambia el color según prefieras */
+        margin-right: 8px;
       }
     </style>
   </head>
@@ -115,51 +137,70 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <!--RESUMEN-->
         <div class="row">
             <div class="col-12 mt-2">
-              <label for="actividadId" class="form-label">Actividad <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalActividad"></i></label>
+              <label for="actividadId" class="form-label">Actividades <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalActividad"></i></label>
               <div class="input-group">
-                <input type="text" class="form-control" id="actividadId" name="actividad" value="<?php echo isset($actividad) ? $actividad : ''; ?>">
-                <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
-                <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+                <p class="mb-0" id="actividadId">Mantenimiento de motor</p>
+                <div class="input-grop-icons">
+                  <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
+                  <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+                </div>
               </div>
             </div>
             <div class="col-12 mt-2">
-              <label for="antecedenteId" class="form-label">Antecedente <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalAntecedente"></i></label>
+              <label for="antecedenteId" class="form-label">Antecedentes <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalAntecedente"></i></label>
               <div class="input-group">
-                <input type="text" class="form-control" id="antecedenteId" name="antecedente" value="<?php echo isset($antecedente) ? $antecedente : ''; ?>">
-                <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
-                <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+                <div class="d-flex">
+                  <span class="vineta"></span>
+                  <p class="mb-0" id="antecedenteId">El año 2023 se realizó cambios mantenimiento al cigueñal</p>
+                </div>
+                <div class="input-grop-icons">
+                  <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
+                  <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+                </div>
               </div>
             </div>
             <div class="col-12 mt-2">
-              <label for="diagnosticoId" class="form-label">Diagnóstico <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalDiagnostico"></i></label>
+              <label for="diagnosticoId" class="form-label">Análisis <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalDiagnostico"></i></label>
               <div class="input-group">
-                <input type="text" class="form-control" id="diagnosticoId" name="diagnostico" value="<?php echo isset($diagnostico) ? $diagnostico : ''; ?>">
-                <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
-                <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+                <div class="d-flex">
+                  <span class="vineta"></span>
+                  <p class="mb-0" id="diagnosticoId">Se deben canbiar las fajas.</p>
+                </div>
+                <div class="input-grop-icons">
+                  <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
+                  <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+                </div>
               </div>
             </div>
             <div class="col-12 mt-2">
-              <label for="conclusionId" class="form-label">Conclusión <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalConclusion"></i></label>
+              <label for="conclusionId" class="form-label">Conclusiones <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalConclusion"></i></label>
               <div class="input-group">
-                <input type="text" class="form-control" id="conclusionId" name="conclusion" value="<?php echo isset($conclusion) ? $conclusion : ''; ?>">
-                <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
-                <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+                <div class="d-flex">
+                  <span class="vineta"></span>
+                  <p class="mb-0" id="conclusionId">Conclusión nro.01</p>
+                </div>
+                <div class="input-grop-icons">
+                  <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
+                  <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+                </div>
               </div>
             </div>
             <div class="col-12 mt-2">
-              <label for="recomendacionId" class="form-label">Recomendación <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalRecomendacion"></i></label>
+              <label for="recomendacionId" class="form-label">Recomendaciones <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalRecomendacion"></i></label>
               <div class="input-group">
-                <input type="text" class="form-control" id="recomendacionId" name="recomendacion" value="<?php echo isset($recomendacion) ? $recomendacion : ''; ?>">
-                <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
-                <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+                <div class="d-flex">
+                  <span class="vineta"></span>
+                  <p class="mb-0" id="recomendacionId">recomendación 1</p>
+                </div>
+                <div class="input-grop-icons">
+                  <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
+                  <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+                </div>
               </div>
             </div>
             <div class="col-6 btn-control mt-2">
               <button type="button" class="btn btn-primary text-uppercase fw-light" onclick="sendResumen()">Guardar <i class="bi bi-floppy"></i></button>
             </div>
-            <!-- <div class="col-6 btn-control mt-2">
-              <button type="button" class="btn btn-danger text-uppercase fw-light">Cancelar</button>
-            </div> -->
         </div>
     </div>
 

@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="../css/main.css">
     <title>Sistema GPEM S.A.C</title>
     <style>
+      img{
+        width: 100%;
+      }
       ::placeholder{
         color: #cecccc !important;
         font-weight: 200;
@@ -53,11 +56,9 @@
           text-align: center;
           cursor: pointer;
       }
-
       .custom-file-button i {
           margin-right: 0.5em;
       }
-
       .preview {
           width: 300px;
           height: auto;
@@ -71,7 +72,8 @@
         display: none
       }
       .accordion-body--mod{
-        padding-right: 0 !important;
+        padding-right: 10px;
+        padding-left: 10px;
       }
       .accordion-button::after{
         width: 0;
@@ -142,7 +144,7 @@
       .accordion-actividad{
         color: #212529;
         font-weight: 300;
-        margin-top: 1.8rem;
+        margin-top: 1.5rem;
         text-align: justify;
       }
       .accordion-header--mod{
@@ -153,10 +155,20 @@
       }
       .imagenes-actividad{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        column-gap:5px;
-        margin-right: 1rem;
-        margin-left: 1rem;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5px;
+      }
+      @media(min-width:992px){
+        .imagenes-actividad{
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+      }
+      .imagenes-actividad input{
+        text-align: center;
+      }
+      .grid-imagen{
+        padding-top:15px;
+        padding-bottom:5px;
       }
 
     </style>
@@ -205,139 +217,259 @@
         <div class="accordion" id="contenedor-accordion">
           
           <!-- CONTENEDOR DE CADA ITEM-ACCORDION -->
-          <div class="accordion-item" id="accordionId">
-            <h2 class="accordion-header accordion-header--mod" id="accordionHeaderId1">
+          <div class="accordion-item" id="accordionId-1">
+            <h2 class="accordion-header accordion-header--mod" id="accordionHeaderId-1">
               <div class="item-actividad">
-                <div class="accordion-button accordion-button--mod collapsed" data-bs-toggle="collapse"
-                  data-bs-target="#collapseAcordion" aria-expanded="false" aria-controls="collapseAcordion" id="13">
+                <div class="accordion-button accordion-button--mod" data-bs-toggle="collapse" data-bs-target="#collapseAcordion-1" aria-expanded="false" aria-controls="collapseAcordion-1" id="gpem1">
                   <div class="accordion-actividad col-8 text-uppercase">ACTIVIDAD 1</div>
                 </div>
                 <div class="accordion-botones">
-                  <i class="bi bi-plus-lg icono icono-agregar" data-id="13" data-bs-toggle="modal"
-                    data-bs-target="#actividadModal"></i>
+                  <i class="bi bi-plus-lg icono icono-agregar" data-id="1" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
                   <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                  <div id="cargar-archivo-13" style="display: none;">
-                    <input type="file" id="file-input-13" accept="image/*">
+                  <div id="cargar-archivo-1" style="display: none;">
+                    <input type="file" id="file-input-1" accept="image/*">
                   </div>
-                  <i class="bi bi-paperclip icono icono-cargar" data-id="file-input-13"></i>
+                  <i class="bi bi-paperclip icono icono-cargar" data-id="file-input-1"></i>
                   <i class="bi bi-trash3 icono"></i>
                 </div>
               </div>
             </h2>
-            <div id="collapseAcordion" class="accordion-collapse collapse" aria-labelledby="accordionHeaderId1" style="">
+            <div id="collapseAcordion-1" class="accordion-collapse collapse show" aria-labelledby="accordionHeaderId-1" style="">
                 <div class="accordion-body accordion-body--mod">
+                  <!-- CONTENEDOR-DIAGNÓSTICO-TRABAJO-OBSERVACIÓN -->
+                  <div class=" row detalles">
+                    <div class="detalles-diagnostico col-6">
+                      <label for="detalleDiagnosticoId-1" class="form-label mb-0">Diagnóstico</label>
+                      <input type="text" class="form-control" id="detalleDiagnosticoId-1" placeholder="Ingrese el diagnóstico.">
+                    </div>
+                    <div class="detalles-trabajo col-6">
+                      <label for="detalleTrabajoId-1" class="form-label mb-0">Trabajos</label>
+                      <input type="text" class="form-control" id="detalleTrabajoId-1" placeholder="Ingrese el trabajo.">
+                    </div>
+                    <div class="detalles-observacion col-12">
+                      <label for="detalleObservacionId-1" class="form-label mb-0">Observaciones</label>
+                      <input type="text" class="form-control" id="detalleObservacionId-1" placeholder="Ingrese la observación.">
+                    </div>
+                  </div>
+                  <!-- CONTENEDOR-IMAGENES -->
                   <div class="imagenes-actividad">
-                    <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
-                      <img src="" class="img-thumbnail">
-                      <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
+                    <div class="grid-imagen">
+                      <div class="titulo-imagen">
+                        <input type="text" class="form-control" id="tituloImagenId1-1" placeholder="Título 1">
+                      </div>
+                      <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
+                        <img src="../img/imagen1.png" id="imagenId1-1" class="img-thumbnail">
+                        <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
+                      </div>
+                      <div class="descripcion-imagen">
+                        <input type="text" class="form-control" id="descripcionImagenId1-1" placeholder="Descripción 1">
+                      </div>
                     </div>
+                    <div class="grid-imagen">
+                      <div class="titulo-imagen">
+                        <input type="text" class="form-control" id="tituloImagenId2-1" placeholder="Título 2">
+                      </div>
+                      <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
+                        <img src="../img/imagen2.png" id="imagenId2-1" class="img-thumbnail">
+                        <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
+                      </div>
+                      <div class="descripcion-imagen">
+                        <input type="text" class="form-control" id="descripcionImagenId2-1" placeholder="Descripción 2">
+                      </div>
                     </div>
-                    <div class="accordion-item" id="accordion-item-ur6f3">
-                        <h2 class="accordion-header accordion-header--mod" id="accordionHeaderId2">
-                            <div class="item-actividad">
-                                <div class="accordion-button accordion-button--mod" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse-ur6f3" aria-expanded="true" aria-controls="collapse-ur6f3"
-                                    id="ur6f3">
-                                    <div class="accordion-actividad col-8 text-uppercase">SUBACTIVIDAD 1.1</div>
-                                </div>
-                                <div class="accordion-botones">
-                                    <i class="bi bi-plus-lg icono icono-agregar" data-id="ur6f3" data-bs-toggle="modal"
-                                        data-bs-target="#actividadModal"></i>
-                                    <i class="bi bi-pencil-square icono" data-bs-toggle="modal"
-                                        data-bs-target="#actividadModal"></i>
-                                    <div id="cargar-archivour6f3" style="display: none;">
-                                        <input type="file" id="file-inputur6f3" accept="image/*">
-                                    </div>
-                                    <i class="bi bi-paperclip icono icono-cargar" data-id="file-inputur6f3"></i>
-                                    <i class="bi bi-trash3 icono"></i>
-                                </div>
+                  </div>
+                  <div class="accordion-item" id="accordionId-2">
+                      <h2 class="accordion-header accordion-header--mod" id="accordionHeaderId-2">
+                        <div class="item-actividad">
+                          <div class="accordion-button accordion-button--mod" data-bs-toggle="collapse" data-bs-target="#collapseAcordion-2" aria-expanded="true" aria-controls="collapseAcordion-2" id="2">
+                            <div class="accordion-actividad col-8 text-uppercase">SUBACTIVIDAD 1.1</div>
+                          </div>
+                          <div class="accordion-botones">
+                            <i class="bi bi-plus-lg icono icono-agregar" data-id="2" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
+                            <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
+                            <div id="cargar-archivo-2" style="display: none;">
+                                <input type="file" id="file-input-2" accept="image/*">
                             </div>
-                        </h2>
-                        <div id="collapse-ur6f3" class="accordion-collapse collapse show" aria-labelledby="accordionHeaderId2"
-                            style="">
-                            <div class="accordion-body accordion-body--mod">
-                                <div class="imagenes-actividad">
-                                    <div class="image-wrapper"
-                                        style="position: relative; display: inline-block; margin: 10px;"><img src=""
-                                            class="img-thumbnail"><i class="bi bi-x-circle-fill remove-icon"
-                                            style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i></div>
-                                </div>
-                                <div class="accordion-item" id="accordion-item-10uzu">
-                                    <h2 class="accordion-header accordion-header--mod" id="heading-10uzu">
-                                        <div class="item-actividad">
-                                            <div class="accordion-button accordion-button--mod" data-bs-toggle="collapse"
-                                                data-bs-target="#collapse-10uzu" aria-expanded="true"
-                                                aria-controls="collapse-10uzu" id="10uzu">
-                                                <div class="accordion-actividad col-8 text-uppercase">SUBACTIVIDAD 1.1.1
-                                                </div>
-                                            </div>
-                                            <div class="accordion-botones">
-                                                <i class="bi bi-plus-lg icono icono-agregar" data-id="10uzu"
-                                                    data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                                                <i class="bi bi-pencil-square icono" data-bs-toggle="modal"
-                                                    data-bs-target="#actividadModal"></i>
-                                                <div id="cargar-archivo10uzu" style="display: none;">
-                                                    <input type="file" id="file-input10uzu" accept="image/*">
-                                                </div>
-                                                <i class="bi bi-paperclip icono icono-cargar" data-id="file-input10uzu"></i>
-                                                <i class="bi bi-trash3 icono"></i>
-                                            </div>
-                                        </div>
-                                    </h2>
-                                    <div id="collapse-10uzu" class="accordion-collapse collapse show"
-                                        aria-labelledby="heading-10uzu" style="">
-                                        <div class="accordion-body accordion-body--mod">
-                                            <div class="imagenes-actividad">
-                                                <div class="image-wrapper"
-                                                    style="position: relative; display: inline-block; margin: 10px;"><img
-                                                        src="" class="img-thumbnail"><i
-                                                        class="bi bi-x-circle-fill remove-icon"
-                                                        style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item" id="accordion-item-idc5s">
-                                                <h2 class="accordion-header accordion-header--mod" id="heading-idc5s">
-                                                    <div class="item-actividad">
-                                                        <div class="accordion-button accordion-button--mod collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#collapse-idc5s"
-                                                            aria-expanded="false" aria-controls="collapse-idc5s" id="idc5s">
-                                                            <div class="accordion-actividad col-8 text-uppercase">
-                                                                SUBACTIVIDAD 1.1.1.1</div>
-                                                        </div>
-                                                        <div class="accordion-botones">
-                                                            <i class="bi bi-plus-lg icono icono-agregar" data-id="idc5s"
-                                                                data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                                                            <i class="bi bi-pencil-square icono" data-bs-toggle="modal"
-                                                                data-bs-target="#actividadModal"></i>
-                                                            <div id="cargar-archivoidc5s" style="display: none;">
-                                                                <input type="file" id="file-inputidc5s" accept="image/*">
-                                                            </div>
-                                                            <i class="bi bi-paperclip icono icono-cargar"
-                                                                data-id="file-inputidc5s"></i>
-                                                            <i class="bi bi-trash3 icono"></i>
-                                                        </div>
-                                                    </div>
-                                                </h2>
-                                                <div id="collapse-idc5s" class="accordion-collapse collapse"
-                                                    aria-labelledby="heading-idc5s">
-                                                    <div class="accordion-body accordion-body--mod">
-                                                        <div class="imagenes-actividad">
-                                                            <div class="image-wrapper"
-                                                                style="position: relative; display: inline-block; margin: 10px;">
-                                                                <img src="" class="img-thumbnail"><i
-                                                                    class="bi bi-x-circle-fill remove-icon"
-                                                                    style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <i class="bi bi-paperclip icono icono-cargar" data-id="file-input-2"></i>
+                            <i class="bi bi-trash3 icono"></i>
+                          </div>
                         </div>
-                    </div>
+                      </h2>
+                      <div id="collapseAcordion-2" class="accordion-collapse collapse show" aria-labelledby="accordionHeaderId-2" style="">
+                          <div class="accordion-body accordion-body--mod">
+                              <!-- CONTENEDOR-DIAGNÓSTICO-TRABAJO-OBSERVACIÓN -->
+                              <div class=" row detalles">
+                                <div class="detalles-diagnostico col-6">
+                                  <label for="detalleDiagnosticoId-2" class="form-label mb-0">Diagnóstico</label>
+                                  <input type="text" class="form-control" id="detalleDiagnosticoId-2" placeholder="Ingrese el diagnóstico.">
+                                </div>
+                                <div class="detalles-trabajo col-6">
+                                  <label for="detalleTrabajoId" class="form-label mb-0">Trabajos</label>
+                                  <input type="text" class="form-control" id="detalleTrabajoId-2" placeholder="Ingrese el trabajo.">
+                                </div>
+                                <div class="detalles-observacion col-12">
+                                  <label for="detalleObservacionId" class="form-label mb-0">Observaciones</label>
+                                  <input type="text" class="form-control" id="detalleObservacionId-2" placeholder="Ingrese la observación.">
+                                </div>
+                              </div>
+                              <!-- CONTENEDOR-IMAGENES -->
+                              <div class="imagenes-actividad">
+                                <div class="grid-imagen">
+                                  <div class="titulo-imagen">
+                                    <input type="text" class="form-control" id="tituloImagenId1-2" placeholder="Título 1">
+                                  </div>
+                                  <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
+                                    <img src="../img/imagen3.png" id="imagenId1-2" class="img-thumbnail">
+                                    <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
+                                  </div>
+                                  <div class="descripcion-imagen">
+                                    <input type="text" class="form-control" id="descripcionImagenId1-2" placeholder="Descripción 1">
+                                  </div>
+                                </div>
+                                <div class="grid-imagen">
+                                  <div class="titulo-imagen">
+                                    <input type="text" class="form-control" id="tituloImagenId2-2" placeholder="Título 2">
+                                  </div>
+                                  <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
+                                    <img src="../img/imagen4.png" id="imagenId2-2" class="img-thumbnail">
+                                    <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
+                                  </div>
+                                  <div class="descripcion-imagen">
+                                    <input type="text" class="form-control" id="descripcionImagenId2-2" placeholder="Descripción 2">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion-item" id="accordionId-3">
+                                  <h2 class="accordion-header accordion-header--mod" id="accordionHeaderId-3">
+                                    <div class="item-actividad">
+                                      <div class="accordion-button accordion-button--mod" data-bs-toggle="collapse" data-bs-target="#collapseAcordion-3" aria-expanded="true" aria-controls="collapseAcordion-3" id="3">
+                                        <div class="accordion-actividad col-8 text-uppercase">SUBACTIVIDAD 1.1.1</div>
+                                      </div>
+                                      <div class="accordion-botones">
+                                        <i class="bi bi-plus-lg icono icono-agregar" data-id="3" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
+                                        <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
+                                        <div id="cargar-archivo-3" style="display: none;">
+                                            <input type="file" id="file-input-3" accept="image/*">
+                                        </div>
+                                        <i class="bi bi-paperclip icono icono-cargar" data-id="file-input-3"></i>
+                                        <i class="bi bi-trash3 icono"></i>
+                                      </div>
+                                    </div>
+                                  </h2>
+                                  <div id="collapseAcordion-3" class="accordion-collapse collapse show" aria-labelledby="accordionHeaderId-3" style="">
+                                      <div class="accordion-body accordion-body--mod">
+                                          <!-- CONTENEDOR-DIAGNÓSTICO-TRABAJO-OBSERVACIÓN -->
+                                          <div class=" row detalles">
+                                            <div class="detalles-diagnostico col-6">
+                                              <label for="detalleDiagnosticoId-3" class="form-label mb-0">Diagnóstico</label>
+                                              <input type="text" class="form-control" id="detalleDiagnosticoId-3" placeholder="Ingrese el diagnóstico.">
+                                            </div>
+                                            <div class="detalles-trabajo col-6">
+                                              <label for="detalleTrabajoId-3" class="form-label mb-0">Trabajos</label>
+                                              <input type="text" class="form-control" id="detalleTrabajoId-3" placeholder="Ingrese el trabajo.">
+                                            </div>
+                                            <div class="detalles-observacion col-12">
+                                              <label for="detalleObservacionId-3" class="form-label mb-0">Observaciones</label>
+                                              <input type="text" class="form-control" id="detalleObservacionId-3" placeholder="Ingrese la observación.">
+                                            </div>
+                                          </div>
+                                          <!-- CONTENEDOR-IMAGENES -->
+                                          <div class="imagenes-actividad">
+                                            <div class="grid-imagen">
+                                              <div class="titulo-imagen">
+                                                <input type="text" class="form-control" id="tituloImagenId1-3" placeholder="Título 1">
+                                              </div>
+                                              <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
+                                                <img src="../img/imagen5.png" id="imagenId1-3" class="img-thumbnail">
+                                                <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
+                                              </div>
+                                              <div class="descripcion-imagen">
+                                                <input type="text" class="form-control" id="descripcionImagenId1-3" placeholder="Descripción 1">
+                                              </div>
+                                            </div>
+                                            <div class="grid-imagen">
+                                              <div class="titulo-imagen">
+                                                <input type="text" class="form-control" id="tituloImagenId2" placeholder="Título 2">
+                                              </div>
+                                              <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
+                                                <img src="../img/imagen6.png" id="imagenId2-3" class="img-thumbnail">
+                                                <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
+                                              </div>
+                                              <div class="descripcion-imagen">
+                                                <input type="text" class="form-control" id="descripcionImagenId2-3" placeholder="Descripción 2">
+                                              </div>
+                                            </div>
+                                          </div> 
+                                          <div class="accordion-item" id="accordionId-4">
+                                              <h2 class="accordion-header accordion-header--mod" id="accordionHeaderId-4">
+                                                  <div class="item-actividad">
+                                                      <div class="accordion-button accordion-button--mod" data-bs-toggle="collapse" data-bs-target="#collapseAcordion-4" aria-expanded="false" aria-controls="collapseAcordion-4" id="4">
+                                                        <div class="accordion-actividad col-8 text-uppercase">SUBACTIVIDAD 1.1.1.1</div>
+                                                      </div>
+                                                      <div class="accordion-botones">
+                                                        <i class="bi bi-plus-lg icono icono-agregar" data-id="4" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
+                                                        <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
+                                                        <div id="cargar-archivo-4" style="display: none;">
+                                                            <input type="file" id="file-input-4" accept="image/*">
+                                                        </div>
+                                                        <i class="bi bi-paperclip icono icono-cargar" data-id="file-input-4"></i>
+                                                        <i class="bi bi-trash3 icono"></i>
+                                                      </div>
+                                                  </div>
+                                              </h2>
+                                              <div id="collapseAcordion-4" class="accordion-collapse collapse show" aria-labelledby="accordionHeaderId-4">
+                                                  <div class="accordion-body accordion-body--mod">
+                                                      <!-- CONTENEDOR-DIAGNÓSTICO-TRABAJO-OBSERVACIÓN -->
+                                                      <div class=" row detalles">
+                                                        <div class="detalles-diagnostico col-6">
+                                                          <label for="detalleDiagnosticoId-4" class="form-label mb-0">Diagnóstico</label>
+                                                          <input type="text" class="form-control" id="detalleDiagnosticoId-4" placeholder="Ingrese el diagnóstico.">
+                                                        </div>
+                                                        <div class="detalles-trabajo col-6">
+                                                          <label for="detalleTrabajoId-4" class="form-label mb-0">Trabajos</label>
+                                                          <input type="text" class="form-control" id="detalleTrabajoId-4" placeholder="Ingrese el trabajo.">
+                                                        </div>
+                                                        <div class="detalles-observacion col-12">
+                                                          <label for="detalleObservacionId-4" class="form-label mb-0">Observaciones</label>
+                                                          <input type="text" class="form-control" id="detalleObservacionId-4" placeholder="Ingrese la observación.">
+                                                        </div>
+                                                      </div>
+                                                      <!-- CONTENEDOR-IMAGENES -->
+                                                      <div class="imagenes-actividad">
+                                                        <div class="grid-imagen">
+                                                          <div class="titulo-imagen">
+                                                            <input type="text" class="form-control" id="tituloImagenId1-4" placeholder="Título 1">
+                                                          </div>
+                                                          <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
+                                                            <img src="../img/imagen7.png" id="imagenId1-4" class="img-thumbnail">
+                                                            <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
+                                                          </div>
+                                                          <div class="descripcion-imagen">
+                                                            <input type="text" class="form-control" id="descripcionImagenId1-4" placeholder="Descripción 1">
+                                                          </div>
+                                                        </div>
+                                                        <div class="grid-imagen">
+                                                          <div class="titulo-imagen">
+                                                            <input type="text" class="form-control" id="tituloImagenId2-4" placeholder="Título 2">
+                                                          </div>
+                                                          <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
+                                                            <img src="../img/imagen8.png" id="imagenId2-4" class="img-thumbnail">
+                                                            <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
+                                                          </div>
+                                                          <div class="descripcion-imagen">
+                                                            <input type="text" class="form-control" id="descripcionImagenId2-4" placeholder="Descripción 2">
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
                 </div>
             </div>
           </div>
@@ -346,8 +478,8 @@
         </div>
         <!-- FIN ACCORDION -->
           
-        <div class="col-sm-3">
-          <button class="btn btn-primary text-uppercase fw-200">Guardar <i class="bi bi-floppy"></i></button>
+        <div class="col-6">
+          <button class="btn btn-primary text-uppercase fw-light" onclick="sendActividades()">Guardar <i class="bi bi-floppy"></i></button>
         </div>
       </div>
       <!-- END LISTA DE ACTIVIDADES-->
@@ -389,11 +521,7 @@
                 </div>
 
                 <div id="contenedorGuardarActividad" class="col-6 mt-4">
-                  <button id="guardarActividad" class="btn btn-primary text-uppercase pt-2 pb-2 col-12" style="font-weight:200;">Guardar Act <i class="bi bi-floppy"></i></button>
-                </div>
-
-                <div id="contenedorGuardarSubActividad" class="col-6 mt-4">
-                  <button id="guardarSubactividad" class="btn btn-secondary text-uppercase pt-2 pb-2 col-12" style="font-weight:200;">Guardar SubAc <i class="bi bi-floppy"></i></button>
+                  <button id="guardarActividad" class="btn btn-primary text-uppercase pt-2 pb-2 col-12" style="font-weight:200;">Guardar <i class="bi bi-floppy"></i></button>
                 </div>
               </div>
 
@@ -406,6 +534,7 @@
 
     </div><!--FIN CONTAINER-->
 
+    <script src="../js/actividad.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     
     <!-- <script>

@@ -1,11 +1,11 @@
 const sendResumen = async () => {
   const formData = new FormData();
 
-  const actividad     = document.querySelector('#actividadId').value;
-  const antecedente   = document.querySelector('#antecedenteId').value;
-  const diagnostico   = document.querySelector('#diagnosticoId').value;
-  const conclusion    = document.querySelector('#conclusionId').value;
-  const recomendacion = document.querySelector('#recomendacionId').value;
+  const actividad     = document.querySelector('#actividadId').textContent;
+  const antecedente   = document.querySelector('#antecedenteId').textContent;
+  const diagnostico   = document.querySelector('#diagnosticoId').textContent;
+  const conclusion    = document.querySelector('#conclusionId').textContent;
+  const recomendacion = document.querySelector('#recomendacionId').textContent;
 
   formData.append('actividad', actividad);
   formData.append('antecedente', antecedente);

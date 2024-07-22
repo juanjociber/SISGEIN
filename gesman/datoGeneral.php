@@ -125,7 +125,7 @@
         </div>
 
         <div class="col-6 btn-control mt-2">
-          <button id="guardarDatosGenerales" type="button" class="btn btn-primary text-uppercase fw-200">Guardar <i class="bi bi-floppy"></i></button>
+          <button id="guardarDatosGenerales" type="button" class="btn btn-primary text-uppercase fw-light" onclick="sendDatosGenerales()">Guardar <i class="bi bi-floppy"></i></button>
         </div>
       </div>
     </div>

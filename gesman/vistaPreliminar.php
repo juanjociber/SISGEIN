@@ -1,3 +1,7 @@
+<?php
+  require_once $_SERVER['DOCUMENT_ROOT']."/gesman/connection/ConnGesmanDb.php";
+?>
+
 <!doctype html>
 <html lang="es">
   <head>
