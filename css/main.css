@@ -61,7 +61,7 @@ body {
     max-height: 200px;
     overflow-y: auto;
     background-color: #fff;
-    border: 1px solid #ced4da;
+    /* border: 1px solid #ced4da; */
     border-radius: 0.25rem;
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
     z-index: 1000;

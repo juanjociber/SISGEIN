@@ -1,40 +1,9 @@
-<?php
-// Variables para almacenar los valores
-$actividades = [];
-$antecedentes = [];
-$diagnosticos = [];
-$conclusiones = [];
-$recomendaciones = [];
-
-// Verifica si se ha enviado un formulario
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['actividad'])) {
-        $actividad = $_POST['actividad'];
-    }
-    if (isset($_POST['antecedente'])) {
-        $antecedente = $_POST['antecedente'];
-    }
-    if (isset($_POST['diagnostico'])) {
-        $diagnostico = $_POST['diagnostico'];
-    }
-    if (isset($_POST['conclusion'])) {
-        $conclusion = $_POST['conclusion'];
-    }
-    if (isset($_POST['recomendacion'])) {
-        $recomendacion = $_POST['recomendacion'];
-    }
-}
-?>
-
 <!doctype html>
 <html lang="es">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="css/main.css">
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -45,7 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/main.css">
-    <title>Sistema GPEM S.A.C</title>
+    <title>Resumen</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <style>
       ::placeholder {
         color: #cecccc !important;
@@ -96,6 +66,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         display: grid;
         grid-template-columns: 80% 20%;
         align-items: center;
+        border: 0.5px solid #0000005e;
+        padding: 1px 8px;
+        border-radius: 4px;
       }
       .input-group p{
         font-weight: 300;
@@ -105,9 +78,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         justify-content: flex-end;
       }
       .vineta::before {
-        content: '\2713'; /* Unicode para el check mark */
+        content: '\2713'; 
         font-size: 13px;
-        color: green; /* Cambia el color según prefieras */
+        color: green; 
         margin-right: 8px;
       }
     </style>
@@ -136,75 +109,81 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <!--RESUMEN-->
         <div class="row">
-            <div class="col-12 mt-2">
-              <label for="actividadId" class="form-label">Actividades <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalActividad"></i></label>
-              <div class="input-group">
-                <p class="mb-0" id="actividadId">Mantenimiento de motor</p>
+            <div class="col-12 mt-2" id="containerActividad" style="border: 0.5px solid #0000005e; padding: 1px 8px 9px 8px; border-radius: 4px;">
+              <label class="form-label">Actividades <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalActividad"></i></label>
+              <!-- ITEM ACTIVIDADES -->
+              <div class="input-group mt-2" data-id="id-1721777989578">
+                <p class="mb-0" id="actividadId" style="text-align: justify;">Cambio de motor</p>
                 <div class="input-grop-icons">
-                  <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
-                  <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+                  <span class="input-group-text"><i class="bi bi-pencil-square" onclick="editarItem('actividad', 'id-1721777989578')"></i></span>
+                  <span class="input-group-text"><i class="bi bi-trash3" onclick="eliminarItem('id-1721777989578')"></i></span>
                 </div>
               </div>
             </div>
-            <div class="col-12 mt-2">
-              <label for="antecedenteId" class="form-label">Antecedentes <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalAntecedente"></i></label>
-              <div class="input-group">
+            <!-- ITEM ANTECEDENTES -->
+            <div class="col-12 mt-2" id="containerAntecedente" style="border: 0.5px solid #0000005e; padding: 1px 8px 9px 8px; border-radius: 4px;">
+              <label class="form-label">Antecedentes <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalAntecedente"></i></label>
+              <div class="input-group mt-2" data-id="id-1721781315868">
                 <div class="d-flex">
                   <span class="vineta"></span>
-                  <p class="mb-0" id="antecedenteId">El año 2023 se realizó cambios mantenimiento al cigueñal</p>
+                  <p class="mb-0" id="antecedenteId" style="text-align: justify;">El año 2023 se realizó cambio en cigueñal</p>
                 </div>
                 <div class="input-grop-icons">
-                  <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
-                  <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+                  <span class="input-group-text"><i class="bi bi-pencil-square" onclick="editarItem('antecedente', 'id-1721781315868')"></i></span>
+                  <span class="input-group-text"><i class="bi bi-trash3" onclick="eliminarItem('id-1721781315868')"></i></span>
                 </div>
               </div>
             </div>
-            <div class="col-12 mt-2">
-              <label for="diagnosticoId" class="form-label">Análisis <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalDiagnostico"></i></label>
-              <div class="input-group">
+            <!-- ITEM ANÁLISIS -->
+            <div class="col-12 mt-2" id="containerAnalisis" style="border: 0.5px solid #0000005e; padding: 1px 8px 9px 8px; border-radius: 4px;">
+              <label class="form-label">Análisis <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalAnalisis"></i></label>
+              <div class="input-group mt-2" data-id="id-1721782002867">
                 <div class="d-flex">
                   <span class="vineta"></span>
-                  <p class="mb-0" id="diagnosticoId">Se deben canbiar las fajas.</p>
+                  <p class="mb-0" id="analisisId" style="text-align: justify;">Se deben cambiar las fajas</p>
                 </div>
                 <div class="input-grop-icons">
-                  <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
-                  <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+                  <span class="input-group-text"><i class="bi bi-pencil-square" onclick="editarItem('analisis', 'id-1721782002867')"></i></span>
+                  <span class="input-group-text"><i class="bi bi-trash3" onclick="eliminarItem('id-1721782002867')"></i></span>
                 </div>
               </div>
             </div>
-            <div class="col-12 mt-2">
-              <label for="conclusionId" class="form-label">Conclusiones <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalConclusion"></i></label>
-              <div class="input-group">
+            <!-- ITEM CONCLUSION -->
+            <div class="col-12 mt-2" id="containerConclusion" style="border: 0.5px solid #0000005e; padding: 1px 8px 9px 8px; border-radius: 4px;">
+              <label class="form-label">Conclusiones <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalConclusion"></i></label>
+              <div class="input-group mt-2" data-id="id-1721782191531">
                 <div class="d-flex">
                   <span class="vineta"></span>
-                  <p class="mb-0" id="conclusionId">Conclusión nro.01</p>
+                  <p class="mb-0" id="conclusionId" style="text-align: justify;">Conclusión Nro.01</p>
                 </div>
                 <div class="input-grop-icons">
-                  <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
-                  <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+                  <span class="input-group-text"><i class="bi bi-pencil-square" onclick="editarItem('conclusion', 'id-1721782191531')"></i></span>
+                  <span class="input-group-text"><i class="bi bi-trash3" onclick="eliminarItem('id-1721782191531')"></i></span>
                 </div>
               </div>
             </div>
-            <div class="col-12 mt-2">
-              <label for="recomendacionId" class="form-label">Recomendaciones <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalRecomendacion"></i></label>
-              <div class="input-group">
+             <!-- ITEM RECOMENDACIÓN -->
+            <div class="col-12 mt-2" id="containerRecomendacion" style="border: 0.5px solid #0000005e; padding: 1px 8px 9px 8px; border-radius: 4px;">
+              <label class="form-label">Recomendaciones <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalRecomendacion"></i></label>
+              <div class="input-group mt-2" data-id="id-1721782242627">
                 <div class="d-flex">
                   <span class="vineta"></span>
-                  <p class="mb-0" id="recomendacionId">recomendación 1</p>
+                  <p class="mb-0" id="recomendacionId" style="text-align: justify;">Recomendación Nro.01</p>
                 </div>
                 <div class="input-grop-icons">
-                  <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
-                  <span class="input-group-text"><i class="bi bi-trash3"></i></span>
+                  <span class="input-group-text"><i class="bi bi-pencil-square" onclick="editarItem('recomendacion', 'id-1721782242627')"></i></span>
+                  <span class="input-group-text"><i class="bi bi-trash3" onclick="eliminarItem('id-1721782242627')"></i></span>
                 </div>
               </div>
             </div>
             <div class="col-6 btn-control mt-2">
-              <button type="button" class="btn btn-primary text-uppercase fw-light" onclick="sendResumen()">Guardar <i class="bi bi-floppy"></i></button>
+              <button type="button" class="btn btn-primary text-uppercase fw-light" onclick="fnResumen()">Guardar <i class="bi bi-floppy"></i></button>
             </div>
         </div>
     </div>
 
-    <!-- Modals -->
+    <!-- M O D A L E S -->
+    <!-- ACTIVIDAD -->
     <div class="modal fade" id="modalActividad" tabindex="-1" aria-labelledby="modalActividadLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -213,10 +192,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form method="post">
-              <input type="text" class="form-control" id="modalActividadInput" name="actividad">
+            <form id="formActividad">
+              <input type="text" class="form-control" id="modalActividadInput" name="actividad" placeholder="Ingresar nueva ctividad">
               <div class="modal-footer">
-                <button type="submit" class="btn btn-primary text-uppercase fw-light">Guardar <i class="bi bi-floppy"></i></button>
+                <button type="button" class="btn btn-primary text-uppercase fw-light" onclick="agregarItem('actividad')">Guardar <i class="bi bi-floppy"></i></button>
               </div>
             </form>
           </div>
@@ -224,6 +203,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
     </div>
 
+    <!-- ANTECEDENTE -->
     <div class="modal fade" id="modalAntecedente" tabindex="-1" aria-labelledby="modalAntecedenteLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -232,10 +212,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form method="post">
-              <input type="text" class="form-control" id="modalAntecedenteInput" name="antecedente">
+            <form id="formAntecedente">
+              <input type="text" class="form-control" id="modalAntecedenteInput" name="antecedente" placeholder="Ingresar nuevo antecedente">
               <div class="modal-footer">
-                <button type="submit" class="btn btn-primary text-uppercase fw-light">Guardar <i class="bi bi-floppy"></i></button>
+                <button type="button" class="btn btn-primary text-uppercase fw-light" onclick="agregarItem('antecedente')">Guardar <i class="bi bi-floppy"></i></button>
               </div>
             </form>
           </div>
@@ -243,25 +223,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
     </div>
 
-    <div class="modal fade" id="modalDiagnostico" tabindex="-1" aria-labelledby="modalDiagnosticoLabel" aria-hidden="true">
+    <!-- DIAGNOSTICO -->
+    <div class="modal fade" id="modalAnalisis" tabindex="-1" aria-labelledby="modalAnalisisLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header bg-primary text-white">
-            <h5 class="modal-title text-uppercase" id="modalDiagnosticoLabel">Agregar Diagnóstico</h5>
+            <h5 class="modal-title text-uppercase" id="modalAnalisisLabel">Agregar Diagnóstico</h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form method="post">
-              <input type="text" class="form-control" id="modalDiagnosticoInput" name="diagnostico">
+            <form id="formAnalisis">
+              <input type="text" class="form-control" id="modalAnalisisInput" name="analisis" placeholder="Ingresar nuevo diagnóstico">
               <div class="modal-footer">
-                <button type="submit" class="btn btn-primary text-uppercase fw-light">Guardar <i class="bi bi-floppy"></i></button>
+                <button type="button" class="btn btn-primary text-uppercase fw-light" onclick="agregarItem('analisis')">Guardar <i class="bi bi-floppy"></i></button>
               </div>
             </form>
           </div>
         </div>
       </div>
     </div>
-
+    
+    <!-- CONCLUSIÓN -->
     <div class="modal fade" id="modalConclusion" tabindex="-1" aria-labelledby="modalConclusionLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -270,10 +252,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form method="post">
-              <input type="text" class="form-control" id="modalConclusionInput" name="conclusion">
+            <form id="formConclusion">
+              <input type="text" class="form-control" id="modalConclusionInput" name="conclusion" placeholder="Ingresar nueva conclusión">
               <div class="modal-footer">
-                <button type="submit" class="btn btn-primary text-uppercase fw-light">Guardar <i class="bi bi-floppy"></i></button>
+                <button type="button" class="btn btn-primary text-uppercase fw-light" onclick="agregarItem('conclusion')">Guardar <i class="bi bi-floppy"></i></button>
               </div>
             </form>
           </div>
@@ -281,6 +263,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
     </div>
 
+    <!-- RECOMENDACIÓN -->
     <div class="modal fade" id="modalRecomendacion" tabindex="-1" aria-labelledby="modalRecomendacionLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -289,10 +272,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form method="post">
-              <input type="text" class="form-control" id="modalRecomendacionInput" name="recomendacion">
+            <form id="formRecomendacion">
+              <input type="text" class="form-control" id="modalRecomendacionInput" name="recomendacion" placeholder="Ingresar nueva recomendación">
               <div class="modal-footer">
-                <button type="submit" class="btn btn-primary text-uppercase fw-light">Guardar <i class="bi bi-floppy"></i></button>
+                <button type="button" class="btn btn-primary text-uppercase fw-light" onclick="agregarItem('recomendacion')">Guardar <i class="bi bi-floppy"></i></button>
               </div>
             </form>
           </div>
@@ -302,5 +285,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <script src="../js/resumen.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
   </body>
 </html>

@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS DBGESMAN;
+
+USE DB;
+
+CREATE TABLE equipos (
+    id INT PRIMARY KEY auto_increment,
+    nombre VARCHAR(255) NOT NULL
+);
+
+INSERT INTO equipos (nombre) VALUES 
+('Motor'),
+('Bateria'),
+('Bujia'),
+('Termostato'),
+('Llantas'),
+('Puerta'),
+('Capot')

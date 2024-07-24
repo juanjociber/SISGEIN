@@ -79,37 +79,37 @@
         <!--DATOS EQUIPOS-->
         <div class="row g-3">
             <div class="col-6 col-lg-4 mt-2">
-                <label for="nombreEquipoId" class="form-label mb-0">Nombre</label>
-                <input type="text" class="form-control" id="nombreEquipoId">
+                <label for="nombreEquipoInput" class="form-label mb-0">Nombre</label>
+                <input type="text" class="form-control" id="nombreEquipoInput">
             </div>
             <div class="custom-select-container col-6 col-lg-4 mt-2">
-              <label for="modeloId" class="form-label mb-0">Modelo</label>
-              <input type="text" class="form-control" id="modeloId">
+              <label for="modeloInput" class="form-label mb-0">Modelo</label>
+              <input type="text" class="form-control" id="modeloInput">
             </div>
             <div class="col-6 col-lg-4 mt-2">
-                <label for="serieEquipoId" class="form-label mb-0">Serie</label>
-                <input type="text" class="form-control" id="serieEquipoId">
+                <label for="serieEquipoInput" class="form-label mb-0">Serie</label>
+                <input type="text" class="form-control" id="serieEquipoInput">
             </div>
 
             <div class="custom-select-container col-6 col-lg-4 mt-2">
-              <label for="marcaId" class="form-label mb-0">Marca</label>
-              <input type="text" class="form-control" id="marcaId">
+              <label for="marcaInput" class="form-label mb-0">Marca</label>
+              <input type="text" class="form-control" id="marcaInput">
             </div>
             <div class="col-6 col-lg-4 mt-2">
-                <label for="kmEquipoId" class="form-label mb-0">Kilometraje</label>
-                <input type="text" class="form-control" id="kmEquipoId">
+                <label for="kmEquipoInput" class="form-label mb-0">Kilometraje</label>
+                <input type="text" class="form-control" id="kmEquipoInput">
             </div>
             <div class="col-6 col-lg-4 mt-2">
-                <label for="horaMotorId" class="form-label mb-0">Horas de motor</label>
-                <input type="text" class="form-control" id="horaMotorId">
+                <label for="horaMotorInput" class="form-label mb-0">Horas de motor</label>
+                <input type="text" class="form-control" id="horaMotorInput">
             </div>
 
             <div class="col-md-12 col-lg-12 mt-2">
-                <label for="descipcionEquipoId" class="form-label mb-0">Descripción</label>
-                <textarea name="desEquipo" class="form-control fixed-size-textarea" rows="4" id="descripcionEquipoId" placeholder="Puede ingresar adicionalmente la fecha de fabricación, número interno, número de padron,tipo de combustible y otros que considere necesario."></textarea>
+                <label for="descripcionEquipoInput" class="form-label mb-0">Descripción</label>
+                <textarea name="desEquipo" class="form-control fixed-size-textarea" rows="4" id="descripcionEquipoInput" placeholder="Puede ingresar adicionalmente la fecha de fabricación, número interno, número de padron,tipo de combustible y otros que considere necesario."></textarea>
             </div>
             <div class="col-6 btn-control mt-2">
-              <button type="button" class="btn btn-primary text-uppercase fw-light" onclick="sendEquipo()">Guardar <i class="bi bi-floppy"></i></button>
+              <button type="button" class="btn btn-primary text-uppercase fw-light" onclick="fnDatosEquipos()">Guardar <i class="bi bi-floppy"></i></button>
             </div>
         </div>
     </div>

@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/main.css">
-    <title>Sistema GPEM S.A.C</title>
+    <title>Actividad</title>
     <style>
       img{
         width: 100%;
@@ -240,41 +240,41 @@
                   <div class=" row detalles">
                     <div class="detalles-diagnostico col-6">
                       <label for="detalleDiagnosticoId-1" class="form-label mb-0">Diagnóstico</label>
-                      <input type="text" class="form-control" id="detalleDiagnosticoId-1" placeholder="Ingrese el diagnóstico.">
+                      <p class="mb-1" id="detalleDiagnosticoId-1">Diagnostico Nro.1</p>
                     </div>
                     <div class="detalles-trabajo col-6">
                       <label for="detalleTrabajoId-1" class="form-label mb-0">Trabajos</label>
-                      <input type="text" class="form-control" id="detalleTrabajoId-1" placeholder="Ingrese el trabajo.">
+                      <p class="mb-1" id="detalleTrabajoId-1">Trabajo Nro.1</p>
                     </div>
                     <div class="detalles-observacion col-12">
                       <label for="detalleObservacionId-1" class="form-label mb-0">Observaciones</label>
-                      <input type="text" class="form-control" id="detalleObservacionId-1" placeholder="Ingrese la observación.">
+                      <p class="mb-1" id="detalleObservacionId-1">Observación N°1</p>
                     </div>
                   </div>
                   <!-- CONTENEDOR-IMAGENES -->
                   <div class="imagenes-actividad">
                     <div class="grid-imagen">
                       <div class="titulo-imagen">
-                        <input type="text" class="form-control" id="tituloImagenId1-1" placeholder="Título 1">
+                        <p class="mb-1" id="tituloImagenId1-1" style="text-align:center;">Título 1</p>
                       </div>
                       <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
                         <img src="../img/imagen1.png" id="imagenId1-1" class="img-thumbnail">
                         <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
                       </div>
                       <div class="descripcion-imagen">
-                        <input type="text" class="form-control" id="descripcionImagenId1-1" placeholder="Descripción 1">
+                        <p class="mb-1" id="descripcionImagenId1-1" style="text-align:center;">Descripción 1</p>
                       </div>
                     </div>
                     <div class="grid-imagen">
                       <div class="titulo-imagen">
-                        <input type="text" class="form-control" id="tituloImagenId2-1" placeholder="Título 2">
+                        <p class="mb-1" id="tituloImagenId2-1" style="text-align:center;">Título 2</p>
                       </div>
                       <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
                         <img src="../img/imagen2.png" id="imagenId2-1" class="img-thumbnail">
                         <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
                       </div>
                       <div class="descripcion-imagen">
-                        <input type="text" class="form-control" id="descripcionImagenId2-1" placeholder="Descripción 2">
+                        <p class="mb-1" id="descripcionImagenId2-1" style="text-align:center;">Descripción 2</p>
                       </div>
                     </div>
                   </div>
@@ -301,41 +301,41 @@
                               <div class=" row detalles">
                                 <div class="detalles-diagnostico col-6">
                                   <label for="detalleDiagnosticoId-2" class="form-label mb-0">Diagnóstico</label>
-                                  <input type="text" class="form-control" id="detalleDiagnosticoId-2" placeholder="Ingrese el diagnóstico.">
+                                  <p class="mb-1" id="detalleDiagnosticoId-2">Diagnostico Nro.1.1</p>
                                 </div>
                                 <div class="detalles-trabajo col-6">
                                   <label for="detalleTrabajoId" class="form-label mb-0">Trabajos</label>
-                                  <input type="text" class="form-control" id="detalleTrabajoId-2" placeholder="Ingrese el trabajo.">
+                                  <p class="mb-1" id="detalleTrabajoId-2">Trabajo Nro.1.1</p>
                                 </div>
                                 <div class="detalles-observacion col-12">
                                   <label for="detalleObservacionId" class="form-label mb-0">Observaciones</label>
-                                  <input type="text" class="form-control" id="detalleObservacionId-2" placeholder="Ingrese la observación.">
+                                  <p class="mb-1" id="detalleObservacionId-2">Observación N°1.1</p>
                                 </div>
                               </div>
                               <!-- CONTENEDOR-IMAGENES -->
                               <div class="imagenes-actividad">
                                 <div class="grid-imagen">
                                   <div class="titulo-imagen">
-                                    <input type="text" class="form-control" id="tituloImagenId1-2" placeholder="Título 1">
+                                    <p class="mb-1" id="tituloImagenId1-2" style="text-align:center;">Título 1</p>
                                   </div>
                                   <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
                                     <img src="../img/imagen3.png" id="imagenId1-2" class="img-thumbnail">
                                     <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
                                   </div>
                                   <div class="descripcion-imagen">
-                                    <input type="text" class="form-control" id="descripcionImagenId1-2" placeholder="Descripción 1">
+                                    <p class="mb-1" id="descripcionImagenId1-2" style="text-align:center;">Descripción 1</p>
                                   </div>
                                 </div>
                                 <div class="grid-imagen">
                                   <div class="titulo-imagen">
-                                    <input type="text" class="form-control" id="tituloImagenId2-2" placeholder="Título 2">
+                                    <p class="mb-1" id="tituloImagenId2-2" style="text-align:center;">Título 2</p>
                                   </div>
                                   <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
                                     <img src="../img/imagen4.png" id="imagenId2-2" class="img-thumbnail">
                                     <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
                                   </div>
                                   <div class="descripcion-imagen">
-                                    <input type="text" class="form-control" id="descripcionImagenId2-2" placeholder="Descripción 2">
+                                    <p class="mb-1" id="descripcionImagenId2-2" style="text-align:center;">Descripción 2</p>
                                   </div>
                                 </div>
                               </div>
@@ -362,108 +362,45 @@
                                           <div class=" row detalles">
                                             <div class="detalles-diagnostico col-6">
                                               <label for="detalleDiagnosticoId-3" class="form-label mb-0">Diagnóstico</label>
-                                              <input type="text" class="form-control" id="detalleDiagnosticoId-3" placeholder="Ingrese el diagnóstico.">
+                                              <p class="mb-1" id="detalleDiagnosticoId-3">Diagnostico Nro.1.1.1</p>
                                             </div>
                                             <div class="detalles-trabajo col-6">
                                               <label for="detalleTrabajoId-3" class="form-label mb-0">Trabajos</label>
-                                              <input type="text" class="form-control" id="detalleTrabajoId-3" placeholder="Ingrese el trabajo.">
+                                              <p class="mb-1" id="detalleTrabajoId-3">Trabajo Nro.1.1.1</p>
                                             </div>
                                             <div class="detalles-observacion col-12">
                                               <label for="detalleObservacionId-3" class="form-label mb-0">Observaciones</label>
-                                              <input type="text" class="form-control" id="detalleObservacionId-3" placeholder="Ingrese la observación.">
+                                              <p class="mb-1" id="detalleObservacionId-3">Observación N°1.1.1</p>
                                             </div>
                                           </div>
                                           <!-- CONTENEDOR-IMAGENES -->
                                           <div class="imagenes-actividad">
                                             <div class="grid-imagen">
                                               <div class="titulo-imagen">
-                                                <input type="text" class="form-control" id="tituloImagenId1-3" placeholder="Título 1">
+                                                <p class="mb-1" id="tituloImagenId1-3" style="text-align:center;">Título 1</p>
                                               </div>
                                               <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
                                                 <img src="../img/imagen5.png" id="imagenId1-3" class="img-thumbnail">
                                                 <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
                                               </div>
                                               <div class="descripcion-imagen">
-                                                <input type="text" class="form-control" id="descripcionImagenId1-3" placeholder="Descripción 1">
+                                               <p class="mb-1" id="descripcionImagenId1-2" style="text-align:center;">Descripción 1</p>
+
                                               </div>
                                             </div>
                                             <div class="grid-imagen">
                                               <div class="titulo-imagen">
-                                                <input type="text" class="form-control" id="tituloImagenId2" placeholder="Título 2">
+                                                <p class="mb-1" id="tituloImagenId2-2" style="text-align:center;">Título 2</p>
                                               </div>
                                               <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
                                                 <img src="../img/imagen6.png" id="imagenId2-3" class="img-thumbnail">
                                                 <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
                                               </div>
                                               <div class="descripcion-imagen">
-                                                <input type="text" class="form-control" id="descripcionImagenId2-3" placeholder="Descripción 2">
+                                                <p class="mb-1" id="descripcionImagenId2-3" style="text-align:center;">Descripción 2</p>
                                               </div>
                                             </div>
                                           </div> 
-                                          <div class="accordion-item" id="accordionId-4">
-                                              <h2 class="accordion-header accordion-header--mod" id="accordionHeaderId-4">
-                                                  <div class="item-actividad">
-                                                      <div class="accordion-button accordion-button--mod" data-bs-toggle="collapse" data-bs-target="#collapseAcordion-4" aria-expanded="false" aria-controls="collapseAcordion-4" id="4">
-                                                        <div class="accordion-actividad col-8 text-uppercase">SUBACTIVIDAD 1.1.1.1</div>
-                                                      </div>
-                                                      <div class="accordion-botones">
-                                                        <i class="bi bi-plus-lg icono icono-agregar" data-id="4" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                                                        <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                                                        <div id="cargar-archivo-4" style="display: none;">
-                                                            <input type="file" id="file-input-4" accept="image/*">
-                                                        </div>
-                                                        <i class="bi bi-paperclip icono icono-cargar" data-id="file-input-4"></i>
-                                                        <i class="bi bi-trash3 icono"></i>
-                                                      </div>
-                                                  </div>
-                                              </h2>
-                                              <div id="collapseAcordion-4" class="accordion-collapse collapse show" aria-labelledby="accordionHeaderId-4">
-                                                  <div class="accordion-body accordion-body--mod">
-                                                      <!-- CONTENEDOR-DIAGNÓSTICO-TRABAJO-OBSERVACIÓN -->
-                                                      <div class=" row detalles">
-                                                        <div class="detalles-diagnostico col-6">
-                                                          <label for="detalleDiagnosticoId-4" class="form-label mb-0">Diagnóstico</label>
-                                                          <input type="text" class="form-control" id="detalleDiagnosticoId-4" placeholder="Ingrese el diagnóstico.">
-                                                        </div>
-                                                        <div class="detalles-trabajo col-6">
-                                                          <label for="detalleTrabajoId-4" class="form-label mb-0">Trabajos</label>
-                                                          <input type="text" class="form-control" id="detalleTrabajoId-4" placeholder="Ingrese el trabajo.">
-                                                        </div>
-                                                        <div class="detalles-observacion col-12">
-                                                          <label for="detalleObservacionId-4" class="form-label mb-0">Observaciones</label>
-                                                          <input type="text" class="form-control" id="detalleObservacionId-4" placeholder="Ingrese la observación.">
-                                                        </div>
-                                                      </div>
-                                                      <!-- CONTENEDOR-IMAGENES -->
-                                                      <div class="imagenes-actividad">
-                                                        <div class="grid-imagen">
-                                                          <div class="titulo-imagen">
-                                                            <input type="text" class="form-control" id="tituloImagenId1-4" placeholder="Título 1">
-                                                          </div>
-                                                          <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
-                                                            <img src="../img/imagen7.png" id="imagenId1-4" class="img-thumbnail">
-                                                            <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
-                                                          </div>
-                                                          <div class="descripcion-imagen">
-                                                            <input type="text" class="form-control" id="descripcionImagenId1-4" placeholder="Descripción 1">
-                                                          </div>
-                                                        </div>
-                                                        <div class="grid-imagen">
-                                                          <div class="titulo-imagen">
-                                                            <input type="text" class="form-control" id="tituloImagenId2-4" placeholder="Título 2">
-                                                          </div>
-                                                          <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
-                                                            <img src="../img/imagen8.png" id="imagenId2-4" class="img-thumbnail">
-                                                            <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
-                                                          </div>
-                                                          <div class="descripcion-imagen">
-                                                            <input type="text" class="form-control" id="descripcionImagenId2-4" placeholder="Descripción 2">
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
                                       </div>
                                   </div>
                               </div>
@@ -479,7 +416,7 @@
         <!-- FIN ACCORDION -->
           
         <div class="col-6">
-          <button class="btn btn-primary text-uppercase fw-light" onclick="sendActividades()">Guardar <i class="bi bi-floppy"></i></button>
+          <button class="btn btn-primary text-uppercase fw-light" onclick="fnActividades()">Guardar <i class="bi bi-floppy"></i></button>
         </div>
       </div>
       <!-- END LISTA DE ACTIVIDADES-->
@@ -537,180 +474,6 @@
     <script src="../js/actividad.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     
-    <!-- <script>
-
-      let nombreActividad = null;
-
-      document.addEventListener('DOMContentLoaded', () => {
-        const rootAccordion = document.getElementById('contenedor-accordion');
-
-        //ALGORIRMO PARA AGREGAR NUEVA ACTIVIDAD
-        document.querySelector('#agregarActividad').addEventListener('click',() =>{
-          document.querySelector('#contenedorGuardarActividad').style.display='block';
-          document.querySelector('#contenedorGuardarSubActividad').style.display='none';
-          document.querySelector('#nombreActId').removeAttribute('disabled','disabled');
-        });
-
-        // ALGORITMO PARA GUARDAR ACTIVIDAD
-        document.getElementById('guardarActividad').addEventListener('click', function() {
-          nombreActividad = document.querySelector('#nombreActId').value;
-          if (nombreActividad.trim() === '') return; // No hacer nada si el campo está vacío
-
-          // AGREGANDO NUEVA ACTIVIDAD
-          crearAccordion(rootAccordion, `${nombreActividad}`, 1);
-
-          document.querySelector('#nombreActId').value = '';
-          const modal = bootstrap.Modal.getInstance(document.getElementById('actividadModal'));
-          modal.hide();
-        });
-
-        // ALGORITMO PARA GUARDAR SUBACTIVIDAD
-        document.getElementById('guardarSubactividad').addEventListener('click', function() {
-          const nombreSubactividad = document.querySelector('#nombreSubActId').value;
-          if (nombreSubactividad.trim() === '') return; // No hacer nada si el campo está vacío
-
-          const currentActivityId = document.querySelector('#actividadModal').getAttribute('data-current-activity-id');
-          const activityElement = document.querySelector(`#collapse-${currentActivityId} .accordion-body`);
-
-          // AGREGAR SUBACTIVIDAD
-          crearAccordion(activityElement, `${nombreSubactividad}`, 1);
-          document.querySelector('#nombreSubActId').value = '';
-          document.querySelector('#camposubactividad').style.display = 'none';
-          document.querySelector('#nombreActId').value = '';
-          // document.querySelector('#nombreActId').setAttribute('disabled','disabled');
-          const modal = bootstrap.Modal.getInstance(document.getElementById('actividadModal'));
-          modal.hide();
-        });
-      });
-
-      const crearAccordion = (parentElement, actividad, level) => {
-        const idUnico = Math.random().toString(36).substring(2, 7); // ID único para evitar colisiones
-
-        const accordionItem = document.createElement('div');
-        accordionItem.className = 'accordion-item';
-        accordionItem.setAttribute('id',`accordion-item-${idUnico}`);
-
-        const header = document.createElement('h2');
-        header.className = 'accordion-header accordion-header--mod';
-        header.id = `heading-${idUnico}`;
-
-        const button = document.createElement('div');
-        button.className = 'accordion-button accordion-button--mod collapsed';
-        button.setAttribute('data-bs-toggle', 'collapse');
-        button.setAttribute('data-bs-target', `#collapse-${idUnico}`);
-        button.setAttribute('aria-expanded', 'false');
-        button.setAttribute('aria-controls', `collapse-${idUnico}`);
-        button.setAttribute('id',`${idUnico}` );
-
-        const actividadDiv = document.createElement('div');
-        actividadDiv.className = 'accordion-actividad col-8 text-uppercase';
-        actividadDiv.textContent = actividad;
-
-        button.appendChild(actividadDiv);
-
-        const botonesDiv = document.createElement('div');
-        botonesDiv.className = 'accordion-botones';
-        botonesDiv.innerHTML = `
-          <i class="bi bi-plus-lg icono icono-agregar" data-id="${idUnico}" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-          <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-          <div id="cargar-archivo${idUnico}" style="display: none;">
-            <input type="file" id="file-input${idUnico}" accept="image/*" />
-          </div>
-          <i class="bi bi-paperclip icono icono-cargar" data-id="file-input${idUnico}"></i>
-          <i class="bi bi-trash3 icono"></i>
-        `;
-        const itemActividad = document.createElement('div');
-        itemActividad.className = 'item-actividad';
-        itemActividad.appendChild(button);
-        itemActividad.appendChild(botonesDiv);
-
-        header.appendChild(itemActividad);
-        accordionItem.appendChild(header);
-
-        const collapseDiv = document.createElement('div');
-        collapseDiv.id = `collapse-${idUnico}`;
-        collapseDiv.className = 'accordion-collapse collapse';
-        collapseDiv.setAttribute('aria-labelledby', `heading-${idUnico}`);
-
-        const bodyDiv = document.createElement('div');
-        bodyDiv.className = 'accordion-body accordion-body--mod';
-
-        bodyDiv.innerHTML = '<div class="imagenes-actividad"></div>'; // Contenedor para las imágenes
-
-        collapseDiv.appendChild(bodyDiv);
-        accordionItem.appendChild(collapseDiv);
-        parentElement.appendChild(accordionItem);
-
-        // EVENTO PARA AGREGAR SUBACTIVIDAD
-        const addSubActivityIcon = botonesDiv.querySelector('.icono-agregar');
-        addSubActivityIcon.addEventListener('click', function(e) {
-            // MOSTRAR CAMPO PARA INGRESAR SUBACTIVIDAD EN EL MODAL
-            document.querySelector('#camposubactividad').style.display = 'block';
-            // OCULTAR CAMPO ACTIVIDAD
-            document.querySelector('#nombreActId').value =actividad;
-            document.querySelector('#nombreActId').setAttribute('disabled','disabled');
-            // OCULTAR BOTON GUARDAR ACTIVIDAD
-            document.querySelector('#contenedorGuardarActividad').style.display='none';
-            // MOSTRAR BOTON GUARAR SUBACTIVIDAD
-            document.querySelector('#contenedorGuardarSubActividad').style.display='block';
-            // ESTABLECER EL ID DE LA ACTIVIDAD ACTUAL EN EL MODAL
-            document.querySelector('#actividadModal').setAttribute('data-current-activity-id', idUnico);
-
-            console.log(e.target);
-        });
-
-        // VERIFICANDO SI EL INPUT EXISTE ANTES DE AGREGAR EL 'eventListener'
-        const fileInput = document.getElementById(`file-input${idUnico}`);
-        if (fileInput) {
-          fileInput.addEventListener('change', function(e) {
-            const fileList = e.target.files;
-            const imageContainer = bodyDiv.querySelector('.imagenes-actividad');
-            for (let i = 0; i < fileList.length; i++) {
-              const file = fileList[i];
-              const reader = new FileReader();
-              reader.onload = function(event) {
-                const imgDiv = document.createElement('div');
-                imgDiv.className = 'image-wrapper';
-                imgDiv.style.position = 'relative';
-                imgDiv.style.display = 'inline-block';
-                imgDiv.style.margin = '10px';
-
-                const img = document.createElement('img');
-                img.src = event.target.result;
-                img.className = 'img-thumbnail';
-
-                const removeIcon = document.createElement('i');
-                removeIcon.className = 'bi bi-x-circle-fill remove-icon';
-                removeIcon.style.position = 'absolute';
-                removeIcon.style.top = '5px';
-                removeIcon.style.right = '5px';
-                removeIcon.style.cursor = 'pointer';
-
-                removeIcon.addEventListener('click', function() {
-                    imgDiv.remove();
-                });
-
-                imgDiv.appendChild(img);
-                imgDiv.appendChild(removeIcon);
-                imageContainer.appendChild(imgDiv);
-              };
-              reader.readAsDataURL(file);
-            }
-          });
-        }
-      };
-      // ALGORITMO PARA CARGAR IMAGEN 
-      document.addEventListener('click', (e) => {
-        if (e.target.classList.contains('icono-cargar')) {
-          const id = e.target.getAttribute('data-id');
-          const fileInput = document.getElementById(id);
-          if (fileInput) {
-            fileInput.click();
-          }
-        }
-      });
-
-    </script> -->
   
   </body>
 </html>

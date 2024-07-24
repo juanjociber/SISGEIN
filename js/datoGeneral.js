@@ -64,23 +64,20 @@ const cargaFechaActual = () =>{
   document.getElementById('fechaInforme').value = formattedDate;
 }
 
+const fnDatosGenerales = async () => {
+  const formData = new FormData();
+  const fecha = document.querySelector('#fechaInforme').value;
+  const contacto = document.querySelector('#contactoInput').value;
+  const lugar = document.querySelector('#ubicacion').value;
+  const supervisor = document.querySelector('#supervisorInput').value;
 
-// const cargaDatosGenerales = async () =>{
+  formData.append('fecha', fecha);
+  formData.append('contacto', contacto);
+  formData.append('lugar', lugar);
+  formData.append('supervisor', supervisor);
 
-  const sendDatosGenerales = async () => {
-    const formData = new FormData();
-    const fecha = document.querySelector('#fechaInforme').value;
-    const contacto = document.querySelector('#contactoInput').value;
-    const lugar = document.querySelector('#ubicacion').value;
-    const supervisor = document.querySelector('#supervisorInput').value;
-  
-    formData.append('fecha', fecha);
-    formData.append('contacto', contacto);
-    formData.append('lugar', lugar);
-    formData.append('supervisor', supervisor);
-  
-    console.log('Datos a enviar: ', { fecha, contacto, lugar, supervisor });
-    console.log(formData);
+  console.log('Datos a enviar: ', { fecha, contacto, lugar, supervisor });
+  console.log(formData);
 
 
   // const response = await fetch('http://192.168.40.70/marcador/controller/RegistrarMarcacion.php', {
@@ -103,6 +100,6 @@ const cargaFechaActual = () =>{
 document.addEventListener('DOMContentLoaded', () =>{
   cargaSelect();
   cargaFechaActual();
-  cargaDatosGenerales();
+  //cargaDatosGenerales();
 });
 
