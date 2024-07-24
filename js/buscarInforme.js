@@ -15,9 +15,21 @@ const inicializarSelectPersonalizado = async (idInput, idLista, idSpinner) => {
       }
   });
 
-  // FILTRAR ELEMENTOS DE LA LISTA AL ESCRIBIR EN EL INPUT
-  inputSelect.addEventListener('input', async function() {
+  // DEBOUNCE FUNCTION
+  const debounce = (func, delay) => {
+    let debounceTimer;
+    return function() {
+      const context = this;
+      const args = arguments;
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => func.apply(context, args), delay);
+    }
+  };
+
+  // FUNCIÓN DE BÚSQUEDA
+  const buscarDatos = async () => {
     const filtro = inputSelect.value.toLowerCase();
+    console.log(filtro);
     if (filtro.length === 0) {
       // LIMPIAR LA LISTA SI EL INPUT ESTÁ VACÍO
       listaSelect.innerHTML = '';
@@ -38,24 +50,20 @@ const inicializarSelectPersonalizado = async (idInput, idLista, idSpinner) => {
 
       if (datos.length === 0) {
         // MOSTRAR MENSAJE DE NO HABER RESULTADOS
-        Swal.fire({
-          title: 'Aviso',
-          html: `<div class="custom-select-item">No se encontraron resultados</div>`,
-          icon: 'info',
-          confirmButtonText: 'OK'
-        }); 
+        listaSelect.innerHTML = `<div class="custom-select-item" style="font-size:15px; font-weight:300">No se encontraron resultados</div>`;
+        listaSelect.style.display = 'block';
       } else {
         // LIMPIAR LISTA ACTUAL
         listaSelect.innerHTML = ''; 
         datos.forEach(elemento => {
           const itemLista = document.createElement('div');
           itemLista.className = 'custom-select-item';
-          // ESCTRUCTURA DE RESPUESTA JSON
-          itemLista.textContent = elemento.nombre; 
+          // ESTRUCTURA DE RESPUESTA JSON
+          itemLista.textContent = elemento.nombre;             
           itemLista.addEventListener('click', function() {
             inputSelect.value = this.textContent;
             // LIMPIANDO LISTA ACTUAL PARA MOSTRAR LA SELECCIONADA
-            listaSelect.innerHTML = ''; 
+            listaSelect.innerHTML = '';
             // OCULTANDO LISTA DESPUES DE SELECCIÓN
             listaSelect.style.display = 'none'; 
           });
@@ -71,8 +79,12 @@ const inicializarSelectPersonalizado = async (idInput, idLista, idSpinner) => {
           spinner.style.display = 'none';
       }, 500); 
     }
-  });
+  };
+
+  // ASIGNAR LA FUNCIÓN DEBUNCED AL EVENTO INPUT
+  inputSelect.addEventListener('input', debounce(buscarDatos, 500));
 }
+
 
 // CARGANDO FECHA ACTUAL
 const cargaFechaActual = () =>{

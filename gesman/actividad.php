@@ -24,8 +24,9 @@
       }
       ::placeholder{
         color: #cecccc !important;
-        font-weight: 200;
-        text-transform: uppercase;
+        font-weight: 300;
+        font-size:15px;
+        /* text-transform: uppercase; */
       }
       /*ESTILOS CARGA DE IMAGEN*/
       .file-input-wrapper {
@@ -191,9 +192,9 @@
           <div class="col-12">
               <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                   <ol class="breadcrumb">
-                      <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/datoGeneral.php" class="text-decoration-none">INFORME</a></li>
-                      <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/datoEquipo.php" class="text-decoration-none">EQUIPO</a></li>
-                      <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/resumen.php" class="text-decoration-none">RESUMEN</a></li>
+                      <li class="breadcrumb-item fw-bold"><a href="/sisgein/gesman/datoGeneral.php" class="text-decoration-none">INFORME</a></li>
+                      <li class="breadcrumb-item fw-bold"><a href="/sisgein/gesman/datoEquipo.php" class="text-decoration-none">EQUIPO</a></li>
+                      <li class="breadcrumb-item fw-bold"><a href="/sisgein/gesman/resumen.php" class="text-decoration-none">RESUMEN</a></li>
                       <li class="breadcrumb-item active fw-bold" aria-current="page">ACTIVIDAD</li>
                   </ol>
               </nav>
@@ -221,7 +222,7 @@
             <h2 class="accordion-header accordion-header--mod" id="accordionHeaderId-1">
               <div class="item-actividad">
                 <div class="accordion-button accordion-button--mod" data-bs-toggle="collapse" data-bs-target="#collapseAcordion-1" aria-expanded="false" aria-controls="collapseAcordion-1" id="gpem1">
-                  <div class="accordion-actividad col-8 text-uppercase">ACTIVIDAD 1</div>
+                  <div class="accordion-actividad col-8 text-uppercase" id="actividadId">ACTIVIDAD 1</div>
                 </div>
                 <div class="accordion-botones">
                   <i class="bi bi-plus-lg icono icono-agregar" data-id="1" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
@@ -239,42 +240,42 @@
                   <!-- CONTENEDOR-DIAGNÓSTICO-TRABAJO-OBSERVACIÓN -->
                   <div class=" row detalles">
                     <div class="detalles-diagnostico col-6">
-                      <label for="detalleDiagnosticoId-1" class="form-label mb-0">Diagnóstico</label>
-                      <p class="mb-1" id="detalleDiagnosticoId-1">Diagnostico Nro.1</p>
+                      <label for="diagnosticoId" class="form-label mb-0">Diagnóstico</label>
+                      <p class="mb-1" id="diagnosticoId">Diagnostico Nro.1</p>
                     </div>
                     <div class="detalles-trabajo col-6">
-                      <label for="detalleTrabajoId-1" class="form-label mb-0">Trabajos</label>
-                      <p class="mb-1" id="detalleTrabajoId-1">Trabajo Nro.1</p>
+                      <label for="trabajoId" class="form-label mb-0">Trabajos</label>
+                      <p class="mb-1" id="trabajoId">Trabajo Nro.1</p>
                     </div>
                     <div class="detalles-observacion col-12">
-                      <label for="detalleObservacionId-1" class="form-label mb-0">Observaciones</label>
-                      <p class="mb-1" id="detalleObservacionId-1">Observación N°1</p>
+                      <label for="observacionId" class="form-label mb-0">Observaciones</label>
+                      <p class="mb-1" id="observacionId">Observación N°1</p>
                     </div>
                   </div>
                   <!-- CONTENEDOR-IMAGENES -->
                   <div class="imagenes-actividad">
                     <div class="grid-imagen">
                       <div class="titulo-imagen">
-                        <p class="mb-1" id="tituloImagenId1-1" style="text-align:center;">Título 1</p>
+                        <p class="mb-1" id="titulo1Id" style="text-align:center;">Título 1</p>
                       </div>
                       <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
                         <img src="../img/imagen1.png" id="imagenId1-1" class="img-thumbnail">
                         <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
                       </div>
                       <div class="descripcion-imagen">
-                        <p class="mb-1" id="descripcionImagenId1-1" style="text-align:center;">Descripción 1</p>
+                        <p class="mb-1" id="descripcion1Id" style="text-align:center;">Descripción 1</p>
                       </div>
                     </div>
                     <div class="grid-imagen">
                       <div class="titulo-imagen">
-                        <p class="mb-1" id="tituloImagenId2-1" style="text-align:center;">Título 2</p>
+                        <p class="mb-1" id="titulo2Id" style="text-align:center;">Título 2</p>
                       </div>
                       <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
                         <img src="../img/imagen2.png" id="imagenId2-1" class="img-thumbnail">
                         <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
                       </div>
                       <div class="descripcion-imagen">
-                        <p class="mb-1" id="descripcionImagenId2-1" style="text-align:center;">Descripción 2</p>
+                        <p class="mb-1" id="descripcion2Id" style="text-align:center;">Descripción 2</p>
                       </div>
                     </div>
                   </div>
@@ -410,18 +411,40 @@
                 </div>
             </div>
           </div>
+
+
+          <div class="accordion-item" id="accordionId-1">
+            <h2 class="accordion-header accordion-header--mod" id="accordionHeaderId-1">
+              <div class="item-actividad">
+                <div class="accordion-button accordion-button--mod collapsed" data-bs-toggle="collapse" data-bs-target="#collapseAcordion-1" aria-expanded="false" aria-controls="collapseAcordion-1" id="gpem1">
+                  <div class="accordion-actividad col-8 text-uppercase" id="actividadId">ACTIVIDAD 1</div>
+                </div>
+                <div class="accordion-botones">
+                  <i class="bi bi-plus-lg icono icono-agregar" data-id="1" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
+                  <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
+                  <div id="cargar-archivo-1" style="display: none;">
+                    <input type="file" id="file-input-1" accept="image/*">
+                  </div>
+                  <i class="bi bi-paperclip icono icono-cargar" data-id="file-input-1"></i>
+                  <i class="bi bi-trash3 icono"></i>
+                </div>
+              </div>
+            </h2>
+          </div>
+
+
           <!-- CONTENEDOR DE CADA ITEM-ACCORDION -->
         
         </div>
         <!-- FIN ACCORDION -->
           
         <div class="col-6">
-          <button class="btn btn-primary text-uppercase fw-light" onclick="fnActividades()">Guardar <i class="bi bi-floppy"></i></button>
+          <button class="btn btn-primary text-uppercase fw-light" onclick="fnEnvioData()">Guardar <i class="bi bi-floppy"></i></button>
         </div>
       </div>
       <!-- END LISTA DE ACTIVIDADES-->
 
-      <!-- START MODAL PARA AGREGAR ACTIVIDADES Y SUBACTIVIDADES -->
+      <!-- START MODAL PARA AGREGAR ACTIVIDADES -->
       <div class="modal fade" id="actividadModal" tabindex="-1" aria-labelledby="actividadModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -430,35 +453,28 @@
               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <!-- START MODAL-BODY -->
-            <div class="modal-body">
+            <div class="modal-body" id='modal-body'>
               <div class="row">
                 <div id="campoactividad">
-                  <label for="nombreActId" class="form-label mb-0">Nombre de la Actividad</label>
-                  <input type="text" class="form-control" id="nombreActId" placeholder="Ingrese el nombre de la actividad.">
+                  <label for="nombreActividadInput" class="form-label mb-0">Nombre de la Actividad</label>
+                  <textarea type="text" name="actividad" class="form-control" id="nombreActividadInput" row=3 placeholder="Ingrese el nombre de la actividad."></textarea>
                 </div>
-
-                <div id="camposubactividad" class="mt-3" style="display: none;">
-                  <label for="nombreSubActId" class="form-label">Nombre de la Subactividad</label>
-                  <input type="text" class="form-control" id="nombreSubActId" placeholder="Ingrese el nombre de la subactividad.">
-                </div>
-
                 <div id="campoDiagnostico" class="col-md-12 mt-2">
-                  <label for="diagnosticoId" class="form-label mb-0">Diagnóstico</label>
-                  <textarea name="diagnosticos" class="form-control fixed-size-textarea" row="4" id="diagnosticoId" placeholder="Ingrese el diagnositico."></textarea>
+                  <label for="diagnosticoInput" class="form-label mb-0">Diagnóstico</label>
+                  <textarea type="text" name="diagnostico" class="form-control" ro=3 id="diagnosticoInput" placeholder="Ingrese el diagnositico."></textarea>
                 </div>
 
                 <div id="campoTrabajo" class="col-md-12 mt-2">
-                  <label for="trabajosId" class="form-label mb-0">Trabajos</label>
-                  <textarea name="trabajos" class="form-control fixed-size-textarea" row="4" id="trabajosId" placeholder="Ingrese los trabajos realizados."></textarea>
+                  <label for="trabajosInput" class="form-label mb-0">Trabajos</label>
+                  <textarea type="text" name="trabajo" class="form-control" id="trabajosInput" row=3 placeholder="Ingrese el diagnositico."></textarea>
                 </div>
 
                 <div id="campoObservacion" class ="col-md-12 mt-2">
-                  <label for="observacionesId" class="form-label mb-0">Observación</label>
-                  <textarea name="observaciones" class="form-control fixed-size-textarea" row="4" id="observacionesId" placeholder="Ingrese las observaciones encontradas."></textarea>
+                  <label for="observacionesInput" class="form-label mb-0">Observación</label>
+                  <textarea type="text" name="observacion" class="form-control" id="observacionesInput" row=3 placeholder="Ingrese el diagnositico."></textarea>
                 </div>
-
                 <div id="contenedorGuardarActividad" class="col-6 mt-4">
-                  <button id="guardarActividad" class="btn btn-primary text-uppercase pt-2 pb-2 col-12" style="font-weight:200;">Guardar <i class="bi bi-floppy"></i></button>
+                  <button id="guardarActividad" class="btn btn-primary text-uppercase pt-2 pb-2 col-12" style="font-weight:200;" onclick="fnGuardarActividad()" >Guardar <i class="bi bi-floppy"></i></button>
                 </div>
               </div>
 
@@ -468,6 +484,48 @@
         </div>
       </div>
       <!-- END MODAL -->
+
+      <!-- START MODAL IMAGENES -->
+      <div class="modal fade" id="contenedorImagenModal" tabindex="-1" aria-labelledby="actividadModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+              <h5 class="modal-title fs-5 text-uppercase" id="actividadModalLabel">Actividad</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- START MODAL-BODY -->
+            <div class="modal-body" id='modal-body'>
+              <div class="row">
+                <div id="campoTitulo1" class ="col-md-12 mt-2">
+                  <label for="titulo1Input" class="form-label mb-0">Título 1</label>
+                  <input name="titulo1" type="text" class="form-control" id="titulo1Input" placeholder="Ingresar título.">
+                </div>
+
+                <div id="campoDescripcion1" class ="col-md-12 mt-2">
+                  <label for="descripcion1Input" class="form-label mb-0">Descripción 1</label>
+                  <textarea type="descripcion1"  name="titulo1" class="form-control" row=3 id="descripcion1Input" placeholder="Ingresar título."></textarea>
+                </div>
+
+                <div id="campoTitulo2" class ="col-md-12 mt-2">
+                  <label for="titulo2Input" class="form-label mb-0">Título 2</label>
+                  <input type="text" name="titulo2" class="form-control" id="titulo2Input" placeholder="Ingresar título.">
+                </div>
+
+                <div id="campoDescripcion2" class ="col-md-12 mt-2">
+                  <label for="descripcion2Input" class="form-label mb-0">Descripcion 2</label>
+                  <input type="text" name="descripcion2" class="form-control" id="descripcion2Input"  placeholder="Ingresar título.">
+                </div>
+
+                <div id="contenedorGuardarActividad" class="col-6 mt-4">
+                  <button id="guardarActividad" class="btn btn-primary text-uppercase pt-2 pb-2 col-12" style="font-weight:200;" onclick="fnGuardarActividad()" >Guardar <i class="bi bi-floppy"></i></button>
+                </div>
+              </div>
+
+            </div>
+            <!-- END MODAL-BODY -->
+          </div>
+        </div>
+      </div>
 
     </div><!--FIN CONTAINER-->
 

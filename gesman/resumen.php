@@ -19,8 +19,9 @@
     <style>
       ::placeholder {
         color: #cecccc !important;
-        font-weight: 200;
-        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 15px;
+        /* text-transform: uppercase; */
       }
       .form-label {
         color: #212529;
@@ -98,10 +99,10 @@
             <div class="col-12">
                 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/datoGeneral.php" class="text-decoration-none">INFORME</a></li>
-                        <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/datoEquipo.php" class="text-decoration-none">EQUIPO</a></li>
+                        <li class="breadcrumb-item fw-bold"><a href="/sisgein/gesman/datoGeneral.php" class="text-decoration-none">INFORME</a></li>
+                        <li class="breadcrumb-item fw-bold"><a href="/sisgein/gesman/datoEquipo.php" class="text-decoration-none">EQUIPO</a></li>
                         <li class="breadcrumb-item active fw-bold" aria-current="page">RESUMEN</li>
-                        <li class="breadcrumb-item fw-bold"><a href="/sigein/gesman/actividad.php" class="text-decoration-none">ACTIVIDAD</a></li>
+                        <li class="breadcrumb-item fw-bold"><a href="/sisgein/gesman/actividad.php" class="text-decoration-none">ACTIVIDAD</a></li>
                     </ol>
                 </nav>
             </div>
@@ -112,67 +113,67 @@
             <div class="col-12 mt-2" id="containerActividad" style="border: 0.5px solid #0000005e; padding: 1px 8px 9px 8px; border-radius: 4px;">
               <label class="form-label">Actividades <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalActividad"></i></label>
               <!-- ITEM ACTIVIDADES -->
-              <div class="input-group mt-2" data-id="id-1721777989578">
+              <div class="input-group mt-2" data-id="actividadId">
                 <p class="mb-0" id="actividadId" style="text-align: justify;">Cambio de motor</p>
                 <div class="input-grop-icons">
-                  <span class="input-group-text"><i class="bi bi-pencil-square" onclick="editarItem('actividad', 'id-1721777989578')"></i></span>
-                  <span class="input-group-text"><i class="bi bi-trash3" onclick="eliminarItem('id-1721777989578')"></i></span>
+                  <span class="input-group-text"><i class="bi bi-pencil-square" onclick="editarItem('actividad', 'actividadId')"></i></span>
+                  <span class="input-group-text"><i class="bi bi-trash3" onclick="eliminarItem('actividadId')"></i></span>
                 </div>
               </div>
             </div>
             <!-- ITEM ANTECEDENTES -->
             <div class="col-12 mt-2" id="containerAntecedente" style="border: 0.5px solid #0000005e; padding: 1px 8px 9px 8px; border-radius: 4px;">
               <label class="form-label">Antecedentes <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalAntecedente"></i></label>
-              <div class="input-group mt-2" data-id="id-1721781315868">
+              <div class="input-group mt-2" data-id="antecedenteId">
                 <div class="d-flex">
                   <span class="vineta"></span>
                   <p class="mb-0" id="antecedenteId" style="text-align: justify;">El año 2023 se realizó cambio en cigueñal</p>
                 </div>
                 <div class="input-grop-icons">
-                  <span class="input-group-text"><i class="bi bi-pencil-square" onclick="editarItem('antecedente', 'id-1721781315868')"></i></span>
-                  <span class="input-group-text"><i class="bi bi-trash3" onclick="eliminarItem('id-1721781315868')"></i></span>
+                  <span class="input-group-text"><i class="bi bi-pencil-square" onclick="editarItem('antecedente', 'antecedenteId')"></i></span>
+                  <span class="input-group-text"><i class="bi bi-trash3" onclick="eliminarItem('antecedenteId')"></i></span>
                 </div>
               </div>
             </div>
             <!-- ITEM ANÁLISIS -->
             <div class="col-12 mt-2" id="containerAnalisis" style="border: 0.5px solid #0000005e; padding: 1px 8px 9px 8px; border-radius: 4px;">
               <label class="form-label">Análisis <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalAnalisis"></i></label>
-              <div class="input-group mt-2" data-id="id-1721782002867">
+              <div class="input-group mt-2" data-id="analisisId">
                 <div class="d-flex">
                   <span class="vineta"></span>
                   <p class="mb-0" id="analisisId" style="text-align: justify;">Se deben cambiar las fajas</p>
                 </div>
                 <div class="input-grop-icons">
-                  <span class="input-group-text"><i class="bi bi-pencil-square" onclick="editarItem('analisis', 'id-1721782002867')"></i></span>
-                  <span class="input-group-text"><i class="bi bi-trash3" onclick="eliminarItem('id-1721782002867')"></i></span>
+                  <span class="input-group-text"><i class="bi bi-pencil-square" onclick="editarItem('analisis', 'analisisId')"></i></span>
+                  <span class="input-group-text"><i class="bi bi-trash3" onclick="eliminarItem('analisisId')"></i></span>
                 </div>
               </div>
             </div>
             <!-- ITEM CONCLUSION -->
             <div class="col-12 mt-2" id="containerConclusion" style="border: 0.5px solid #0000005e; padding: 1px 8px 9px 8px; border-radius: 4px;">
               <label class="form-label">Conclusiones <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalConclusion"></i></label>
-              <div class="input-group mt-2" data-id="id-1721782191531">
+              <div class="input-group mt-2" data-id="conclusionId">
                 <div class="d-flex">
                   <span class="vineta"></span>
                   <p class="mb-0" id="conclusionId" style="text-align: justify;">Conclusión Nro.01</p>
                 </div>
                 <div class="input-grop-icons">
-                  <span class="input-group-text"><i class="bi bi-pencil-square" onclick="editarItem('conclusion', 'id-1721782191531')"></i></span>
-                  <span class="input-group-text"><i class="bi bi-trash3" onclick="eliminarItem('id-1721782191531')"></i></span>
+                  <span class="input-group-text"><i class="bi bi-pencil-square" onclick="editarItem('conclusion', 'conclusionId')"></i></span>
+                  <span class="input-group-text"><i class="bi bi-trash3" onclick="eliminarItem('conclusionId')"></i></span>
                 </div>
               </div>
             </div>
              <!-- ITEM RECOMENDACIÓN -->
             <div class="col-12 mt-2" id="containerRecomendacion" style="border: 0.5px solid #0000005e; padding: 1px 8px 9px 8px; border-radius: 4px;">
               <label class="form-label">Recomendaciones <i class="bi bi-plus-lg" data-bs-toggle="modal" data-bs-target="#modalRecomendacion"></i></label>
-              <div class="input-group mt-2" data-id="id-1721782242627">
+              <div class="input-group mt-2" data-id="recomendacionId">
                 <div class="d-flex">
                   <span class="vineta"></span>
                   <p class="mb-0" id="recomendacionId" style="text-align: justify;">Recomendación Nro.01</p>
                 </div>
                 <div class="input-grop-icons">
-                  <span class="input-group-text"><i class="bi bi-pencil-square" onclick="editarItem('recomendacion', 'id-1721782242627')"></i></span>
-                  <span class="input-group-text"><i class="bi bi-trash3" onclick="eliminarItem('id-1721782242627')"></i></span>
+                  <span class="input-group-text"><i class="bi bi-pencil-square" onclick="editarItem('recomendacion', 'recomendacionId')"></i></span>
+                  <span class="input-group-text"><i class="bi bi-trash3" onclick="eliminarItem('recomendacionId')"></i></span>
                 </div>
               </div>
             </div>
@@ -193,7 +194,7 @@
           </div>
           <div class="modal-body">
             <form id="formActividad">
-              <input type="text" class="form-control" id="modalActividadInput" name="actividad" placeholder="Ingresar nueva ctividad">
+              <textarea type="text" class="form-control" id="modalActividadInput" name="actividad" row=3 placeholder="Ingresar nueva ctividad"></textarea>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary text-uppercase fw-light" onclick="agregarItem('actividad')">Guardar <i class="bi bi-floppy"></i></button>
               </div>
@@ -213,7 +214,7 @@
           </div>
           <div class="modal-body">
             <form id="formAntecedente">
-              <input type="text" class="form-control" id="modalAntecedenteInput" name="antecedente" placeholder="Ingresar nuevo antecedente">
+              <textarea type="text" class="form-control" id="modalAntecedenteInput" name="antecedente" row=3 placeholder="Ingresar nuevo antecedente"></textarea>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary text-uppercase fw-light" onclick="agregarItem('antecedente')">Guardar <i class="bi bi-floppy"></i></button>
               </div>
@@ -233,7 +234,7 @@
           </div>
           <div class="modal-body">
             <form id="formAnalisis">
-              <input type="text" class="form-control" id="modalAnalisisInput" name="analisis" placeholder="Ingresar nuevo diagnóstico">
+              <textarea type="text" class="form-control" id="modalAnalisisInput" name="analisis" row=3 placeholder="Ingresar nuevo diagnóstico"></textarea>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary text-uppercase fw-light" onclick="agregarItem('analisis')">Guardar <i class="bi bi-floppy"></i></button>
               </div>
@@ -253,7 +254,7 @@
           </div>
           <div class="modal-body">
             <form id="formConclusion">
-              <input type="text" class="form-control" id="modalConclusionInput" name="conclusion" placeholder="Ingresar nueva conclusión">
+              <textarea type="text" class="form-control" id="modalConclusionInput" name="conclusion" row=3 placeholder="Ingresar nueva conclusión"></textarea>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary text-uppercase fw-light" onclick="agregarItem('conclusion')">Guardar <i class="bi bi-floppy"></i></button>
               </div>
@@ -273,7 +274,7 @@
           </div>
           <div class="modal-body">
             <form id="formRecomendacion">
-              <input type="text" class="form-control" id="modalRecomendacionInput" name="recomendacion" placeholder="Ingresar nueva recomendación">
+              <textarea type="text" class="form-control" id="modalRecomendacionInput" name="recomendacion" placeholder="Ingresar nueva recomendación"></textarea>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary text-uppercase fw-light" onclick="agregarItem('recomendacion')">Guardar <i class="bi bi-floppy"></i></button>
               </div>

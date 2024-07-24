@@ -80,10 +80,10 @@
 
         <div class="row mb-3 mt-3">
           <div class="col-12 btn-group" role="group" aria-label="Basic example">
-            <a href="/sigein/gesman/index.php" class="col-4">
+            <a href="/sisgein/gesman/buscarInforme.php" class="col-4">
               <button type="button" class="btn btn-outline-primary col-12 fw-bold d-flex flex-column align-items-center" style="border-radius:0"><i class="bi bi-list-task"></i><span class="text-button"> Informes</span></button>
             </a>
-            <a href="/sigein/gesman/datoGeneral.php" class="col-4">
+            <a href="/sisgein/gesman/datoGeneral.php" class="col-4">
               <button type="button" class="btn btn-outline-primary col-12 fw-bold d-flex flex-column align-items-center" style="border-radius:0; border-left:0"><i class="bi bi-pencil-square"></i><span class="text-button"> Editar</span></button>
             </a>
             <a href="#" class="col-4">

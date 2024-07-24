@@ -18,8 +18,10 @@
     <style>
       ::placeholder {
         color: #cecccc !important;
-        font-weight: 200;
-        text-transform: uppercase;
+        font-weight: 300;
+        /* text-transform: uppercase; */
+        font-size: 15px;
+
       }
       .form-label {
         color: #212529;
@@ -103,7 +105,7 @@
 
         <div class="col-6 col-lg-6 col-xl-3 custom-select-wrapper">
           <label for="equipoInput" class="form-label mb-0">Equipo</label>
-          <input type="text" id="equipoInput" class="form-control" autocomplete="off" placeholder="Buscar Equipo">
+          <input type="text" id="equipoInput" class="form-control" autocomplete="off" placeholder="Ingrese 1 o más caracteres">
           <span class="custom-select-arrow"><i class="bi bi-chevron-down"></i></span>
           <div id="equipoList" class="custom-select-list"></div>
         </div>
@@ -123,7 +125,7 @@
       </div>
 
       <!-- LISTA -->
-      <a class="link-colecciones" href="/sigein/gesman/vistaPreliminar.php" style="text-decoration:none;color: #212529;font-weight: 300;">
+      <a class="link-colecciones" href="/sisgein/gesman/vistaPreliminar.php" style="text-decoration:none;color: #212529;font-weight: 300;">
         <div class="row">
           <div class="col-8"><span class="fw-bold">00003</span> <span style="font-size: 12px; font-style: italic;">2024-07-17</span></div>
           <div class="col-4 text-end"><span class="badge bg-primary">Proceso</span></div>
@@ -131,7 +133,7 @@
         </div>
       </a>
       <hr>
-      <a class="link-colecciones" href="/sigein/gesman/vistaPreliminar.php" style="text-decoration:none;color: #212529;font-weight: 300;">
+      <a class="link-colecciones" href="/sisgein/gesman/vistaPreliminar.php" style="text-decoration:none;color: #212529;font-weight: 300;">
         <div class="row">
           <div class="col-8"><span class="fw-bold">00002</span> <span style="font-size: 12px; font-style: italic;">2024-04-17</span></div>
           <div class="col-4 text-end"><span class="badge bg-secondary">Abierto</span></div>
@@ -139,7 +141,7 @@
         </div>
       </a>
       <hr>
-      <a class="link-colecciones" href="/sigein/gesman/vistaPreliminar.php" style="text-decoration:none;color: #212529;font-weight: 300;">
+      <a class="link-colecciones" href="/sisgein/gesman/vistaPreliminar.php" style="text-decoration:none;color: #212529;font-weight: 300;">
         <div class="row">
           <div class="col-8"><span class="fw-bold">00001</span> <span style="font-size: 12px; font-style: italic;">2024-01-02</span></div>
           <div class="col-4 text-end"><span class="badge bg-success">Cerrado</span></div>

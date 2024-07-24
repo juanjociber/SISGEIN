@@ -1,3 +1,5 @@
+let nuevoId;
+
 // FUNCIÓN PARA AGREGAR ITEM
 const agregarItem = (categoria) => {
   const input = document.getElementById(`modal${capitalizarPrimeraLetra(categoria)}Input`);
@@ -23,7 +25,7 @@ const agregarItem = (categoria) => {
       // LIMPIA EL EDIT-ID Y EL VALOR DEL INPUT
       delete form.dataset.editId;
     } else {
-      cSwal.fire({
+      Swal.fire({
         title: 'Aviso',
         html: `<div class="custom-select-item">${categoria} no encontrado para editar</div>`,
         icon: 'info',
@@ -36,7 +38,7 @@ const agregarItem = (categoria) => {
     const nuevoItem = document.createElement("div");
     nuevoItem.className = "input-group mt-2";
     // GENERA UN IDENTIFICADOR ÚNICO
-    const nuevoId = `id-${Date.now()}`;
+    nuevoId = `id-${Date.now()}`;
     nuevoItem.setAttribute("data-id", nuevoId);
 
     if (categoria === 'actividad') {
@@ -100,11 +102,11 @@ const capitalizarPrimeraLetra = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-
 const fnResumen = async () => {
   const formData = new FormData();
-
-  const actividad     = document.querySelector('#actividadId').textContent.trim();
+  console.log(nuevoId);
+  const actividad     = document.querySelector(`#actividadId`).textContent.trim();
+  // const actividad     = document.querySelector(`#actividad-${nuevoId}`).textContent.trim();
   const antecedente   = document.querySelector('#antecedenteId').textContent.trim();
   const diagnostico   = document.querySelector('#analisisId').textContent.trim();
   const conclusion    = document.querySelector('#conclusionId').textContent.trim();
