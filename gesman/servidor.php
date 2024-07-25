@@ -6,36 +6,29 @@ header('Content-Type: application/json');
 $servername = "localhost";
 $username = "root";
 $password = "mysql";
-$dbname = "dbgesman";
+$dbname = "mydb";
 
-// CREAR CONEXIÓN
-$conn = new mysqli($servername, $username, $password, $dbname);
+try {
+    // CREAR CONEXIÓN PDO
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-// VERIFICAR CONEXIÓN
-if ($conn->connect_error) {
-    echo json_encode(['error' => 'Conexión fallida: ' . $conn->connect_error]);
-    exit;
-}
-// OBTENER EL PARÁMETRO DE BUSQUEDA.
-$search = $_GET['search'] ?? '';
+    // OBTENER EL PARÁMETRO DE BUSQUEDA.
+    $search = $_GET['search'] ?? '';
 
-if ($search) {
-    $stmt = $conn->prepare("SELECT nombre FROM equipos WHERE nombre LIKE ?");
-    $search_param = "%{$search}%";
-    $stmt->bind_param("s", $search_param);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    if ($search) {
+        $stmt = $conn->prepare("SELECT nombre FROM equipos WHERE nombre LIKE :search");
+        $search_param = "%{$search}%";
+        $stmt->bindParam(':search', $search_param);
+        $stmt->execute();
 
-    $equipos = [];
-    while ($row = $result->fetch_assoc()) {
-        $equipos[] = $row;
+        $equipos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        echo json_encode($equipos);
+    } else {
+        echo json_encode([]);
     }
 
-    echo json_encode($equipos);
-    $stmt->close();
-} else {
-    echo json_encode([]);
+} catch (PDOException $e) {
+    echo json_encode(['error' => 'Conexión fallida: ' . $e->getMessage()]);
 }
-
-$conn->close();
 ?>

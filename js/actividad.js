@@ -1,6 +1,6 @@
 const limpiarInputs = (selector) => {
-  const inputs = document.querySelectorAll(selector);
-  inputs.forEach(input => input.value = '');
+  const textos = document.querySelectorAll(selector);
+  textos.forEach(text => text.value = '');
 };
 
 const cerrarModal = (modalId) => {
@@ -8,8 +8,8 @@ const cerrarModal = (modalId) => {
   modal.hide();
 };
 
-const setValues = (fields) => {
-  fields.forEach(({ id, value, isImage }) => {
+const setValues = (campos) => {
+  campos.forEach(({ id, value, isImage }) => {
     const element = document.querySelector(`#${id}`);
     if (element) {
       if (isImage) {
@@ -21,16 +21,92 @@ const setValues = (fields) => {
   });
 };
 
-const fnGuardarActividad = () => {
-  const fields = [
-    { id: 'actividadId', value: document.querySelector('#nombreActividadInput').value.trim() },
-    { id: 'diagnosticoId', value: document.querySelector('#diagnosticoInput').value.trim() },
-    { id: 'trabajoId', value: document.querySelector('#trabajosInput').value.trim() },
-    { id: 'observacionId', value: document.querySelector('#observacionesInput').value.trim() }
-  ];
+const agregarAccordionItem = (idPadre, actividad, diagnostico, trabajo, observacion) => {
+  const idUnico = Date.now();
+  const nuevoItem = document.createElement('div');
+  nuevoItem.classList.add('accordion-item');
+  nuevoItem.id = `accordionId-${idUnico}`;
+  nuevoItem.setAttribute('data-id',`${idUnico}`);
+  nuevoItem.innerHTML = `
+    <h2 class="accordion-header accordion-header--mod" id="accordionHeaderId-${idUnico}">
+      <div class="item-actividad">
+        <div class="accordion-button accordion-button--mod collapsed" data-bs-toggle="collapse" data-bs-target="#collapseAcordion-${idUnico}" aria-expanded="false" aria-controls="collapseAcordion-${idUnico}" id="gpem${idUnico}">
+          <div class="accordion-actividad col-8 text-uppercase" id="actividadId-${idUnico}">${actividad}</div>
+        </div>
+        <div class="accordion-botones">
+          <i class="bi bi-plus-lg icono icono-agregar" data-id="${idUnico}" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
+          <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
+          <i class="bi bi-paperclip icono icono-cargar" data-bs-toggle="modal" data-bs-target="#imagenModal"></i>
+          <i class="bi bi-trash3 icono delete-activity" data-id="accordionId-${idUnico}"></i>
+        </div>
+      </div>
+    </h2>
+    <div id="collapseAcordion-${idUnico}" class="accordion-collapse collapse" aria-labelledby="accordionHeaderId-${idUnico}">
+      <div class="accordion-body accordion-body--mod">
+        <div class="row detalles">
+          <div class="detalles-diagnostico col-6">
+            <label for="diagnosticoId-${idUnico}" class="form-label mb-0">Diagnóstico</label>
+            <p class="mb-1" id="diagnosticoId-${idUnico}">${diagnostico}</p>
+          </div>
+          <div class="detalles-trabajo col-6">
+            <label for="trabajoId-${idUnico}" class="form-label mb-0">Trabajos</label>
+            <p class="mb-1" id="trabajoId-${idUnico}">${trabajo}</p>
+          </div>
+          <div class="detalles-observacion col-12">
+            <label for="observacionId-${idUnico}" class="form-label mb-0">Observaciones</label>
+            <p class="mb-1" id="observacionId-${idUnico}">${observacion}</p>
+          </div>
+        </div>
+        <div class="imagenes-actividad">
+          <div class="grid-imagen">
+            <div class="titulo-imagen">
+              <p class="mb-1" id="titulo1Id-${idUnico}" style="text-align:center;">Título 1</p>
+            </div>
+            <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
+              <img src="../img/imagen1.png" id="imagen1Id-${idUnico}" class="img-thumbnail">
+              <i class="bi bi-x-circle-fill remover-icono" data-target="imagen1Id-${idUnico}" onclick="removerImagen('imagen1Id-${idUnico}')" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
+            </div>
+            <div class="descripcion-imagen">
+              <p class="mb-1" id="descripcion1Id-${idUnico}" style="text-align:center;">Descripción 1</p>
+            </div>
+          </div>
+          <div class="grid-imagen">
+            <div class="titulo-imagen">
+              <p class="mb-1" id="titulo2Id-${idUnico}" style="text-align:center;">Título 2</p>
+            </div>
+            <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
+              <img src="../img/imagen2.png" id="imagen2Id-${idUnico}" class="img-thumbnail">
+              <i class="bi bi-x-circle-fill remover-icono" data-target="imagen2Id-${idUnico}" onclick="removerImagen('imagen2Id-${idUnico}')" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
+            </div>
+            <div class="descripcion-imagen">
+              <p class="mb-1" id="descripcion2Id-${idUnico}" style="text-align:center;">Descripción 2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
 
-  setValues(fields);
-  limpiarInputs('#modal-body input');
+  if (idPadre) {
+    document.querySelector(`#${idPadre} .accordion-body`).appendChild(nuevoItem);
+  } else {
+    document.getElementById('contenedor-accordion').appendChild(nuevoItem);
+  }
+};
+
+
+const fnGuardarActividad = () => {
+  const actividad = document.querySelector('#nombreActividadInput').value.trim();
+  const diagnostico = document.querySelector('#diagnosticoInput').value.trim();
+  const trabajo = document.querySelector('#trabajosInput').value.trim();
+  const observacion = document.querySelector('#observacionesInput').value.trim();
+  const idPadre = document.querySelector('#actividadModal').dataset.padreId || null;
+
+  // Agregar nuevo ítem al acordeón
+  agregarAccordionItem(idPadre, actividad, diagnostico, trabajo, observacion);
+
+  //setValues(campos);
+  limpiarInputs('#modal-body textarea');
   cerrarModal('actividadModal');
 };
 
@@ -40,7 +116,7 @@ const fnGuardarDetallesActividad = () => {
   const imagen1Input = document.querySelector('#imagen1Input').files[0];
   const imagen2Input = document.querySelector('#imagen2Input').files[0];
 
-  const fields = [
+  const campos = [
     { id: 'titulo1Id', value: document.querySelector('#titulo1Input').value.trim() },
     { id: 'descripcion1Id', value: document.querySelector('#descripcion1Input').value.trim() },
     { id: 'titulo2Id', value: document.querySelector('#titulo2Input').value.trim() },
@@ -49,15 +125,15 @@ const fnGuardarDetallesActividad = () => {
 
   if (imagen1Input) {
     const imagen1Path = basePath + imagen1Input.name;
-    fields.push({ id: 'imagen1Id', value: imagen1Path, isImage: true });
+    campos.push({ id: 'imagen1Id', value: imagen1Path, isImage: true });
   }
 
   if (imagen2Input) {
     const imagen2Path = basePath + imagen2Input.name;
-    fields.push({ id: 'imagen2Id', value: imagen2Path, isImage: true });
+    campos.push({ id: 'imagen2Id', value: imagen2Path, isImage: true });
   }
 
-  setValues(fields);
+  setValues(campos);
   limpiarInputs('#modal-body-imagen input');
   cerrarModal('imagenModal');
 };
@@ -104,38 +180,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+});
 
-  // Manejar clic en íconos de eliminación de actividad
+
+// Manejar clic en íconos de eliminación de actividad
+// document.addEventListener('DOMContentLoaded',()=>{
   document.querySelectorAll('.delete-activity').forEach(icon => {
     icon.addEventListener('click', (event) => {
-      const activityId = event.target.getAttribute('data-id');
-      const activityElement = document.getElementById(activityId);
-
-      if (activityElement) {
-        // Eliminar la actividad del DOM
-        activityElement.remove();
-
-        // Opcional: Enviar solicitud al servidor para eliminar la actividad
-        fetch(`/api/actividades/${activityId}`, {
-          method: 'DELETE',
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        })
-        .then(response => {
-          if (response.ok) {
-            console.log(`Actividad con ID ${activityId} eliminada exitosamente.`);
-          } else {
-            console.error(`Error al eliminar la actividad con ID ${activityId}.`);
-          }
-        })
-        .catch(error => {
-          console.error(`Error de red al eliminar la actividad con ID ${activityId}:`, error);
-        });
-      }
+      console.log(event.target);
+      const id = event.target.getAttribute('data-id');
+      document.getElementById(id).remove();
     });
   });
-});
+// });
+
 
 const fnCargaContenidoActividad = () =>{
   const formData = new FormData();

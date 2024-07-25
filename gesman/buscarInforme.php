@@ -1,3 +1,8 @@
+<?php
+  
+
+?>
+
 <!doctype html>
 <html lang="es">
   <head>
@@ -129,11 +134,11 @@
         <div class="row">
           <div class="col-8"><span class="fw-bold">00003</span> <span style="font-size: 12px; font-style: italic;">2024-07-17</span></div>
           <div class="col-4 text-end"><span class="badge bg-primary">Proceso</span></div>
-          <div class="col-12">21FLOTA PREVENTIVA DRENADO DE SISTEMA NEUMATICO ARTICULADO - L,M,V</div>
+          <div class="col-12">ACTIVIDAD 1</div>
         </div>
       </a>
       <hr>
-      <a class="link-colecciones" href="/sisgein/gesman/vistaPreliminar.php" style="text-decoration:none;color: #212529;font-weight: 300;">
+      <!-- <a class="link-colecciones" href="/sisgein/gesman/vistaPreliminar.php" style="text-decoration:none;color: #212529;font-weight: 300;">
         <div class="row">
           <div class="col-8"><span class="fw-bold">00002</span> <span style="font-size: 12px; font-style: italic;">2024-04-17</span></div>
           <div class="col-4 text-end"><span class="badge bg-secondary">Abierto</span></div>
@@ -147,7 +152,7 @@
           <div class="col-4 text-end"><span class="badge bg-success">Cerrado</span></div>
           <div class="col-12">21064 CORRECTIVA REVISAR PALANCA DE LUCES</div>
         </div>
-      </a>
+      </a> -->
     </div>
 
     <!-- SPINNER -->

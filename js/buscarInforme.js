@@ -80,9 +80,8 @@ const inicializarSelectPersonalizado = async (idInput, idLista, idSpinner) => {
       }, 500); 
     }
   };
-
   // ASIGNAR LA FUNCIÓN DEBUNCED AL EVENTO INPUT
-  inputSelect.addEventListener('input', debounce(buscarDatos, 500));
+  inputSelect.addEventListener('input', debounce(buscarDatos, 1000));
 }
 
 
