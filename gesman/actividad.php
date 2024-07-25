@@ -171,6 +171,45 @@
         padding-top:15px;
         padding-bottom:5px;
       }
+      /*ESTILOS CARGA DE IMAGEN*/
+      .profile-img {
+        width: 100px; /* alto y ancho específico para que el círculo sea redondo */
+        height: 100px;
+        border-radius: 50%; 
+        overflow: hidden; /* oculta todo el contenido fuera de la caja */
+        position: relative;
+        margin-left: 15px;
+      }
+
+      .profile-img img {
+        position: absolute;
+        /* width: 150%; 
+        left: -25%;  */
+        width: 100%;
+      }
+
+      .profile-img .file {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        font-size: 15px;
+        background: #212529b8;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0 25px;
+      
+      }
+
+      .profile-img .file input {
+        position: absolute;
+        display: block;
+        width: 100%;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        cursor: pointer; /* manita de selección al hacer hover */
+      }
 
     </style>
   </head>
@@ -227,11 +266,11 @@
                 <div class="accordion-botones">
                   <i class="bi bi-plus-lg icono icono-agregar" data-id="1" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
                   <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                  <div id="cargar-archivo-1" style="display: none;">
+                  <!-- <div id="cargar-archivo-1" style="display: none;">
                     <input type="file" id="file-input-1" accept="image/*">
-                  </div>
-                  <i class="bi bi-paperclip icono icono-cargar" data-id="file-input-1"></i>
-                  <i class="bi bi-trash3 icono"></i>
+                  </div> -->
+                  <i class="bi bi-paperclip icono icono-cargar" data-bs-toggle="modal" data-bs-target="#imagenModal"></i>
+                  <i class="bi bi-trash3 icono delete-activity" data-id="accordionId-1"></i>
                 </div>
               </div>
             </h2>
@@ -259,8 +298,8 @@
                         <p class="mb-1" id="titulo1Id" style="text-align:center;">Título 1</p>
                       </div>
                       <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
-                        <img src="../img/imagen1.png" id="imagenId1-1" class="img-thumbnail">
-                        <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
+                        <img src="../img/imagen1.png" id="imagen1Id" class="img-thumbnail">
+                        <i class="bi bi-x-circle-fill remove-icon" data-target="imagen1Id" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
                       </div>
                       <div class="descripcion-imagen">
                         <p class="mb-1" id="descripcion1Id" style="text-align:center;">Descripción 1</p>
@@ -271,8 +310,8 @@
                         <p class="mb-1" id="titulo2Id" style="text-align:center;">Título 2</p>
                       </div>
                       <div class="image-wrapper" style="position: relative; display: inline-block; margin: 10px;">
-                        <img src="../img/imagen2.png" id="imagenId2-1" class="img-thumbnail">
-                        <i class="bi bi-x-circle-fill remove-icon" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
+                        <img src="../img/imagen2.png" id="imagen2Id" class="img-thumbnail">
+                        <i class="bi bi-x-circle-fill remove-icon" data-target="imagen2Id" style="position: absolute; top: 5px; right: 5px; cursor: pointer;"></i>
                       </div>
                       <div class="descripcion-imagen">
                         <p class="mb-1" id="descripcion2Id" style="text-align:center;">Descripción 2</p>
@@ -288,10 +327,10 @@
                           <div class="accordion-botones">
                             <i class="bi bi-plus-lg icono icono-agregar" data-id="2" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
                             <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                            <div id="cargar-archivo-2" style="display: none;">
+                            <!-- <div id="cargar-archivo-2" style="display: none;">
                                 <input type="file" id="file-input-2" accept="image/*">
-                            </div>
-                            <i class="bi bi-paperclip icono icono-cargar" data-id="file-input-2"></i>
+                            </div> -->
+                            <i class="bi bi-paperclip icono icono-cargar" data-bs-toggle="modal" data-bs-target="#imagenModal"></i>
                             <i class="bi bi-trash3 icono"></i>
                           </div>
                         </div>
@@ -349,10 +388,10 @@
                                       <div class="accordion-botones">
                                         <i class="bi bi-plus-lg icono icono-agregar" data-id="3" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
                                         <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                                        <div id="cargar-archivo-3" style="display: none;">
+                                        <!-- <div id="cargar-archivo-3" style="display: none;">
                                             <input type="file" id="file-input-3" accept="image/*">
-                                        </div>
-                                        <i class="bi bi-paperclip icono icono-cargar" data-id="file-input-3"></i>
+                                        </div> -->
+                                        <i class="bi bi-paperclip icono icono-cargar" data-bs-toggle="modal" data-bs-target="#imagenModal"></i>
                                         <i class="bi bi-trash3 icono"></i>
                                       </div>
                                     </div>
@@ -422,27 +461,24 @@
                 <div class="accordion-botones">
                   <i class="bi bi-plus-lg icono icono-agregar" data-id="1" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
                   <i class="bi bi-pencil-square icono" data-bs-toggle="modal" data-bs-target="#actividadModal"></i>
-                  <div id="cargar-archivo-1" style="display: none;">
+                  <!-- <div id="cargar-archivo-1" style="display: none;">
                     <input type="file" id="file-input-1" accept="image/*">
-                  </div>
-                  <i class="bi bi-paperclip icono icono-cargar" data-id="file-input-1"></i>
+                  </div> -->
+                  <i class="bi bi-paperclip icono icono-cargar" data-bs-toggle="modal" data-bs-target="#imagenModal"></i>
                   <i class="bi bi-trash3 icono"></i>
                 </div>
               </div>
             </h2>
           </div>
-
-
           <!-- CONTENEDOR DE CADA ITEM-ACCORDION -->
-        
         </div>
         <!-- FIN ACCORDION -->
-          
         <div class="col-6">
-          <button class="btn btn-primary text-uppercase fw-light" onclick="fnEnvioData()">Guardar <i class="bi bi-floppy"></i></button>
+          <button class="btn btn-primary text-uppercase fw-light" onclick="fnCargaContenidoActividad()">Guardar <i class="bi bi-floppy"></i></button>
         </div>
       </div>
       <!-- END LISTA DE ACTIVIDADES-->
+
 
       <!-- START MODAL PARA AGREGAR ACTIVIDADES -->
       <div class="modal fade" id="actividadModal" tabindex="-1" aria-labelledby="actividadModalLabel" aria-hidden="true">
@@ -477,7 +513,6 @@
                   <button id="guardarActividad" class="btn btn-primary text-uppercase pt-2 pb-2 col-12" style="font-weight:200;" onclick="fnGuardarActividad()" >Guardar <i class="bi bi-floppy"></i></button>
                 </div>
               </div>
-
             </div>
             <!-- END MODAL-BODY -->
           </div>
@@ -486,38 +521,42 @@
       <!-- END MODAL -->
 
       <!-- START MODAL IMAGENES -->
-      <div class="modal fade" id="contenedorImagenModal" tabindex="-1" aria-labelledby="actividadModalLabel" aria-hidden="true">
+      <div class="modal fade" id="imagenModal" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header bg-primary text-white">
-              <h5 class="modal-title fs-5 text-uppercase" id="actividadModalLabel">Actividad</h5>
+              <h5 class="modal-title fs-5 text-uppercase" id="imagenModalLabel">Detalles de actividades</h5>
               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <!-- START MODAL-BODY -->
-            <div class="modal-body" id='modal-body'>
+            <div class="modal-body" id='modal-body-imagen'>
               <div class="row">
                 <div id="campoTitulo1" class ="col-md-12 mt-2">
                   <label for="titulo1Input" class="form-label mb-0">Título 1</label>
                   <input name="titulo1" type="text" class="form-control" id="titulo1Input" placeholder="Ingresar título.">
                 </div>
-
+                <div id="campoImagen1" class="col-md-12 mt-2">
+                  <label for="imagen1Input" class="form-label mb-0">Imagen 1</label>
+                  <input name="imagen1" class="form-control" type="file" id="imagen1Input">
+                </div>
                 <div id="campoDescripcion1" class ="col-md-12 mt-2">
                   <label for="descripcion1Input" class="form-label mb-0">Descripción 1</label>
                   <textarea type="descripcion1"  name="titulo1" class="form-control" row=3 id="descripcion1Input" placeholder="Ingresar título."></textarea>
                 </div>
-
                 <div id="campoTitulo2" class ="col-md-12 mt-2">
                   <label for="titulo2Input" class="form-label mb-0">Título 2</label>
                   <input type="text" name="titulo2" class="form-control" id="titulo2Input" placeholder="Ingresar título.">
                 </div>
-
+                <div id="campoImagen2" class="col-md-12 mt-2">
+                  <label for="imagen2Input" class="form-label mb-0">Imagen 2</label>
+                  <input name="imagen2" class="form-control" type="file" id="imagen2Input">
+                </div>
                 <div id="campoDescripcion2" class ="col-md-12 mt-2">
                   <label for="descripcion2Input" class="form-label mb-0">Descripcion 2</label>
-                  <input type="text" name="descripcion2" class="form-control" id="descripcion2Input"  placeholder="Ingresar título.">
+                  <textarea type="text" name="descripcion2" class="form-control" row=3 id="descripcion2Input" placeholder="Ingresar título."></textarea>
                 </div>
-
                 <div id="contenedorGuardarActividad" class="col-6 mt-4">
-                  <button id="guardarActividad" class="btn btn-primary text-uppercase pt-2 pb-2 col-12" style="font-weight:200;" onclick="fnGuardarActividad()" >Guardar <i class="bi bi-floppy"></i></button>
+                  <button id="guardarActividad" class="btn btn-primary text-uppercase pt-2 pb-2 col-12" style="font-weight:200;" onclick="fnGuardarDetallesActividad()">Guardar <i class="bi bi-floppy"></i></button>
                 </div>
               </div>
 

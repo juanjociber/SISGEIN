@@ -15,7 +15,7 @@ const inicializarSelectPersonalizado = async (idInput, idLista, idSpinner) => {
       }
   });
 
-  // DEBOUNCE FUNCTION
+  // FUNCIÓN DEBOUNCE
   const debounce = (func, delay) => {
     let debounceTimer;
     return function() {

@@ -20,8 +20,9 @@
   <style>
     ::placeholder{
       color: #cecccc !important;
-      font-weight: 200;
-      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 15px;
+      /* text-transform: uppercase; */
     }
     .form-label{
       color:#212529;
@@ -108,7 +109,7 @@
         
         <div class="col-md-6 col-lg-6 mt-2">
           <label for="ubicacion" class="form-label mb-0">Lugar</label>
-          <input type="text" class="form-control" id="ubicacion">
+          <input type="text" class="form-control" id="ubicacion" placeholder="Ingresar lugar">
         </div>      
         
         <div class="custom-select-container col-md-6 col-lg-6 mt-2">

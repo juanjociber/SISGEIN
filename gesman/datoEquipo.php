@@ -20,8 +20,9 @@
     <style>
       ::placeholder{
         color: #cecccc !important;
-        font-weight: 200;
-        text-transform: uppercase;
+        font-weight: 300;
+        font-size:15px;
+        /* text-transform: uppercase; */
       }
       .form-label{
         color:#212529;
@@ -80,33 +81,33 @@
         <div class="row g-3">
             <div class="col-6 col-lg-4 mt-2">
                 <label for="nombreEquipoInput" class="form-label mb-0">Nombre</label>
-                <input type="text" class="form-control" id="nombreEquipoInput">
+                <input type="text" class="form-control" id="nombreEquipoInput" placeholder="Ingresar nombre">
             </div>
             <div class="custom-select-container col-6 col-lg-4 mt-2">
               <label for="modeloInput" class="form-label mb-0">Modelo</label>
-              <input type="text" class="form-control" id="modeloInput">
+              <input type="text" class="form-control" id="modeloInput" placeholder="Ingresar modelo">
             </div>
             <div class="col-6 col-lg-4 mt-2">
                 <label for="serieEquipoInput" class="form-label mb-0">Serie</label>
-                <input type="text" class="form-control" id="serieEquipoInput">
+                <input type="text" class="form-control" id="serieEquipoInput" placeholder="Ingresar serie">
             </div>
 
             <div class="custom-select-container col-6 col-lg-4 mt-2">
               <label for="marcaInput" class="form-label mb-0">Marca</label>
-              <input type="text" class="form-control" id="marcaInput">
+              <input type="text" class="form-control" id="marcaInput" placeholder="Ingresar marca">
             </div>
             <div class="col-6 col-lg-4 mt-2">
                 <label for="kmEquipoInput" class="form-label mb-0">Kilometraje</label>
-                <input type="text" class="form-control" id="kmEquipoInput">
+                <input type="text" class="form-control" id="kmEquipoInput" placeholder="Ingresar kilometraje">
             </div>
             <div class="col-6 col-lg-4 mt-2">
                 <label for="horaMotorInput" class="form-label mb-0">Horas de motor</label>
-                <input type="text" class="form-control" id="horaMotorInput">
+                <input type="text" class="form-control" id="horaMotorInput" placeholder="Ingersar horas de motor">
             </div>
 
             <div class="col-md-12 col-lg-12 mt-2">
                 <label for="descripcionEquipoInput" class="form-label mb-0">Descripción</label>
-                <textarea name="desEquipo" class="form-control fixed-size-textarea" rows="4" id="descripcionEquipoInput" placeholder="Puede ingresar adicionalmente la fecha de fabricación, número interno, número de padron,tipo de combustible y otros que considere necesario."></textarea>
+                <textarea name="desEquipo" class="form-control fixed-size-textarea" rows="4" id="descripcionEquipoInput" style="text-align:justify" placeholder="Puede ingresar adicionalmente la fecha de fabricación, número interno, número de padron,tipo de combustible y otros que considere necesario."></textarea>
             </div>
             <div class="col-6 btn-control mt-2">
               <button type="button" class="btn btn-primary text-uppercase fw-light" onclick="fnDatosEquipos()">Guardar <i class="bi bi-floppy"></i></button>
