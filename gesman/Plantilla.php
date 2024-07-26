@@ -122,8 +122,6 @@
 		return $html;
 	}
 
-
-
 	try{
 		$conmy->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
@@ -165,24 +163,15 @@
 		//echo '<pre>';
 		//print_r($imagenes);
 		//echo '</pre>';
-
-		
 		$tablaHTML.='<div class="accordion" id="accordionExample">';
 			$tabla=FnGenerarInformeHtmlAcordeon($arbol, $imagenes, $clsHide);
 			$tablaHTML .=$tabla;
 		$tablaHTML.='</div>';
 		//echo $tablaHTML ;
-
-
-
 	}catch(PDOException $ex){
 		$conmy=null;
 		echo $ex;
 	};
-
-
-
-
 ?>
 
 <!DOCTYPE html>
